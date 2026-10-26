@@ -21,7 +21,7 @@ npm run build && npm start
 | `lib/content/registry.ts` | Lookups, hub→spoke mapping, breadcrumbs, sitemap source. |
 | `lib/seo.ts` | Metadata builder (robots, canonical, OG) and JSON-LD schema builders. |
 | `components/layout/` | Header, footer, breadcrumbs, sticky mobile CTA. |
-| `components/modules/` | Reusable modules M1–M14 (Hero, TrustBar, StepProcess, CtaBand, FaqAccordion, ChildGrid, LatestPosts, RelatedPages, Callout, ComparisonTable, ReviewerBox, SampleLetter, PricingBlock, CityInfoPanel) plus the contact form. Every "Get Your ESA Letter" CTA opens the evaluation survey (`site.applyHref` in `lib/site.ts`, currently https://survey.myesatherapist.com/). |
+| `components/modules/` | Reusable modules M1–M14 (Hero, TrustBar, StepProcess, CtaBand, FaqAccordion, ChildGrid, LatestPosts, RelatedPages, Callout, ComparisonTable, SampleLetter, PricingBlock, CityInfoPanel) plus the contact form. Every "Get Your ESA Letter" CTA opens the evaluation survey (`site.applyHref` in `lib/site.ts`, currently https://survey.myesatherapist.com/). |
 | `components/templates/` | Page templates T2–T11. Home (T1) is `app/page.tsx`. |
 
 **Typography:** headings use Merriweather and body text uses Inter (self-hosted in `app/fonts/`). Use only the seven named classes in markup: `text-h1`, `text-h2`, `text-h3`, `text-h4`, `text-body-large`, `text-body-normal`, `text-body-small` (+ `text-body-small-semibold`). Plain `h1`–`h4` and `p` elements get their style from the base layer. Never set font sizes in component CSS; the minimum size is 14px.
@@ -46,7 +46,6 @@ npm run build && npm start
 
 - **Blog post:** add an entry to `blogPosts` in `lib/content/blog.ts`. It needs a category, plus a `siloLink`, which is required.
 - **City page:** add a `place({...})` entry in `lib/content/locations.ts` with unique local copy and M14 fields.
-- **Any page:** remove its `reviewNote` once legal or clinical review is complete.
 
 ## Before launch
 

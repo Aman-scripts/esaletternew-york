@@ -13,8 +13,6 @@ import { ChildGrid } from "../modules/ChildGrid";
 import { CtaBand } from "../modules/CtaBand";
 import { LatestPosts } from "../modules/LatestPosts";
 import { FaqAccordion } from "../modules/FaqAccordion";
-import { ReviewerBox } from "../modules/ReviewerBox";
-import { ReviewNote } from "../modules/ReviewNote";
 
 type Props = {
   page: ArticlePage;
@@ -27,7 +25,7 @@ const GRID_HEADING_ID = "all-guides";
 
 /**
  * T3 Silo pillar (hub): Hero > Intro 200-300 words > TOC > Overview H2s > M6 child grid [all spokes]
- * > Inline CTA > M7 Latest from blog > FAQ > Final CTA > Reviewer box
+ * > Inline CTA > M7 Latest from blog > FAQ > Final CTA
  */
 export function PillarTemplate({ page, spokes, gridTitle, gridIcon }: Props) {
   const categories = blogCategories.filter((c) => c.pillars.includes(page.path));
@@ -40,7 +38,6 @@ export function PillarTemplate({ page, spokes, gridTitle, gridIcon }: Props) {
 
       <section className="section">
         <div className="container container--narrow">
-          <ReviewNote text={page.reviewNote} />
           <div className="prose">
             {page.overview?.map((p) => <p key={p} className="text-body-large">{p}</p>)}
           </div>
@@ -85,9 +82,6 @@ export function PillarTemplate({ page, spokes, gridTitle, gridIcon }: Props) {
       </section>
 
       <CtaBand variant="final" />
-      <div className="container container--narrow section--tight">
-        <ReviewerBox date={page.updated} label="Reviewed by" />
-      </div>
     </>
   );
 }

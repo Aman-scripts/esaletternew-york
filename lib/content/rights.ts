@@ -3,9 +3,6 @@ import { site } from "../site";
 
 const UPDATED = site.lastReviewed;
 
-const LEGAL_REVIEW =
-  "Legal references on this page must be reviewed by counsel and checked for current status before publishing.";
-
 type SpokeInput = Omit<
   ArticlePage,
   "template" | "parent" | "phase" | "robots" | "schema" | "updated"
@@ -19,7 +16,6 @@ function spoke(input: SpokeInput): ArticlePage {
     robots: "IF",
     schema: ["Article", "FAQPage"],
     updated: UPDATED,
-    reviewNote: LEGAL_REVIEW,
     ...input,
     related: Array.from(new Set(["/rights/", ...input.related])),
   };
@@ -42,7 +38,6 @@ export const rightsPillar: ArticlePage = {
   intro:
     "New York renters with emotional support animals are protected by federal, state and city law. This guide explains each layer and links to detailed answers.",
   updated: UPDATED,
-  reviewNote: LEGAL_REVIEW,
   overview: [
     "If you live with a mental or emotional health condition and an animal helps you manage it, New York housing law gives you a way to ask for an exception to no-pet rules. That request is called a reasonable accommodation, and an ESA letter from a licensed professional is the documentation that supports it.",
     "What makes New York different is that three laws can apply at once. The federal Fair Housing Act covers most housing nationwide. The New York State Human Rights Law covers housing across the state, including some buildings the federal law exempts. Inside the five boroughs, the New York City Human Rights Law adds further protections and a duty for housing providers to engage in a cooperative dialogue before turning a request down.",
@@ -263,8 +258,6 @@ export const rightsSpokes: ArticlePage[] = [
       "HUD's 2026 ESA guidance changed federal enforcement. See what it does and doesn't change for renters under New York State and NYC law.",
     priority: "High",
     intro: "Federal guidance on assistance animals shifted in 2026. Here is what New York renters should know.",
-    reviewNote:
-      "LEGAL REVIEW REQUIRED: confirm the current status and contents of HUD's 2026 ESA guidance before this page is published.",
     quickAnswer:
       "HUD's 2026 guidance on emotional support animals reportedly narrows federal enforcement. It does not rewrite the Fair Housing Act itself, and it does not change the New York State or NYC Human Rights Laws, which are enforced by state and city agencies. New York renters should keep reliable documentation and understand all three layers.",
     sections: [

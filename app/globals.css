@@ -2014,24 +2014,6 @@ a.card:hover .card__more svg {
   color: var(--ink-900);
 }
 
-.review-note {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 0 0 24px;
-  padding: 12px 16px;
-  border: 1px dashed var(--warning-600);
-  border-radius: var(--radius-sm);
-  background: var(--warning-50);
-  color: var(--warning-600);
-}
-
-.review-note svg {
-  flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-}
-
 /* ---------- 17. Comparison table (M10) ---------- */
 .table-wrap {
   margin: 0 0 24px;
@@ -2173,50 +2155,6 @@ a.card:hover .card__more svg {
 .aside-cta__text {
   color: rgba(255, 255, 255, 0.85);
   margin: 0 0 16px;
-}
-
-/* ---------- 19. Reviewer box (M11) ---------- */
-.reviewer {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 20px;
-  background: var(--surface-alt);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-}
-
-.reviewer__avatar {
-  flex-shrink: 0;
-  display: grid;
-  place-items: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--brand-600);
-  color: #fff;
-}
-
-.reviewer__avatar svg {
-  width: 28px;
-  height: 28px;
-}
-
-.reviewer__label {
-  margin: 0;
-  color: var(--ink-500);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.reviewer__name {
-  margin: 2px 0;
-  color: var(--ink-900);
-}
-
-.reviewer__meta {
-  margin: 0;
-  color: var(--ink-500);
 }
 
 /* ---------- 20. Sample letter viewer (M12) ---------- */

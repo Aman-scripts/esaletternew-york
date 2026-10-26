@@ -19,11 +19,6 @@ export const site = {
     currency: "USD",
   },
   turnaround: "Often within 24 hours of your consultation",
-  reviewer: {
-    name: "ESA Letter New York Clinical Review Team",
-    credentials: "Licensed mental health professionals",
-    licenseState: "New York",
-  },
   lastReviewed: "2026-10-26",
   disclaimer:
     "ESA Letter New York provides access to evaluations by licensed mental health professionals. Content on this site is for general information only and is not medical or legal advice. An ESA letter is issued only if a licensed professional determines it is clinically appropriate.",

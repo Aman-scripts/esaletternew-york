@@ -13,7 +13,6 @@ import { TrustBar } from "../modules/TrustBar";
 import { CtaBand } from "../modules/CtaBand";
 import { FaqAccordion } from "../modules/FaqAccordion";
 import { RelatedPages } from "../modules/RelatedPages";
-import { ReviewerBox } from "../modules/ReviewerBox";
 import { ContentSections } from "../modules/ContentSections";
 import { ContactForm } from "../modules/ContactForm";
 import { FaqSection } from "./parts";
@@ -68,9 +67,6 @@ function HowItWorks({ page }: { page: ArticlePage }) {
         </div>
       </section>
       <CtaBand variant="final" />
-      <div className="container container--narrow section--tight">
-        <ReviewerBox date={page.updated} />
-      </div>
     </>
   );
 }
@@ -116,7 +112,6 @@ function About({ page }: { page: ArticlePage }) {
       <section className="section section--tint">
         <div className="container container--narrow">
           <ContentSections sections={page.sections} />
-          <ReviewerBox date={page.updated} label="Clinical oversight" />
           <CtaBand />
         </div>
       </section>

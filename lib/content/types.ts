@@ -94,8 +94,6 @@ export type ArticlePage = PageBase & {
   related: string[];
   /** Pillar only: blog category feeding M7 */
   blogCategory?: string;
-  /** Notes rendered as an editorial review banner (legal review pending, etc.) */
-  reviewNote?: string;
 };
 
 export type CityInfo = {

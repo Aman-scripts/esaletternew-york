@@ -7,7 +7,6 @@ import { countWords } from "@/lib/slug";
 import { formatDate } from "@/lib/site";
 import { Breadcrumbs } from "../layout/Breadcrumbs";
 import { JsonLd } from "../common/JsonLd";
-import { ReviewerBox } from "../modules/ReviewerBox";
 import { TableOfContents } from "../modules/TableOfContents";
 import { ContentSections, sectionWords } from "../modules/ContentSections";
 import { CtaBand } from "../modules/CtaBand";
@@ -47,10 +46,6 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
             </span>
           </div>
         </header>
-      </div>
-
-      <div className="container">
-        <ReviewerBox date={post.updated} label="Written by" name={post.author} />
       </div>
 
       <div className="section section--tight">

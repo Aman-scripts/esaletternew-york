@@ -116,7 +116,6 @@ type ConditionInput = {
   name: string;
   priority: Priority;
   description: string;
-  sensitive?: boolean;
   quickAnswer: string;
   qualifies: string;
   helps: string[];
@@ -141,9 +140,6 @@ function condition(c: ConditionInput): ArticlePage {
     schema: ["Article", "FAQPage"],
     intro: `How ${c.name.toLowerCase()} is evaluated for an emotional support animal letter in New York, in plain language.`,
     updated: UPDATED,
-    reviewNote: c.sensitive
-      ? "Sensitive topic: clinical review required before publishing."
-      : undefined,
     quickAnswer: c.quickAnswer,
     sections: [
       { heading: `How ${c.name} qualifies under federal, NYS and NYC law`, paragraphs: [c.qualifies] },
@@ -222,7 +218,6 @@ export const conditionPages: ArticlePage[] = [
     slug: "ptsd",
     name: "PTSD",
     priority: "High",
-    sensitive: true,
     description:
       "Does PTSD qualify you for an ESA letter in New York? See how a provider evaluates it and how an ESA may help with hypervigilance and sleep.",
     quickAnswer:
@@ -319,7 +314,6 @@ export const conditionPages: ArticlePage[] = [
     slug: "bipolar-disorder",
     name: "Bipolar Disorder",
     priority: "Low",
-    sensitive: true,
     description:
       "Does Bipolar Disorder qualify you for an ESA letter in New York? See how a provider evaluates it and how an ESA may fit a stable daily routine.",
     quickAnswer:
@@ -392,7 +386,6 @@ export const conditionPages: ArticlePage[] = [
     slug: "eating-disorders",
     name: "Eating Disorders",
     priority: "Low",
-    sensitive: true,
     description:
       "Does Eating Disorders qualify you for an ESA letter in New York? See how a provider evaluates it and how an ESA may support recovery.",
     quickAnswer:
