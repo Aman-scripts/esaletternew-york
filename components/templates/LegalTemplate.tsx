@@ -15,7 +15,7 @@ export function LegalTemplate({ page }: { page: LegalPage }) {
       <Hero title={page.h1} hideCta before={<Breadcrumbs items={crumbsFor(page)} />} />
       <div className="section">
         <div className="container container--narrow">
-          <p className="legal-updated">
+          <p className="legal-updated text-body-small">
             Last updated: <time dateTime={page.updated}>{formatDate(page.updated)}</time>
           </p>
           <ContentSections sections={page.sections} />

@@ -21,10 +21,10 @@ export function StepProcess({ steps = defaultSteps }: { steps?: Step[] }) {
     <ol className={steps.length >= 4 ? "steps steps--4" : "steps"}>
       {steps.map((step, i) => (
         <li key={step.title} className="step">
-          <span className="step__num" aria-hidden="true">
+          <span className="step__num text-h4" aria-hidden="true">
             {i + 1}
           </span>
-          <h3 className="step__title">{step.title}</h3>
+          <h3 className="step__title text-h3">{step.title}</h3>
           <p className="step__text">{step.text}</p>
         </li>
       ))}

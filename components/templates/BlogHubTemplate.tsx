@@ -26,16 +26,16 @@ export function BlogHubTemplate({ pageNumber = 1 }: { pageNumber?: number }) {
       <section className="hero hero--compact">
         <Breadcrumbs items={crumbsFor(blogHub)} />
         <div className="container">
-          <h1 className="hero__title">
+          <h1 className="hero__title text-h1">
             {blogHub.h1}
             {pageNumber > 1 && ` (page ${pageNumber})`}
           </h1>
-          <p className="hero__lead">{blogHub.intro}</p>
+          <p className="hero__lead text-body-large">{blogHub.intro}</p>
           <nav aria-label="Blog categories">
             <ul className="chip-list">
               {blogCategories.map((c) => (
                 <li key={c.slug}>
-                  <Link href={c.path} className="chip">
+                  <Link href={c.path} className="chip text-body-small-semibold">
                     {c.name}
                   </Link>
                 </li>

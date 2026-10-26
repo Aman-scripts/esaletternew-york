@@ -41,8 +41,8 @@ export function PillarTemplate({ page, spokes, gridTitle, gridIcon }: Props) {
       <section className="section">
         <div className="container container--narrow">
           <ReviewNote text={page.reviewNote} />
-          <div className="prose lead-paragraphs">
-            {page.overview?.map((p) => <p key={p}>{p}</p>)}
+          <div className="prose">
+            {page.overview?.map((p) => <p key={p} className="text-body-large">{p}</p>)}
           </div>
           <TableOfContents headings={[...page.sections.map((s) => s.heading), gridTitle]} inline />
           <ContentSections sections={page.sections} />

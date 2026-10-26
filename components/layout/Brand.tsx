@@ -13,7 +13,7 @@ export function Brand({ priority = false }: { priority?: boolean }) {
         className="brand__logo"
         priority={priority}
       />
-      <span className="brand__name">
+      <span className="brand__name text-h4">
         ESA Letter <span>New York</span>
       </span>
     </Link>

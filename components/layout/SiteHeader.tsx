@@ -76,7 +76,7 @@ export function SiteHeader() {
         <ul className="mobile-nav__list">
           {primaryNav.map((item) => (
             <li key={item.href}>
-              <Link href={item.href} className="mobile-nav__link">
+              <Link href={item.href} className="mobile-nav__link text-h4">
                 {item.label}
               </Link>
               {item.children && (

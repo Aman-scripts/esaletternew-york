@@ -30,13 +30,13 @@ export function Hero({
 }: Props) {
   const body = (
     <div>
-      {eyebrow && <span className="eyebrow">{eyebrow}</span>}
-      <h1 className="hero__title">{title}</h1>
-      {lead && <p className="hero__lead">{lead}</p>}
+      {eyebrow && <span className="eyebrow text-body-small-semibold">{eyebrow}</span>}
+      <h1 className="hero__title text-h1">{title}</h1>
+      {lead && <p className="hero__lead text-body-large">{lead}</p>}
       {checks && (
         <ul className="hero__checks">
           {checks.map((c) => (
-            <li key={c}>
+            <li key={c} className="text-body-large">
               <Check className="check-icon" aria-hidden="true" />
               {c}
             </li>
@@ -50,7 +50,7 @@ export function Hero({
       )}
       {guarantee && <p className="hero__guarantee">{guarantee}</p>}
       {!hideCta && (
-        <ul className="hero__meta" aria-label="Trust badges">
+        <ul className="hero__meta text-body-small" aria-label="Trust badges">
           <li className="hero__meta-item">
             <BadgeCheck aria-hidden="true" /> Licensed NY providers
           </li>

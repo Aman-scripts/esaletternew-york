@@ -6,24 +6,24 @@ export function CityInfoPanel({ name, city }: { name: string; city: CityInfo }) 
   return (
     <section className="city-panel" aria-label={`${name} at a glance`}>
       <div>
-        <p className="city-panel__title">
+        <p className="city-panel__title text-h4">
           <Building2 aria-hidden="true" /> {name} housing
         </p>
         <dl>
           <div>
-            <dt>Housing mix</dt>
+            <dt className="text-body-small-semibold">Housing mix</dt>
             <dd>{city.housingMix}</dd>
           </div>
           {city.facts.map((f) => (
             <div key={f.label}>
-              <dt>{f.label}</dt>
+              <dt className="text-body-small-semibold">{f.label}</dt>
               <dd>{f.value}</dd>
             </div>
           ))}
         </dl>
       </div>
       <div>
-        <p className="city-panel__title">
+        <p className="city-panel__title text-h4">
           <Gavel aria-hidden="true" /> Local rules
         </p>
         <ul>
@@ -33,7 +33,7 @@ export function CityInfoPanel({ name, city }: { name: string; city: CityInfo }) 
         </ul>
       </div>
       <div>
-        <p className="city-panel__title">
+        <p className="city-panel__title text-h4">
           <Landmark aria-hidden="true" /> Local resources
         </p>
         <ul>

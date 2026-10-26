@@ -44,7 +44,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <a href="#main" className="skip-link">
           Skip to content
         </a>
-        <p className="topbar">
+        <p className="topbar text-body-small">
           Policy update: HUD&rsquo;s 2026 ESA guidance and New York renters.{" "}
           <Link href="/rights/hud-2026-esa-memo-new-york/">What it means</Link>
         </p>

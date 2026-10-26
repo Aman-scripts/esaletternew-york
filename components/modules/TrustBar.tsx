@@ -13,7 +13,7 @@ export function TrustBar() {
     <div className="trust-bar">
       <ul className="container trust-bar__list">
         {items.map(({ icon: Icon, label }) => (
-          <li key={label} className="trust-bar__item">
+          <li key={label} className="trust-bar__item text-body-small-semibold">
             <span className="trust-bar__icon">
               <Icon aria-hidden="true" />
             </span>

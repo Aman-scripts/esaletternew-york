@@ -9,7 +9,7 @@ export type Crumb = { label: string; href: string };
 export function Breadcrumbs({ items }: { items: Crumb[] }) {
   const trail = [{ label: "Home", href: "/" }, ...items];
   return (
-    <nav className="breadcrumbs container" aria-label="Breadcrumb">
+    <nav className="breadcrumbs container text-body-small" aria-label="Breadcrumb">
       <JsonLd data={breadcrumbSchema(trail)} />
       <ol className="breadcrumbs__list">
         {trail.map((item, i) => {
@@ -17,7 +17,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
           return (
             <li key={item.href} className="breadcrumbs__item">
               {last ? (
-                <span className="breadcrumbs__current" aria-current="page">
+                <span className="breadcrumbs__current text-body-small-semibold" aria-current="page">
                   {item.label}
                 </span>
               ) : (

@@ -17,9 +17,9 @@ export function ReviewerBox({
         <Stethoscope />
       </span>
       <div>
-        <p className="reviewer__label">{label}</p>
-        <p className="reviewer__name">{name}</p>
-        <p className="reviewer__meta">
+        <p className="reviewer__label text-body-small-semibold">{label}</p>
+        <p className="reviewer__name text-h4">{name}</p>
+        <p className="reviewer__meta text-body-small">
           {site.reviewer.credentials}, licensed in {site.reviewer.licenseState} · Last reviewed{" "}
           <time dateTime={date}>{formatDate(date)}</time>
         </p>

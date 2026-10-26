@@ -26,11 +26,11 @@ export default function NotFound() {
   return (
     <section className="notfound">
       <div className="container container--narrow">
-        <p className="notfound__code" aria-hidden="true">
+        <p className="notfound__code text-h1" aria-hidden="true">
           404
         </p>
-        <h1 className="hero__title">Page not found</h1>
-        <p className="hero__lead">
+        <h1 className="hero__title text-h1">Page not found</h1>
+        <p className="hero__lead text-body-large">
           The page you were looking for doesn&rsquo;t exist or has moved. Search our guides or try one of
           these pages.
         </p>
@@ -38,7 +38,7 @@ export default function NotFound() {
         <ul className="chip-list notfound__links">
           {keyLinks.map((l) => (
             <li key={l.href}>
-              <Link href={l.href} className="chip">
+              <Link href={l.href} className="chip text-body-small-semibold">
                 {l.label}
               </Link>
             </li>

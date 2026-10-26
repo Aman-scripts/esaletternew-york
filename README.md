@@ -15,7 +15,9 @@ npm run build && npm start
 
 | Path | What |
 | --- | --- |
-| `app/globals.css` | **All styling.** Brand tokens (from the logo: `#0F75BC`, `#429ED7`) and every component class. No inline styles. |
+| `app/globals.css` | **All styling.** Starts with the shared Trust & Clarity typography system (same `globals.css` as ESA Letter Colorado, with New York brand colors `#0F75BC` / `#429ED7`), followed by component classes (layout and color only). No inline styles. |
+
+**Typography:** use only the seven named classes in markup: `text-h1`, `text-h2`, `text-h3`, `text-h4`, `text-body-large`, `text-body-normal`, `text-body-small` (+ `text-body-small-semibold`). Plain `h1`–`h4` and `p` elements get their style from the base layer. Never set font sizes in component CSS; the minimum size is 14px.
 | `lib/site.ts` | Site config, primary nav (spec 3.1), footer (3.2), pricing, contact. Values marked `CONFIRM` are placeholders. |
 | `lib/content/*.ts` | Page data for every URL: H1, meta title/description, robots (I/F, NI/F), schema, body sections, FAQs, related links. |
 | `lib/content/registry.ts` | Lookups, hub→spoke mapping, breadcrumbs, sitemap source. |

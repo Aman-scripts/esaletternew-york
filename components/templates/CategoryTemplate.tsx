@@ -29,8 +29,8 @@ export function CategoryTemplate({ category, pageNumber = 1 }: { category: BlogC
           ]}
         />
         <div className="container container--narrow">
-          <h1 className="hero__title">{category.name}</h1>
-          <p className="hero__lead">{category.intro}</p>
+          <h1 className="hero__title text-h1">{category.name}</h1>
+          <p className="hero__lead text-body-large">{category.intro}</p>
           <p className="pillar-link">
             Start with our guide:
             {category.pillars.map((p, i) => (
@@ -55,7 +55,7 @@ export function CategoryTemplate({ category, pageNumber = 1 }: { category: BlogC
             </ul>
           ) : (
             <div className="empty-state">
-              <p className="empty-state__title">Articles coming soon</p>
+              <p className="empty-state__title text-h3">Articles coming soon</p>
               <p>We&rsquo;re writing new guides for this topic. In the meantime, explore our main guide above.</p>
             </div>
           )}

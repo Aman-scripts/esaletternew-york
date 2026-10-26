@@ -7,7 +7,7 @@ export function RelatedPages({ paths, title = "Related guides" }: { paths: strin
   if (!paths.length) return null;
   return (
     <nav className="related" aria-label={title}>
-      <p className="related__title">{title}</p>
+      <p className="related__title text-h4">{title}</p>
       <ul className="related__list">
         {paths.map((path) => (
           <li key={path}>

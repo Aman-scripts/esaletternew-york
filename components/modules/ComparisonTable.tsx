@@ -5,11 +5,11 @@ export function ComparisonTable({ caption, head, rows }: ComparisonTableData) {
   return (
     <div className="table-wrap" role="region" aria-label={caption ?? "Comparison table"} tabIndex={0}>
       <table className="table">
-        {caption && <caption>{caption}</caption>}
+        {caption && <caption className="text-body-small">{caption}</caption>}
         <thead>
           <tr>
             {head.map((h, i) => (
-              <th key={i} scope="col">
+              <th key={i} scope="col" className="text-body-small-semibold">
                 {h}
               </th>
             ))}

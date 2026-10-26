@@ -16,7 +16,7 @@ export function CtaBand({
     <aside className={`cta-band cta-band--${variant}`} aria-label="Get your ESA letter">
       <div className="cta-band__inner">
         <div>
-          <p className="cta-band__title">{title}</p>
+          <p className="cta-band__title text-h3">{title}</p>
           <p className="cta-band__text">{text}</p>
         </div>
         <ButtonLink variant="white" size="lg" />

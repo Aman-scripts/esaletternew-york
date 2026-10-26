@@ -4,7 +4,7 @@ import { TriangleAlert } from "lucide-react";
 export function ReviewNote({ text }: { text?: string }) {
   if (!text) return null;
   return (
-    <p className="review-note" role="note">
+    <p className="review-note text-body-small-semibold" role="note">
       <TriangleAlert aria-hidden="true" />
       {text}
     </p>

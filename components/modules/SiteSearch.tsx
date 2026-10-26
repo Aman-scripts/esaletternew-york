@@ -19,7 +19,7 @@ export function SiteSearch({ entries }: { entries: Entry[] }) {
 
   return (
     <div className="search-box" role="search">
-      <label className="field__label" htmlFor="site-search">
+      <label className="field__label text-body-small-semibold" htmlFor="site-search">
         Search our guides
       </label>
       <input
@@ -40,7 +40,7 @@ export function SiteSearch({ entries }: { entries: Entry[] }) {
         </ul>
       )}
       {query.trim().length >= 2 && results.length === 0 && (
-        <p className="field__hint">No matching pages. Try a different word.</p>
+        <p className="field__hint text-body-small">No matching pages. Try a different word.</p>
       )}
     </div>
   );

@@ -33,12 +33,12 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
       <div className="container">
         <header className="post-header container--narrow">
           {category && (
-            <Link href={category.path} className="eyebrow">
+            <Link href={category.path} className="eyebrow text-body-small-semibold">
               {category.name}
             </Link>
           )}
-          <h1 className="post-header__title">{post.h1}</h1>
-          <div className="post-meta">
+          <h1 className="post-header__title text-h1">{post.h1}</h1>
+          <div className="post-meta text-body-small">
             <span className="post-meta__item">
               <Calendar aria-hidden="true" /> Published <time dateTime={post.published}>{formatDate(post.published)}</time>
             </span>
@@ -64,8 +64,8 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
             <CtaBand />
             <Link href={post.siloLink} className="silo-link">
               <span>
-                <span className="silo-link__label">Read the full guide</span>
-                <span className="silo-link__title">{labelFor(post.siloLink)}</span>
+                <span className="silo-link__label text-body-small-semibold">Read the full guide</span>
+                <span className="silo-link__title text-h4">{labelFor(post.siloLink)}</span>
                 {descriptionFor(post.siloLink) && <span className="card__text"> {descriptionFor(post.siloLink)}</span>}
               </span>
               <ArrowRight aria-hidden="true" />
@@ -78,7 +78,7 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
       {related.length > 0 && (
         <section className="section section--tint">
           <div className="container">
-            <h2 className="section-head__title">More in {category?.name}</h2>
+            <h2 className="section-head__title text-h2">More in {category?.name}</h2>
             <ul className="grid grid--2" role="list">
               {related.map((p) => (
                 <li key={p.path}>

@@ -23,7 +23,7 @@ export function ArticleAside({ siblings, siblingsTitle }: { siblings?: string[];
   return (
     <aside className="article-layout__aside aside-stack">
       <div className="aside-cta">
-        <p className="aside-cta__title">Get your ESA letter</p>
+        <p className="aside-cta__title text-h3">Get your ESA letter</p>
         <p className="aside-cta__text">
           Private assessment, a New York-licensed professional, and a full refund if you don&rsquo;t
           qualify. {site.turnaround}.

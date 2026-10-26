@@ -105,7 +105,7 @@ function About({ page }: { page: ArticlePage }) {
           <SectionHead title="Our providers" />
           {/* Provider profiles: add only real providers with verifiable NY license numbers (spec #74). */}
           <div className="empty-state">
-            <h3 className="empty-state__title">Provider profiles are being verified</h3>
+            <h3 className="empty-state__title text-h3">Provider profiles are being verified</h3>
             <p>
               Each profile will show the provider&rsquo;s name, credentials, New York license number and
               a link to verify it with the NYS Office of the Professions.
@@ -132,7 +132,7 @@ function Reviews() {
         <div className="container container--narrow">
           {/* Review grid: real, verifiable reviews only. Add Review/AggregateRating schema only once real reviews are shown. */}
           <div className="empty-state">
-            <p className="empty-state__title">Verified reviews coming soon</p>
+            <p className="empty-state__title text-h3">Verified reviews coming soon</p>
             <p>We only publish genuine reviews from customers who completed an evaluation.</p>
           </div>
           <div className="prose">
@@ -176,7 +176,7 @@ function Contact({ page }: { page: ArticlePage }) {
                 <Mail aria-hidden="true" />
               </span>
               <div>
-                <p className="feature__title">Email</p>
+                <p className="feature__title text-h3">Email</p>
                 <p className="feature__text">
                   <a href={`mailto:${site.email}`}>{site.email}</a>
                 </p>
@@ -187,7 +187,7 @@ function Contact({ page }: { page: ArticlePage }) {
                 <Clock aria-hidden="true" />
               </span>
               <div>
-                <p className="feature__title">Support hours</p>
+                <p className="feature__title text-h3">Support hours</p>
                 <p className="feature__text">{site.supportHours}</p>
               </div>
             </div>
@@ -196,7 +196,7 @@ function Contact({ page }: { page: ArticlePage }) {
                 <ShieldCheck aria-hidden="true" />
               </span>
               <div>
-                <p className="feature__title">Your privacy</p>
+                <p className="feature__title text-h3">Your privacy</p>
                 <p className="feature__text">
                   Please don&rsquo;t send health information by email or this form. Share it only in
                   your secure evaluation.

@@ -22,9 +22,9 @@ export function PricingBlock() {
   return (
     <div className="pricing">
       <div className="pricing__card pricing__card--featured">
-        <h3 className="pricing__name">ESA Housing Letter</h3>
-        <p className="pricing__price">
-          {formatPrice(site.pricing.letter)} <small>one-time</small>
+        <h3 className="pricing__name text-h3">ESA Housing Letter</h3>
+        <p className="pricing__price text-h1">
+          {formatPrice(site.pricing.letter)} <small className="text-body-normal">one-time</small>
         </p>
         <ul className="pricing__list">
           {letterIncludes.map((item) => (
@@ -35,14 +35,14 @@ export function PricingBlock() {
           ))}
         </ul>
         <ButtonLink block />
-        <p className="pricing__note">
+        <p className="pricing__note text-body-small">
           See our <Link href="/refund-policy/">Refund &amp; Money-Back Policy</Link>.
         </p>
       </div>
       <div className="pricing__card">
-        <h3 className="pricing__name">Annual Renewal</h3>
-        <p className="pricing__price">
-          {formatPrice(site.pricing.renewal)} <small>per year</small>
+        <h3 className="pricing__name text-h3">Annual Renewal</h3>
+        <p className="pricing__price text-h1">
+          {formatPrice(site.pricing.renewal)} <small className="text-body-normal">per year</small>
         </p>
         <ul className="pricing__list">
           {renewalIncludes.map((item) => (

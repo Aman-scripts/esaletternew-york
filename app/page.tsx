@@ -68,7 +68,7 @@ export default function HomePage() {
         }
         aside={
           <div id="appForm" className="apply apply__card">
-            <p className="apply__title">Start your evaluation</p>
+            <p className="apply__title text-h3">Start your evaluation</p>
             <p className="apply__sub">Takes about 2 minutes. No payment until you book.</p>
             <ApplicationForm />
           </div>
@@ -100,7 +100,7 @@ export default function HomePage() {
           <ul className="grid grid--4" role="list">
             {conditions.map((c) => (
               <li key={c.path}>
-                <Link href={c.path} className="tile">
+                <Link href={c.path} className="tile text-h4">
                   {c.label}
                   <ArrowRight aria-hidden="true" />
                 </Link>
@@ -125,7 +125,7 @@ export default function HomePage() {
                 <span className="card__icon">
                   <Icon aria-hidden="true" />
                 </span>
-                <h3 className="card__title">{title}</h3>
+                <h3 className="card__title text-h3">{title}</h3>
                 <p className="card__text">{text}</p>
               </div>
             ))}
@@ -175,18 +175,18 @@ export default function HomePage() {
           />
           <div className="grid grid--3">
             <div className="law-card">
-              <span className="law-card__tag">Federal</span>
-              <h3 className="law-card__title">Fair Housing Act</h3>
+              <span className="law-card__tag text-body-small-semibold">Federal</span>
+              <h3 className="law-card__title text-h3">Fair Housing Act</h3>
               <p className="law-card__text">Requires most housing providers nationwide to make reasonable accommodations for people with disabilities.</p>
             </div>
             <div className="law-card law-card--state">
-              <span className="law-card__tag">New York State</span>
-              <h3 className="law-card__title">NYS Human Rights Law</h3>
+              <span className="law-card__tag text-body-small-semibold">New York State</span>
+              <h3 className="law-card__title text-h3">NYS Human Rights Law</h3>
               <p className="law-card__text">Executive Law 296 protects renters statewide, enforced by the NYS Division of Human Rights.</p>
             </div>
             <div className="law-card law-card--city">
-              <span className="law-card__tag">New York City</span>
-              <h3 className="law-card__title">NYC Human Rights Law</h3>
+              <span className="law-card__tag text-body-small-semibold">New York City</span>
+              <h3 className="law-card__title text-h3">NYC Human Rights Law</h3>
               <p className="law-card__text">Admin Code 8-107 adds city protections, including a cooperative dialogue before any denial.</p>
             </div>
           </div>
@@ -209,7 +209,7 @@ export default function HomePage() {
                   <Icon aria-hidden="true" />
                 </span>
                 <div>
-                  <h3 className="feature__title">{title}</h3>
+                  <h3 className="feature__title text-h3">{title}</h3>
                   <p className="feature__text">{text}</p>
                 </div>
               </div>
@@ -251,7 +251,7 @@ export default function HomePage() {
           <ul className="grid grid--4" role="list">
             {cityPages.map((c) => (
               <li key={c.path}>
-                <Link href={c.path} className="tile">
+                <Link href={c.path} className="tile text-h4">
                   {c.label}
                   <ArrowRight aria-hidden="true" />
                 </Link>
@@ -281,7 +281,7 @@ export default function HomePage() {
           </div>
           <ul className="hero__checks">
             {["Every review comes from a completed evaluation", "Positive and negative feedback published", "No health details shared publicly"].map((t) => (
-              <li key={t}>
+              <li key={t} className="text-body-large">
                 <Check className="check-icon" aria-hidden="true" />
                 {t}
               </li>
