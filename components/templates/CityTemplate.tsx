@@ -11,8 +11,7 @@ import { CityInfoPanel } from "../modules/CityInfoPanel";
 import { ContentSections } from "../modules/ContentSections";
 import { CtaBand } from "../modules/CtaBand";
 import { RelatedPages } from "../modules/RelatedPages";
-import { ReviewerBox } from "../modules/ReviewerBox";
-import { ArticleAside, FaqSection } from "./parts";
+import { ArticleAside, FaqSection, MAX_RELATED } from "./parts";
 
 type Props = {
   page: CityPage;
@@ -58,16 +57,13 @@ export function CityTemplate({ page, boroughs, siblings }: Props) {
             <ContentSections sections={page.sections} slots={slots} />
             <CtaBand title={`Get your ESA letter in ${page.label}`} />
             <FaqSection faqs={page.faqs} heading={`${page.label} ESA FAQ`} />
-            <RelatedPages paths={page.related} />
+            <RelatedPages paths={[...page.related, ...siblings].slice(0, MAX_RELATED)} />
           </article>
-          <ArticleAside siblings={siblings} siblingsTitle="Nearby locations" />
+          <ArticleAside />
         </div>
       </div>
 
       <CtaBand variant="final" />
-      <div className="container container--narrow section--tight">
-        <ReviewerBox date={page.updated} label="Reviewed by" />
-      </div>
     </>
   );
 }

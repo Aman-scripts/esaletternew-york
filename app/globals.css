@@ -2094,45 +2094,63 @@ a.card:hover .card__more svg {
 }
 
 /* ---------- 18. Related pages (M8) ---------- */
+/* One related-links box per page, at the end of the article: tinted panel with link tiles */
 .related {
   padding: 24px;
-  background: #fff;
+  background: var(--surface-alt);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
 }
 
+/* Space the box from whatever precedes it in the article flow (FAQ, CTA band, body copy) */
+* + .related {
+  margin-top: 40px;
+}
+
 .related__title {
-  margin: 0 0 14px;
+  margin: 0 0 16px;
 }
 
 .related__list {
   display: grid;
-  gap: 4px;
+  gap: 12px;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+@media (min-width: 640px) {
+  .related__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .related__list a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  padding: 10px 12px;
-  border-radius: var(--radius-sm);
-  color: var(--ink-700);
+  gap: 12px;
+  height: 100%;
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  color: var(--ink-900);
   text-decoration: none;
+  transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 .related__list a:hover {
-  background: var(--brand-50);
+  border-color: var(--brand-400);
   color: var(--brand-600);
+  box-shadow: var(--shadow-sm);
 }
 
 .related__list svg {
   width: 16px;
   height: 16px;
   flex-shrink: 0;
+  color: var(--brand-600);
 }
 
 .aside-stack {

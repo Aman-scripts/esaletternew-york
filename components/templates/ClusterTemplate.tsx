@@ -1,5 +1,5 @@
 import type { ArticlePage } from "@/lib/content/types";
-import { crumbsFor, labelFor } from "@/lib/content/registry";
+import { crumbsFor } from "@/lib/content/registry";
 import { schemasFor } from "@/lib/seo";
 import { Breadcrumbs } from "../layout/Breadcrumbs";
 import { JsonLd } from "../common/JsonLd";
@@ -10,9 +10,7 @@ import { ContentSections } from "../modules/ContentSections";
 import { Callout } from "../modules/Callout";
 import { CtaBand } from "../modules/CtaBand";
 import { RelatedPages } from "../modules/RelatedPages";
-import { ReviewerBox } from "../modules/ReviewerBox";
-import { ReviewNote } from "../modules/ReviewNote";
-import { ArticleAside, FAQ_HEADING, FaqSection } from "./parts";
+import { ArticleAside, FAQ_HEADING, FaqSection, MAX_RELATED } from "./parts";
 
 type Props = {
   page: ArticlePage;
@@ -22,7 +20,7 @@ type Props = {
 
 /**
  * T4 Silo cluster / T5 Condition: Hero > Quick answer [required] > TOC > Body > Legal callout
- * > Inline CTA > FAQ > Related pages incl. link up to pillar [required] > Final CTA > Reviewer box
+ * > Inline CTA > FAQ > Related pages incl. link up to pillar [required] > Final CTA
  */
 export function ClusterTemplate({ page, siblings }: Props) {
   const headings = [...page.sections.map((s) => s.heading), ...(page.faqs.length ? [FAQ_HEADING] : [])];
@@ -35,26 +33,19 @@ export function ClusterTemplate({ page, siblings }: Props) {
       <div className="section">
         <div className="container article-layout">
           <article>
-            <ReviewNote text={page.reviewNote} />
             {page.quickAnswer && <QuickAnswer text={page.quickAnswer} />}
             <TableOfContents headings={headings} inline />
             <ContentSections sections={page.sections} />
             {page.legalCallout && <Callout {...page.legalCallout} />}
             <CtaBand />
             <FaqSection faqs={page.faqs} />
-            <RelatedPages paths={page.related} />
+            <RelatedPages paths={[...page.related, ...siblings].slice(0, MAX_RELATED)} />
           </article>
-          <ArticleAside
-            siblings={siblings}
-            siblingsTitle={page.parent ? `More in ${labelFor(page.parent)}` : undefined}
-          />
+          <ArticleAside />
         </div>
       </div>
 
       <CtaBand variant="final" />
-      <div className="container container--narrow section--tight">
-        <ReviewerBox date={page.updated} />
-      </div>
     </>
   );
 }
