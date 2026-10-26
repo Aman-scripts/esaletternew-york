@@ -31,7 +31,7 @@ export function ContactForm() {
         <span className="form-success__icon">
           <CircleCheckBig aria-hidden="true" />
         </span>
-        <h2 className="apply__title">Message sent</h2>
+        <p className="apply__title">Message sent</p>
         <p className="apply__sub">We reply to most messages within one business day.</p>
       </div>
     );

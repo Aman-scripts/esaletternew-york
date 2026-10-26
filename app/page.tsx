@@ -68,7 +68,7 @@ export default function HomePage() {
         }
         aside={
           <div id="appForm" className="apply apply__card">
-            <h2 className="apply__title">Start your evaluation</h2>
+            <p className="apply__title">Start your evaluation</p>
             <p className="apply__sub">Takes about 2 minutes. No payment until you book.</p>
             <ApplicationForm />
           </div>

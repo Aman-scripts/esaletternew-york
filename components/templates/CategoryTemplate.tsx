@@ -55,7 +55,7 @@ export function CategoryTemplate({ category, pageNumber = 1 }: { category: BlogC
             </ul>
           ) : (
             <div className="empty-state">
-              <h2 className="empty-state__title">Articles coming soon</h2>
+              <p className="empty-state__title">Articles coming soon</p>
               <p>We&rsquo;re writing new guides for this topic. In the meantime, explore our main guide above.</p>
             </div>
           )}

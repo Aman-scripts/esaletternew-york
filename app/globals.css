@@ -146,7 +146,8 @@ h2,
 .text-h2,
 .h2,
 .section-head__title,
-.prose h2 {
+.prose h2,
+.post-card--featured .post-card__title {
   font-family: var(--serif);
   font-weight: 400;
   font-size: var(--h2-size);
@@ -159,15 +160,16 @@ h3,
 .text-h3,
 .h3,
 .prose h3,
-.cta-band__title,
+.card__title,
+.post-card__title,
+.feature__title,
 .step__title,
 .law-card__title,
 .pricing__name,
-.apply__title,
-.faq-group__title,
-.empty-state__title,
+.cta-band__title,
 .aside-cta__title,
-.post-card--featured .post-card__title {
+.apply__title,
+.empty-state__title {
   font-family: var(--serif);
   font-weight: 400;
   font-size: var(--h3-size);
@@ -175,14 +177,13 @@ h3,
   letter-spacing: normal;
 }
 
-/* 4. H4 — DM Sans 700 | 20/28 · 19/27 · 18/26 */
+/* 4. H4 — DM Sans 700 | 20/28 · 19/27 · 18/26
+   Heading rule: an h1–h4 element always renders in its own level's style.
+   Classes below are on non-heading elements (labels, links, summaries). */
 h4,
 .text-h4,
 .h4,
 .brand__name,
-.card__title,
-.post-card__title,
-.feature__title,
 .related__title,
 .city-panel__title,
 .reviewer__name,

@@ -20,7 +20,7 @@ export function SiteFooter() {
           <div className="footer-cols">
             {footerColumns.map((col) => (
               <nav key={col.title} aria-label={col.title}>
-                <h2 className="footer-col__title">{col.title}</h2>
+                <p className="footer-col__title">{col.title}</p>
                 <ul className="footer-col__list">
                   {col.links.map((link) => (
                     <li key={link.href}>

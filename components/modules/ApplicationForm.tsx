@@ -47,7 +47,7 @@ export function ApplicationForm() {
         <span className="form-success__icon">
           <CircleCheckBig aria-hidden="true" />
         </span>
-        <h3 className="apply__title">You&rsquo;re on your way</h3>
+        <p className="apply__title">You&rsquo;re on your way</p>
         <p className="apply__sub">
           Check your email for a secure link to complete your assessment and schedule your
           consultation with a New York-licensed professional.
