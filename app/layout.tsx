@@ -10,22 +10,25 @@ import { StickyCta } from "@/components/layout/StickyCta";
 import { JsonLd } from "@/components/common/JsonLd";
 
 /**
- * Typography system: DM Serif Display (H1-H3) + DM Sans (H4, body, UI), self-hosted like
- * ESA Letter Colorado so fonts load even where Google Fonts is blocked. See app/globals.css.
+ * Fonts: Merriweather for headings (--font-serif), Inter for body and UI text (--font-sans).
+ * Self-hosted so they load even where Google Fonts is blocked. See app/globals.css.
  */
-const dmSerif = localFont({
-  src: "./fonts/dm-serif-display.woff2",
-  weight: "400",
-  style: "normal",
+const merriweather = localFont({
+  src: [
+    { path: "./fonts/merriweather-400.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/merriweather-700.woff2", weight: "700", style: "normal" },
+  ],
   variable: "--font-serif",
   display: "swap",
+  fallback: ["Georgia", "serif"],
 });
-const dmSans = localFont({
-  src: "./fonts/dm-sans.woff2",
-  weight: "400 700",
+const inter = localFont({
+  src: "./fonts/inter-variable.woff2",
+  weight: "100 900",
   style: "normal",
   variable: "--font-sans",
   display: "swap",
+  fallback: ["system-ui", "sans-serif"],
 });
 
 /**
@@ -48,7 +51,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-US" className={`${dmSerif.variable} ${dmSans.variable}`}>
+    <html lang="en-US" className={`${merriweather.variable} ${inter.variable}`}>
       <body>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <a href="#main" className="skip-link">

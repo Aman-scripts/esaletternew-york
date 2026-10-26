@@ -166,7 +166,7 @@
     margin: 0;
   }
 
-  /* Headings: DM Serif Display 400 */
+  /* Headings: Merriweather 400 */
   h1 {
     font-family: var(--font-serif), Georgia, serif;
     font-weight: 400;
@@ -235,7 +235,7 @@
     }
   }
 
-  /* H4: DM Sans 700 (Desktop: 20/28px, Tablet: 19/27px, Mobile: 18/26px) */
+  /* H4: Inter 700 (Desktop: 20/28px, Tablet: 19/27px, Mobile: 18/26px) */
   h4 {
     font-family: var(--font-sans), system-ui, sans-serif;
     font-weight: 700;
@@ -277,7 +277,7 @@
    H1, H2, H3, H4, Body Large, Body Normal, Body Small
    ========================================================================== */
 
-/* 1. H1 (DM Serif Display 400 | Desktop: 56/60px, Tablet: 44/50px, Mobile: 36/42px) */
+/* 1. H1 (Merriweather 400 | Desktop: 56/60px, Tablet: 44/50px, Mobile: 36/42px) */
 .text-h1,
 .h1 {
   font-family: var(--font-serif), Georgia, serif;
@@ -302,7 +302,7 @@
   }
 }
 
-/* 2. H2 (DM Serif Display 400 | Desktop: 44/52px, Tablet: 36/43px, Mobile: 32/38px) */
+/* 2. H2 (Merriweather 400 | Desktop: 44/52px, Tablet: 36/43px, Mobile: 32/38px) */
 .text-h2,
 .h2 {
   font-family: var(--font-serif), Georgia, serif;
@@ -327,7 +327,7 @@
   }
 }
 
-/* 3. H3 (DM Serif Display 400 | Desktop: 28/36px, Tablet: 26/34px, Mobile: 24/32px) */
+/* 3. H3 (Merriweather 400 | Desktop: 28/36px, Tablet: 26/34px, Mobile: 24/32px) */
 .text-h3,
 .h3 {
   font-family: var(--font-serif), Georgia, serif;
@@ -351,7 +351,7 @@
   }
 }
 
-/* 4. H4 (DM Sans 700 | Desktop: 20/28px, Tablet: 19/27px, Mobile: 18/26px) */
+/* 4. H4 (Inter 700 | Desktop: 20/28px, Tablet: 19/27px, Mobile: 18/26px) */
 .text-h4,
 .h4 {
   font-family: var(--font-sans), system-ui, sans-serif;
@@ -375,7 +375,7 @@
   }
 }
 
-/* 5. Body Large (DM Sans 400 | Desktop: 18/28px, Tablet: 17/27px, Mobile: 16/25px) */
+/* 5. Body Large (Inter 400 | Desktop: 18/28px, Tablet: 17/27px, Mobile: 16/25px) */
 .text-body-large,
 .body-large {
   font-family: var(--font-sans), system-ui, sans-serif;
@@ -399,7 +399,7 @@
   }
 }
 
-/* 6. Body Normal (DM Sans 400 | Desktop: 16/26px, Tablet: 16/26px, Mobile: 16/26px) */
+/* 6. Body Normal (Inter 400 | Desktop: 16/26px, Tablet: 16/26px, Mobile: 16/26px) */
 .text-body-normal,
 .body-normal {
   font-family: var(--font-sans), system-ui, sans-serif;
@@ -409,7 +409,7 @@
   line-height: 26px;
 }
 
-/* 7. Body Small (DM Sans 400–600 | Desktop: 14/21px, Tablet: 14/21px, Mobile: 14/21px) */
+/* 7. Body Small (Inter 400–600 | Desktop: 14/21px, Tablet: 14/21px, Mobile: 14/21px) */
 /* Used for metadata, helper text, and short legal notes */
 .text-body-small,
 .body-small {

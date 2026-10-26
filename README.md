@@ -16,8 +16,6 @@ npm run build && npm start
 | Path | What |
 | --- | --- |
 | `app/globals.css` | **All styling.** Starts with the shared Trust & Clarity typography system (same `globals.css` as ESA Letter Colorado, with New York brand colors `#0F75BC` / `#429ED7`), followed by component classes (layout and color only). No inline styles. |
-
-**Typography:** use only the seven named classes in markup: `text-h1`, `text-h2`, `text-h3`, `text-h4`, `text-body-large`, `text-body-normal`, `text-body-small` (+ `text-body-small-semibold`). Plain `h1`–`h4` and `p` elements get their style from the base layer. Never set font sizes in component CSS; the minimum size is 14px.
 | `lib/site.ts` | Site config, primary nav (spec 3.1), footer (3.2), pricing, contact. Values marked `CONFIRM` are placeholders. |
 | `lib/content/*.ts` | Page data for every URL: H1, meta title/description, robots (I/F, NI/F), schema, body sections, FAQs, related links. |
 | `lib/content/registry.ts` | Lookups, hub→spoke mapping, breadcrumbs, sitemap source. |
@@ -25,6 +23,8 @@ npm run build && npm start
 | `components/layout/` | Header, footer, breadcrumbs, sticky mobile CTA. |
 | `components/modules/` | Reusable modules M1–M14 (Hero, TrustBar, StepProcess, CtaBand, FaqAccordion, ChildGrid, LatestPosts, RelatedPages, Callout, ComparisonTable, ReviewerBox, SampleLetter, PricingBlock, CityInfoPanel) plus the contact form. Every "Get Your ESA Letter" CTA opens the evaluation survey (`site.applyHref` in `lib/site.ts`, currently https://survey.myesatherapist.com/). |
 | `components/templates/` | Page templates T2–T11. Home (T1) is `app/page.tsx`. |
+
+**Typography:** headings use Merriweather and body text uses Inter (self-hosted in `app/fonts/`). Use only the seven named classes in markup: `text-h1`, `text-h2`, `text-h3`, `text-h4`, `text-body-large`, `text-body-normal`, `text-body-small` (+ `text-body-small-semibold`). Plain `h1`–`h4` and `p` elements get their style from the base layer. Never set font sizes in component CSS; the minimum size is 14px.
 
 ## Routes
 
