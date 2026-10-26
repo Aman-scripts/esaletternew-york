@@ -132,6 +132,8 @@ export type BlogPost = PageBase & {
   sections: ContentSection[];
   /** Required contextual link into the matching silo */
   siloLink: string;
+  /** Featured blog image */
+  image?: string;
 };
 
 export type LegalPage = PageBase & {

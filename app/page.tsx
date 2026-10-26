@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, BadgeCheck, Building2, Check, HeartHandshake, Lock, Scale, Stethoscope, Wallet } from "lucide-react";
 import { homePage, cityPages, conditionPages } from "@/lib/content/registry";
 import { pageMetadata, breadcrumbSchema } from "@/lib/seo";
@@ -64,6 +65,18 @@ export default function HomePage() {
           <>
             <strong>Money-back guarantee:</strong> full refund if you don&rsquo;t qualify.
           </>
+        }
+        aside={
+          <div className="hero__image-wrap">
+            <Image
+              src="/images/ny_esa_hero.jpg"
+              alt="New York pet owner with emotional support dog in a cozy NYC apartment"
+              width={600}
+              height={450}
+              priority
+              className="hero__image"
+            />
+          </div>
         }
       />
       <TrustBar />
@@ -192,25 +205,36 @@ export default function HomePage() {
 
       {/* 9. Why choose us */}
       <section className="section section--tint">
-        <div className="container">
-          <SectionHead eyebrow="Why choose us" title="A legitimate evaluation, done right" center />
-          <div className="grid grid--2">
-            {whyUs.map(({ icon: Icon, title, text }) => (
-              <div key={title} className="feature">
-                <span className="feature__icon">
-                  <Icon aria-hidden="true" />
-                </span>
-                <div>
-                  <h3 className="feature__title text-h3">{title}</h3>
-                  <p className="feature__text">{text}</p>
+        <div className="container split">
+          <div>
+            <SectionHead eyebrow="Why choose us" title="A legitimate evaluation, done right" />
+            <div className="grid grid--2" style={{ gap: "20px" }}>
+              {whyUs.map(({ icon: Icon, title, text }) => (
+                <div key={title} className="feature">
+                  <span className="feature__icon">
+                    <Icon aria-hidden="true" />
+                  </span>
+                  <div>
+                    <h3 className="feature__title text-h3">{title}</h3>
+                    <p className="feature__text">{text}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div style={{ marginTop: "24px" }}>
+              <Link href="/about-our-therapists/" className="text-link">
+                About our providers <ArrowRight className="btn__icon" aria-hidden="true" />
+              </Link>
+            </div>
           </div>
-          <div className="center-actions">
-            <Link href="/about-our-therapists/" className="text-link">
-              About our providers <ArrowRight className="btn__icon" aria-hidden="true" />
-            </Link>
+          <div className="section__visual-wrap">
+            <Image
+              src="/images/section_telehealth_clinician.jpg"
+              alt="Licensed New York mental health clinician conducting a private telehealth evaluation"
+              width={540}
+              height={405}
+              className="section__visual-img"
+            />
           </div>
         </div>
       </section>
@@ -267,18 +291,27 @@ export default function HomePage() {
               title="Real feedback from New Yorkers"
               lead="We only publish genuine reviews from customers who completed an evaluation, and never invent ratings or statistics."
             />
+            <ul className="hero__checks" style={{ margin: "20px 0 28px" }}>
+              {["Every review comes from a completed evaluation", "Positive and negative feedback published", "No health details shared publicly"].map((t) => (
+                <li key={t} className="text-body-large">
+                  <Check className="check-icon" aria-hidden="true" />
+                  {t}
+                </li>
+              ))}
+            </ul>
             <ButtonLink href="/reviews/" variant="outline">
               Read reviews
             </ButtonLink>
           </div>
-          <ul className="hero__checks">
-            {["Every review comes from a completed evaluation", "Positive and negative feedback published", "No health details shared publicly"].map((t) => (
-              <li key={t} className="text-body-large">
-                <Check className="check-icon" aria-hidden="true" />
-                {t}
-              </li>
-            ))}
-          </ul>
+          <div className="section__visual-wrap">
+            <Image
+              src="/images/section_brooklyn_housing.jpg"
+              alt="Happy pet owner on a classic New York apartment stoop with their emotional support dog"
+              width={540}
+              height={405}
+              className="section__visual-img"
+            />
+          </div>
         </div>
       </section>
 

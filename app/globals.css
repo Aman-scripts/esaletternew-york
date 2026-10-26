@@ -1670,11 +1670,22 @@ a.card:hover .card__more svg {
 }
 
 .post-card__media {
+  position: relative;
   display: grid;
   place-items: center;
   aspect-ratio: 16 / 9;
   background: linear-gradient(135deg, var(--brand-600), var(--brand-400));
   color: rgba(255, 255, 255, 0.92);
+  overflow: hidden;
+}
+
+.post-card__img {
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.post-card:hover .post-card__img {
+  transform: scale(1.05);
 }
 
 .post-card__media svg {
@@ -2027,11 +2038,17 @@ a.card:hover .card__more svg {
   overflow-x: auto;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.table-wrap::-webkit-scrollbar {
+  display: none;
 }
 
 .table {
   width: 100%;
-  min-width: 520px;
   border-collapse: collapse;
 }
 
@@ -2043,10 +2060,18 @@ a.card:hover .card__more svg {
 
 .table th,
 .table td {
-  padding: 14px 16px;
+  padding: 12px 14px;
   text-align: left;
   vertical-align: top;
   border-bottom: 1px solid var(--line);
+}
+
+@media (max-width: 640px) {
+  .table th,
+  .table td {
+    padding: 10px 12px;
+    font-size: 0.875rem;
+  }
 }
 
 .table thead th {
@@ -2823,3 +2848,53 @@ a.card:hover .card__more svg {
     transition: none !important;
   }
 }
+
+/* ---------- Hero Image Visual ---------- */
+.hero__image-wrap {
+  width: 100%;
+  max-width: 520px;
+  margin: 24px auto 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px -10px rgba(12, 35, 64, 0.16), 0 0 0 1px rgba(15, 117, 188, 0.1);
+  background: #ffffff;
+}
+
+@media (min-width: 1024px) {
+  .hero__image-wrap {
+    margin: 0 auto;
+  }
+}
+
+.hero__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* ---------- Section Visuals ---------- */
+.section__visual-wrap {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px -10px rgba(12, 35, 64, 0.12), 0 0 0 1px rgba(15, 117, 188, 0.08);
+  background: #ffffff;
+}
+
+.section__visual-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+}
+
+.section__visual-wrap:hover .section__visual-img {
+  transform: scale(1.02);
+}
+

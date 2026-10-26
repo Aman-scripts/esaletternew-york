@@ -95,6 +95,7 @@ type PostInput = {
   published: string;
   excerpt: string;
   sections: ContentSection[];
+  image?: string;
 };
 
 function post(p: PostInput): BlogPost {
@@ -120,6 +121,7 @@ function post(p: PostInput): BlogPost {
     excerpt: p.excerpt,
     sections: p.sections,
     siloLink: p.siloLink,
+    image: p.image,
   };
 }
 
@@ -133,6 +135,7 @@ export const blogPosts: BlogPost[] = [
     category: "co-op-condo-rental-guides",
     siloLink: "/rights/co-op-and-condo-esa-rules/",
     published: "2026-10-20",
+    image: "/images/blogs/blog_coop_board.jpg",
     excerpt: "Board packages are detailed. Here is how to add an ESA accommodation request without slowing your approval.",
     sections: [
       {
@@ -160,6 +163,7 @@ export const blogPosts: BlogPost[] = [
     category: "co-op-condo-rental-guides",
     siloLink: "/rights/no-pet-buildings/",
     published: "2026-10-18",
+    image: "/images/blogs/blog_talk_landlord.jpg",
     excerpt: "A calm, clear conversation and a written follow-up make most ESA requests go smoothly.",
     sections: [
       { heading: "Before you ask", list: ["Have your ESA letter ready", "Know your lease terms", "Plan to put the request in writing"] },
@@ -182,6 +186,7 @@ export const blogPosts: BlogPost[] = [
     category: "co-op-condo-rental-guides",
     siloLink: "/rights/landlord-denials/",
     published: "2026-10-16",
+    image: "/images/blogs/blog_landlord_questions.jpg",
     excerpt: "Landlords can verify your need, but there are clear limits on what they can demand.",
     sections: [
       { heading: "Reasonable documentation", list: ["A letter from a licensed professional", "The provider's license details for verification", "Basic information about the animal"] },
@@ -198,6 +203,7 @@ export const blogPosts: BlogPost[] = [
     category: "co-op-condo-rental-guides",
     siloLink: "/rights/landlord-denials/",
     published: "2026-10-14",
+    image: "/images/blogs/blog_housing_complaint.jpg",
     excerpt: "Three agencies can take ESA housing complaints in New York. Here is how to choose and prepare.",
     sections: [
       {

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { BookOpen } from "lucide-react";
 import type { BlogPost } from "@/lib/content/types";
 import { getCategory } from "@/lib/content/registry";
@@ -10,7 +11,17 @@ export function PostCard({ post, featured = false }: { post: BlogPost; featured?
   return (
     <Link href={post.path} className={featured ? "post-card post-card--featured" : "post-card"}>
       <div className="post-card__media" aria-hidden="true">
-        <BookOpen />
+        {post.image ? (
+          <Image
+            src={post.image}
+            alt={post.h1}
+            fill
+            sizes="(min-width: 1024px) 300px, (min-width: 768px) 50vw, 100vw"
+            className="post-card__img"
+          />
+        ) : (
+          <BookOpen />
+        )}
       </div>
       <div className="post-card__body">
         {category && <span className="post-card__cat text-body-small-semibold">{category.name}</span>}
