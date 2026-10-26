@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
@@ -9,13 +9,14 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { StickyCta } from "@/components/layout/StickyCta";
 import { JsonLd } from "@/components/common/JsonLd";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
-const jakarta = Plus_Jakarta_Sans({
+/** Typography system: DM Serif Display (H1-H3) + DM Sans (H4, body, UI). See app/globals.css section 2. */
+const dmSerif = DM_Serif_Display({
   subsets: ["latin"],
-  variable: "--font-heading",
-  weight: ["600", "700", "800"],
+  weight: "400",
+  variable: "--font-serif",
   display: "swap",
 });
+const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 
 /**
  * Every page is static content. 'navigation' keeps it that way and makes unknown dynamic
@@ -37,7 +38,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-US" className={`${inter.variable} ${jakarta.variable}`}>
+    <html lang="en-US" className={`${dmSerif.variable} ${dmSans.variable}`}>
       <body>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <a href="#main" className="skip-link">
