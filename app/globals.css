@@ -1315,6 +1315,33 @@ img {
   color: var(--brand-600);
 }
 
+/* Inner-page (compact) hero: centered text block, no empty right side */
+.hero--compact {
+  text-align: center;
+}
+
+.hero--compact .hero__title,
+.hero--compact .hero__lead,
+.hero--compact .container--narrow {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.hero--compact .hero__lead {
+  max-width: 720px;
+}
+
+.hero--compact .breadcrumbs__list,
+.hero--compact .hero__actions,
+.hero--compact .hero__meta,
+.hero--compact .chip-list {
+  justify-content: center;
+}
+
+.hero--compact .pillar-link {
+  justify-content: center;
+}
+
 /* ---------- 9. Trust bar (M2) ---------- */
 .trust-bar {
   background: #fff;

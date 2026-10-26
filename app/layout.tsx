@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
-import { DM_Sans, DM_Serif_Display } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
@@ -9,14 +9,24 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { StickyCta } from "@/components/layout/StickyCta";
 import { JsonLd } from "@/components/common/JsonLd";
 
-/** Typography system: DM Serif Display (H1-H3) + DM Sans (H4, body, UI). See app/globals.css section 2. */
-const dmSerif = DM_Serif_Display({
-  subsets: ["latin"],
+/**
+ * Typography system: DM Serif Display (H1-H3) + DM Sans (H4, body, UI), self-hosted like
+ * ESA Letter Colorado so fonts load even where Google Fonts is blocked. See app/globals.css.
+ */
+const dmSerif = localFont({
+  src: "./fonts/dm-serif-display.woff2",
   weight: "400",
+  style: "normal",
   variable: "--font-serif",
   display: "swap",
 });
-const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const dmSans = localFont({
+  src: "./fonts/dm-sans.woff2",
+  weight: "400 700",
+  style: "normal",
+  variable: "--font-sans",
+  display: "swap",
+});
 
 /**
  * Every page is static content. 'navigation' keeps it that way and makes unknown dynamic
