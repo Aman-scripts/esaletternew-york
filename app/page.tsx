@@ -9,7 +9,6 @@ import { ButtonLink } from "@/components/common/ButtonLink";
 import { Hero } from "@/components/modules/Hero";
 import { TrustBar } from "@/components/modules/TrustBar";
 import { StepProcess } from "@/components/modules/StepProcess";
-import { ApplicationForm } from "@/components/modules/ApplicationForm";
 import { ComparisonTable } from "@/components/modules/ComparisonTable";
 import { PricingBlock } from "@/components/modules/PricingBlock";
 import { CtaBand } from "@/components/modules/CtaBand";
@@ -50,7 +49,7 @@ export default function HomePage() {
     <>
       <JsonLd data={breadcrumbSchema([{ label: "Home", href: "/" }])} />
 
-      {/* 1-2. Hero (full) + #appForm */}
+      {/* 1. Hero (full, centered). CTAs open the evaluation survey (site.applyHref) */}
       <Hero
         variant="full"
         eyebrow="Licensed New York providers"
@@ -65,13 +64,6 @@ export default function HomePage() {
           <>
             <strong>Money-back guarantee:</strong> full refund if you don&rsquo;t qualify.
           </>
-        }
-        aside={
-          <div id="appForm" className="apply apply__card">
-            <p className="apply__title text-h3">Start your evaluation</p>
-            <p className="apply__sub">Takes about 2 minutes. No payment until you book.</p>
-            <ApplicationForm />
-          </div>
         }
       />
       <TrustBar />

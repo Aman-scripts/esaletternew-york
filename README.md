@@ -23,14 +23,14 @@ npm run build && npm start
 | `lib/content/registry.ts` | Lookups, hub→spoke mapping, breadcrumbs, sitemap source. |
 | `lib/seo.ts` | Metadata builder (robots, canonical, OG) and JSON-LD schema builders. |
 | `components/layout/` | Header, footer, breadcrumbs, sticky mobile CTA. |
-| `components/modules/` | Reusable modules M1–M14 (Hero, TrustBar, StepProcess, CtaBand, FaqAccordion, ChildGrid, LatestPosts, RelatedPages, Callout, ComparisonTable, ReviewerBox, SampleLetter, PricingBlock, CityInfoPanel) plus the #appForm form. |
+| `components/modules/` | Reusable modules M1–M14 (Hero, TrustBar, StepProcess, CtaBand, FaqAccordion, ChildGrid, LatestPosts, RelatedPages, Callout, ComparisonTable, ReviewerBox, SampleLetter, PricingBlock, CityInfoPanel) plus the contact form. Every "Get Your ESA Letter" CTA opens the evaluation survey (`site.applyHref` in `lib/site.ts`, currently https://survey.myesatherapist.com/). |
 | `components/templates/` | Page templates T2–T11. Home (T1) is `app/page.tsx`. |
 
 ## Routes
 
 | URL | Template | File |
 | --- | --- | --- |
-| `/` | T1 | `app/page.tsx` (contains `#appForm`) |
+| `/` | T1 | `app/page.tsx` |
 | `/{core, support, legal}/` | T2 / T10 / T11 | `app/[slug]/page.tsx` |
 | `/rights/`, `/conditions/`, `/locations/` | T3 | `app/<silo>/page.tsx` |
 | `/rights/*`, `/conditions/*` | T4 / T5 | `app/<silo>/[slug]/page.tsx` |
@@ -53,4 +53,4 @@ npm run build && npm start
 - Confirm pricing, support email and hours in `lib/site.ts`.
 - Have counsel review legal citations, especially the HUD 2026 memo page and bill S9086.
 - Add real provider profiles (`/about-our-therapists/`) and real reviews (`/reviews/`).
-- Connect `app/api/apply/route.ts` and `app/api/contact/route.ts` to the secure intake system and support inbox.
+- Connect `app/api/contact/route.ts` to the support inbox.

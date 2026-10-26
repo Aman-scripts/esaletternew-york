@@ -23,7 +23,7 @@ export function BlogHubTemplate({ pageNumber = 1 }: { pageNumber?: number }) {
   return (
     <>
       <JsonLd data={collectionSchema(blogHub.h1, blogHub.path)} />
-      <section className="hero hero--compact">
+      <section className="hero hero--compact hero--center">
         <Breadcrumbs items={crumbsFor(blogHub)} />
         <div className="container">
           <h1 className="hero__title text-h1">

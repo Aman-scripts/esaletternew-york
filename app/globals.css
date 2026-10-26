@@ -1315,31 +1315,36 @@ img {
   color: var(--brand-600);
 }
 
-/* Inner-page (compact) hero: centered text block, no empty right side */
-.hero--compact {
+/* Centered hero (every hero without a side panel): no empty space on the right */
+.hero--center {
   text-align: center;
 }
 
-.hero--compact .hero__title,
-.hero--compact .hero__lead,
-.hero--compact .container--narrow {
+.hero--center .hero__title,
+.hero--center .hero__lead,
+.hero--center .container--narrow {
   max-width: 900px;
   margin-inline: auto;
 }
 
-.hero--compact .hero__lead {
+.hero--center .hero__lead {
   max-width: 720px;
 }
 
-.hero--compact .breadcrumbs__list,
-.hero--compact .hero__actions,
-.hero--compact .hero__meta,
-.hero--compact .chip-list {
+.hero--center .breadcrumbs__list,
+.hero--center .hero__actions,
+.hero--center .hero__meta,
+.hero--center .chip-list,
+.hero--center .pillar-link {
   justify-content: center;
 }
 
-.hero--compact .pillar-link {
-  justify-content: center;
+/* Checklist stays left-aligned as a block, centered on the page */
+.hero--center .hero__checks {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  text-align: left;
 }
 
 /* ---------- 9. Trust bar (M2) ---------- */
@@ -2341,11 +2346,7 @@ a.card:hover .card__more svg {
   color: var(--ink-900);
 }
 
-/* ---------- 23. Application form (#appForm) ---------- */
-.apply {
-  scroll-margin-top: calc(var(--header-h) + 16px);
-}
-
+/* ---------- 23. Forms (contact) ---------- */
 .apply__card {
   padding: 28px 22px;
   background: #fff;

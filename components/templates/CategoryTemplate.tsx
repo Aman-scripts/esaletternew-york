@@ -21,7 +21,7 @@ export function CategoryTemplate({ category, pageNumber = 1 }: { category: BlogC
   return (
     <>
       <JsonLd data={collectionSchema(category.name, category.path)} />
-      <section className="hero hero--compact">
+      <section className="hero hero--compact hero--center">
         <Breadcrumbs
           items={[
             { label: blogHub.label, href: blogHub.path },

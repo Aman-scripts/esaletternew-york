@@ -24,7 +24,7 @@ const howItWorksSteps = [
   { title: "Receive", text: "If you qualify, receive your signed ESA letter as a PDF, often within 24 hours." },
 ];
 
-/** T10 Support pages: flexible layouts that link back to the Home #appForm */
+/** T10 Support pages: flexible layouts that link to the evaluation survey (site.applyHref) */
 export function SupportTemplate({ page }: { page: ArticlePage }) {
   const crumbs = <Breadcrumbs items={crumbsFor(page)} />;
   const isContact = page.path === "/contact/";

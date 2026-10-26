@@ -6,7 +6,7 @@ type Props = {
   text?: string;
 };
 
-/** M4 CTA band -> /#appForm. "inline" repeats mid-page; "final" closes a page. */
+/** M4 CTA band -> evaluation survey (site.applyHref). "inline" repeats mid-page; "final" closes a page. */
 export function CtaBand({
   variant = "inline",
   title = "Ready to see if you qualify?",

@@ -66,7 +66,7 @@ export function Hero({
   );
 
   return (
-    <section className={`hero hero--${variant}`}>
+    <section className={`hero hero--${variant}${aside ? "" : " hero--center"}`}>
       {before}
       <div className="container">
         {aside ? (

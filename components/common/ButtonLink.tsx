@@ -15,7 +15,7 @@ type Props = {
   className?: string;
 };
 
-/** Shared link-styled button. Defaults to the primary "Get Your ESA Letter" CTA -> /#appForm */
+/** Shared link-styled button. Defaults to the primary "Get Your ESA Letter" CTA -> evaluation survey */
 export function ButtonLink({
   href = site.applyHref,
   children = "Get Your ESA Letter",
@@ -35,10 +35,25 @@ export function ButtonLink({
     .filter(Boolean)
     .join(" ");
 
-  return (
-    <Link href={href} className={classes}>
+  const content = (
+    <>
       {children}
       {arrow && <ArrowRight className="btn__icon" aria-hidden="true" />}
+    </>
+  );
+
+  // External destinations (the evaluation survey) use a plain anchor
+  if (/^https?:\/\//.test(href)) {
+    return (
+      <a href={href} className={classes}>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} className={classes}>
+      {content}
     </Link>
   );
 }
