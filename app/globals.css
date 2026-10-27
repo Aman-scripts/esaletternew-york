@@ -862,8 +862,20 @@ img {
 
 @media (min-width: 1024px) {
   .split {
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 64px;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 48px;
+  }
+
+  .split .section-head__title {
+    font-size: clamp(30px, 2.5vw, 36px);
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .split .section-head__title {
+    white-space: nowrap;
   }
 }
 
@@ -2434,8 +2446,8 @@ a.card:hover .card__more svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding: 16px 18px;
+  gap: 10px;
+  padding: 14px 16px;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
@@ -2457,9 +2469,20 @@ a.card:hover .card__more svg {
   color: var(--brand-600);
 }
 
-.tile__title {
+.tile .tile__title {
   margin: 0;
   color: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  .tile .tile__title {
+    font-size: 19px;
+    line-height: 26px;
+    white-space: nowrap;
+  }
 }
 
 /* ---------- 14. Blog cards (M7) ---------- */
