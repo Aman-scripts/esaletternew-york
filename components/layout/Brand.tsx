@@ -10,6 +10,7 @@ export function Brand({ priority = false }: { priority?: boolean }) {
         alt="ESA Letter New York"
         width={48}
         height={50}
+        quality={95}
         className="brand__logo"
         priority={priority}
       />

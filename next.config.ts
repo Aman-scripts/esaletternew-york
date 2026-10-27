@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 31536000,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    qualities: [75, 95],
+    qualities: [90, 95],
   },
   // Spec 7.3 / 10.1: every URL ends with a trailing slash
   trailingSlash: true,
