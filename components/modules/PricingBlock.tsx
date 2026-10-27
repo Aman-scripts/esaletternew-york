@@ -34,10 +34,12 @@ export function PricingBlock() {
             </li>
           ))}
         </ul>
-        <ButtonLink block />
-        <p className="pricing__note text-body-small">
-          See our <Link href="/refund-policy/">Refund &amp; Money-Back Policy</Link>.
-        </p>
+        <div className="pricing__footer">
+          <ButtonLink block />
+          <p className="pricing__note text-body-small">
+            See our <Link href="/refund-policy/">Refund &amp; Money-Back Policy</Link>.
+          </p>
+        </div>
       </div>
       <div className="pricing__card">
         <h3 className="pricing__name text-h3">Annual Renewal</h3>
@@ -52,9 +54,14 @@ export function PricingBlock() {
             </li>
           ))}
         </ul>
-        <ButtonLink href="/renewal/" variant="outline" block>
-          About renewal
-        </ButtonLink>
+        <div className="pricing__footer">
+          <ButtonLink href="/renewal/" variant="outline" block>
+            About renewal
+          </ButtonLink>
+          <p className="pricing__note pricing__note--spacer text-body-small" aria-hidden="true">
+            &nbsp;
+          </p>
+        </div>
       </div>
     </div>
   );
