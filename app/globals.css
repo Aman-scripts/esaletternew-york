@@ -2270,22 +2270,11 @@ a.card:hover .card__more svg {
 
 .pricing__price {
   margin: 0;
-  font-family: var(--font-serif), Georgia, serif;
-  font-size: 44px;
-  font-weight: 400;
-  line-height: 52px;
-  color: var(--ink-900);
-}
-
-@media (min-width: 1024px) {
-  .pricing__price {
-    font-size: 56px;
-    line-height: 60px;
-  }
 }
 
 .pricing__price small {
   color: var(--ink-500);
+  font-weight: 400;
 }
 
 .pricing__list {

@@ -23,9 +23,9 @@ export function PricingBlock() {
     <div className="pricing">
       <div className="pricing__card pricing__card--featured">
         <h3 className="pricing__name text-h3">ESA Housing Letter</h3>
-        <p className="pricing__price">
+        <h4 className="pricing__price text-h4">
           {formatPrice(site.pricing.letter)} <small className="pricing__period text-body-normal">one-time</small>
-        </p>
+        </h4>
         <ul className="pricing__list">
           {letterIncludes.map((item) => (
             <li key={item}>
@@ -41,9 +41,9 @@ export function PricingBlock() {
       </div>
       <div className="pricing__card">
         <h3 className="pricing__name text-h3">Annual Renewal</h3>
-        <p className="pricing__price">
+        <h4 className="pricing__price text-h4">
           {formatPrice(site.pricing.renewal)} <small className="pricing__period text-body-normal">per year</small>
-        </p>
+        </h4>
         <ul className="pricing__list">
           {renewalIncludes.map((item) => (
             <li key={item}>
