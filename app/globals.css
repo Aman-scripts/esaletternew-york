@@ -1514,15 +1514,6 @@ img {
   cursor: pointer;
 }
 
-.faq__title {
-  margin: 0;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 26px;
-  color: inherit;
-}
-
 .faq__q::-webkit-details-marker {
   display: none;
 }
