@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ShieldCheck } from "lucide-react";
+import { ShieldCheck, CheckCircle2, Calendar, ArrowRight } from "lucide-react";
 import { formatDate, site } from "@/lib/site";
 
 type Props = {
@@ -12,25 +12,52 @@ type Props = {
 /** M11 Author / reviewer box: name, credentials, license state, "Medically reviewed by" + date */
 export function ReviewerBox({ updated, kind = "content" }: Props) {
   const { name, credentials, licenseState, licenseNumber } = site.reviewer;
+  const isMedical = kind === "medical";
+
   return (
-    <aside className="reviewer-box" aria-label="Page review">
-      <span className="reviewer-box__icon" aria-hidden="true">
-        <ShieldCheck />
-      </span>
-      <div>
-        <p className="reviewer-box__label text-body-small-semibold">
-          {kind === "medical" ? "Medically reviewed by" : "Reviewed by"}
+    <aside className="reviewer-box" aria-label="Clinical and editorial review">
+      <div className="reviewer-box__icon-wrap" aria-hidden="true">
+        <ShieldCheck className="reviewer-box__shield" />
+      </div>
+
+      <div className="reviewer-box__content">
+        <div className="reviewer-box__header">
+          <span className="reviewer-box__badge">
+            <CheckCircle2 className="reviewer-box__badge-icon" aria-hidden="true" />
+            {isMedical ? "Clinically Reviewed" : "Fact-Checked & Reviewed"}
+          </span>
+          <span className="reviewer-box__jurisdiction">New York State</span>
+        </div>
+
+        <h3 className="reviewer-box__name">{name}</h3>
+
+        <p className="reviewer-box__credentials">
+          <span>{credentials}</span>
+          <span className="reviewer-box__sep" aria-hidden="true">&middot;</span>
+          <span>License State: {licenseState}</span>
+          {licenseNumber && (
+            <>
+              <span className="reviewer-box__sep" aria-hidden="true">&middot;</span>
+              <span>License #{licenseNumber}</span>
+            </>
+          )}
         </p>
-        <p className="reviewer-box__name">{name}</p>
-        <p className="reviewer-box__meta text-body-small">
-          {credentials}. License state: {licenseState}
-          {licenseNumber && `, license #${licenseNumber}`}.
-        </p>
-        <p className="reviewer-box__meta text-body-small">
-          Last reviewed <time dateTime={updated}>{formatDate(updated)}</time> &middot;{" "}
-          <Link href="/about-our-therapists/">How our providers are vetted</Link>
-        </p>
+
+        <div className="reviewer-box__footer">
+          <span className="reviewer-box__date">
+            <Calendar className="reviewer-box__meta-icon" aria-hidden="true" />
+            <span>
+              Last reviewed <time dateTime={updated}>{formatDate(updated)}</time>
+            </span>
+          </span>
+
+          <Link href="/about-our-therapists/" className="reviewer-box__vetting-link">
+            <span>How our providers are vetted</span>
+            <ArrowRight className="reviewer-box__arrow" aria-hidden="true" />
+          </Link>
+        </div>
       </div>
     </aside>
   );
 }
+

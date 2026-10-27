@@ -1617,49 +1617,181 @@ img {
 /* M11 Author / reviewer box */
 .reviewer-box {
   display: flex;
-  gap: 16px;
+  align-items: flex-start;
+  gap: 18px;
   margin: 40px 0 0;
-  padding: 20px 22px;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  background: linear-gradient(135deg, rgba(242, 248, 253, 0.85) 0%, #ffffff 100%);
+  border: 1px solid rgba(15, 117, 188, 0.2);
+  border-left: 4px solid var(--brand-600);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px -2px rgba(12, 35, 64, 0.05);
+  position: relative;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.reviewer-box__icon {
+.reviewer-box:hover {
+  border-color: rgba(15, 117, 188, 0.35);
+  border-left-color: var(--brand-700);
+  box-shadow: 0 6px 20px -2px rgba(12, 35, 64, 0.08);
+}
+
+.reviewer-box__icon-wrap {
   display: grid;
   place-items: center;
   flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--brand-50);
-  color: var(--brand-600);
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--brand-600), var(--brand-700));
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(15, 117, 188, 0.22);
 }
 
-.reviewer-box__icon svg {
-  width: 22px;
-  height: 22px;
+.reviewer-box__shield {
+  width: 24px;
+  height: 24px;
 }
 
-.reviewer-box p {
-  margin: 0;
+.reviewer-box__content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
 }
 
-.reviewer-box__label {
-  color: var(--ink-500);
+.reviewer-box__header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.reviewer-box__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  background: var(--success-50);
+  border: 1px solid rgba(18, 128, 92, 0.25);
+  border-radius: 999px;
+  color: var(--success-600);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-size: 12px;
+  line-height: 1.2;
+}
+
+.reviewer-box__badge-icon {
+  width: 13px;
+  height: 13px;
+}
+
+.reviewer-box__jurisdiction {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--brand-600);
+  background: rgba(15, 117, 188, 0.08);
+  padding: 3px 8px;
+  border-radius: 999px;
+  line-height: 1.2;
 }
 
 .reviewer-box__name {
-  margin: 2px 0 4px !important;
+  margin: 2px 0 0;
+  font-size: 16px;
+  font-weight: 700;
   color: var(--ink-900);
-  font-weight: 600;
+  line-height: 1.35;
 }
 
-.reviewer-box__meta {
+.reviewer-box__credentials {
+  margin: 0;
+  color: var(--ink-700);
+  font-size: 13.5px;
+  line-height: 1.45;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.reviewer-box__sep {
+  color: var(--ink-300);
+  font-weight: bold;
+}
+
+.reviewer-box__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 6px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(219, 230, 241, 0.9);
+}
+
+.reviewer-box__date {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   color: var(--ink-500);
+  font-size: 12.5px;
+}
+
+.reviewer-box__meta-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--ink-400, #738a9c);
+}
+
+.reviewer-box__vetting-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--brand-600);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s, transform 0.15s;
+}
+
+.reviewer-box__vetting-link:hover {
+  color: var(--brand-700);
+  text-decoration: underline;
+}
+
+.reviewer-box__arrow {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+.reviewer-box__vetting-link:hover .reviewer-box__arrow {
+  transform: translateX(3px);
+}
+
+@media (max-width: 640px) {
+  .reviewer-box {
+    padding: 18px 18px;
+    gap: 14px;
+  }
+  .reviewer-box__icon-wrap {
+    width: 40px;
+    height: 40px;
+  }
+  .reviewer-box__shield {
+    width: 20px;
+    height: 20px;
+  }
+  .reviewer-box__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
 }
 
 /* ---------- 12. FAQ accordion (M5) ---------- */
