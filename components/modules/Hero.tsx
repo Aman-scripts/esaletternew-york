@@ -143,7 +143,7 @@ export function Hero({
                     fill
                     priority
                     quality={95}
-                    sizes="(max-width: 860px) 100vw, 540px"
+                    sizes="(max-width: 860px) 100vw, (max-width: 1280px) 60vw, 1080px"
                     className="hero-window-mockup__img"
                   />
                   <div className="hero-window-mockup__video-tag text-body-normal-semibold">

@@ -223,7 +223,7 @@ export default function HomePage() {
               width={540}
               height={405}
               quality={95}
-              sizes="(max-width: 768px) 100vw, 540px"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1080px"
               loading="lazy"
               className="section__visual-img"
             />
@@ -302,7 +302,7 @@ export default function HomePage() {
               width={540}
               height={405}
               quality={95}
-              sizes="(max-width: 768px) 100vw, 540px"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1080px"
               loading="lazy"
               className="section__visual-img"
             />

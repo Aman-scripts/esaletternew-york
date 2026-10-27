@@ -18,8 +18,8 @@ export function PostCard({ post, featured = false }: { post: BlogPost; featured?
             fill
             sizes={
               featured
-                ? "(min-width: 1024px) 650px, 100vw"
-                : "(min-width: 1200px) 400px, (min-width: 768px) 50vw, 100vw"
+                ? "(min-width: 1024px) 960px, 100vw"
+                : "(min-width: 1200px) 600px, (min-width: 768px) 50vw, 100vw"
             }
             quality={95}
             className="post-card__img"
