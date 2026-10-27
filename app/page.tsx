@@ -50,9 +50,9 @@ export default function HomePage() {
     <>
       <JsonLd data={breadcrumbSchema([{ label: "Home", href: "/" }])} />
 
-      {/* 1. Hero (full, centered). CTAs open the evaluation survey (site.applyHref) */}
+      {/* 1. Hero (showcase variant, Meetmind cloud showcase style). CTAs open the evaluation survey (site.applyHref) */}
       <Hero
-        variant="full"
+        variant="showcase"
         eyebrow="Licensed New York providers"
         title={homePage.h1}
         lead="Get a legitimate ESA letter for New York housing from a licensed mental health professional. Private online evaluation, letters often within 24 hours of your consultation."
@@ -65,21 +65,6 @@ export default function HomePage() {
           <>
             <strong>Money-back guarantee:</strong> full refund if you don&rsquo;t qualify.
           </>
-        }
-        aside={
-          <div className="hero__image-wrap">
-            <Image
-              src="/images/ny_esa_hero.webp"
-              alt="New York pet owner with emotional support dog in a cozy NYC apartment"
-              width={600}
-              height={450}
-              priority
-              quality={95}
-              fetchPriority="high"
-              sizes="(max-width: 768px) 100vw, 600px"
-              className="hero__image"
-            />
-          </div>
         }
       />
       <TrustBar />
