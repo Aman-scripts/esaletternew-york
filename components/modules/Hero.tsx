@@ -125,7 +125,7 @@ export function Hero({
                 <span className="hero-window-mockup__dot hero-window-mockup__dot--green" />
               </div>
               <div className="hero-window-mockup__title text-body-small">
-                telehealth.esaletternewyork.com &middot; Private Clinical Session
+                ESA Letter New York &middot; Private Clinical Session
               </div>
               <div className="hero-window-mockup__badge text-body-small-semibold">
                 <span className="hero-window-mockup__pulse" />
