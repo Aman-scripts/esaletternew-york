@@ -33,7 +33,7 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
       <div className="container">
         <header className="post-header container--narrow">
           {category && (
-            <Link href={category.path} className="eyebrow text-body-small-semibold">
+            <Link href={category.path} className="eyebrow text-body-large-semibold">
               {category.name}
             </Link>
           )}
@@ -76,7 +76,7 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
             <CtaBand />
             <Link href={post.siloLink} className="silo-link">
               <span>
-                <span className="silo-link__label text-body-small-semibold">Read the full guide</span>
+                <span className="silo-link__label text-body-normal-semibold">Read the full guide</span>
                 <span className="silo-link__title text-h4">{labelFor(post.siloLink)}</span>
                 {descriptionFor(post.siloLink) && <span className="card__text"> {descriptionFor(post.siloLink)}</span>}
               </span>

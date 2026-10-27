@@ -19,7 +19,7 @@ export function SiteSearch({ entries }: { entries: Entry[] }) {
 
   return (
     <div className="search-box" role="search">
-      <label className="field__label text-body-small-semibold" htmlFor="site-search">
+      <label className="field__label text-body-normal-semibold" htmlFor="site-search">
         Search our guides
       </label>
       <input

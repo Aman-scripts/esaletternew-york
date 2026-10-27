@@ -29,7 +29,7 @@ export function PostCard({ post, featured = false }: { post: BlogPost; featured?
         )}
       </div>
       <div className="post-card__body">
-        {category && <span className="post-card__cat text-body-small-semibold">{category.name}</span>}
+        {category && <span className="post-card__cat text-body-normal-semibold">{category.name}</span>}
         <Heading className={featured ? "post-card__title text-h2" : "post-card__title text-h3"}>{post.h1}</Heading>
         <p className="post-card__excerpt">{post.excerpt}</p>
         <time className="post-card__date text-body-small" dateTime={post.published}>

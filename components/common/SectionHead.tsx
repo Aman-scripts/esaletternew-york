@@ -9,7 +9,7 @@ type Props = {
 export function SectionHead({ eyebrow, title, lead, center = false, id }: Props) {
   return (
     <div className={center ? "section-head section-head--center" : "section-head"}>
-      {eyebrow && <span className="eyebrow text-body-small-semibold">{eyebrow}</span>}
+      {eyebrow && <span className="eyebrow text-body-large-semibold">{eyebrow}</span>}
       <h2 className="section-head__title text-h2" id={id}>
         {title}
       </h2>

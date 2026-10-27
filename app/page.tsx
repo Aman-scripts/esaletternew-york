@@ -169,17 +169,17 @@ export default function HomePage() {
           />
           <div className="grid grid--3">
             <div className="law-card">
-              <span className="law-card__tag text-body-small-semibold">Federal</span>
+              <span className="law-card__tag text-body-normal-semibold">Federal</span>
               <h3 className="law-card__title text-h3">Fair Housing Act</h3>
               <p className="law-card__text">Requires most housing providers nationwide to make reasonable accommodations for people with disabilities.</p>
             </div>
             <div className="law-card law-card--state">
-              <span className="law-card__tag text-body-small-semibold">New York State</span>
+              <span className="law-card__tag text-body-normal-semibold">New York State</span>
               <h3 className="law-card__title text-h3">NYS Human Rights Law</h3>
               <p className="law-card__text">Executive Law 296 protects renters statewide, enforced by the NYS Division of Human Rights.</p>
             </div>
             <div className="law-card law-card--city">
-              <span className="law-card__tag text-body-small-semibold">New York City</span>
+              <span className="law-card__tag text-body-normal-semibold">New York City</span>
               <h3 className="law-card__title text-h3">NYC Human Rights Law</h3>
               <p className="law-card__text">Admin Code 8-107 adds city protections, including a cooperative dialogue before any denial.</p>
             </div>

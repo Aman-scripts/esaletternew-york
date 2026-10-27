@@ -35,7 +35,7 @@ export function BlogHubTemplate({ pageNumber = 1 }: { pageNumber?: number }) {
             <ul className="chip-list">
               {blogCategories.map((c) => (
                 <li key={c.slug}>
-                  <Link href={c.path} className="chip text-body-small-semibold">
+                  <Link href={c.path} className="chip text-body-normal-semibold">
                     {c.name}
                   </Link>
                 </li>

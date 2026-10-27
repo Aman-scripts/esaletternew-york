@@ -14,12 +14,12 @@ export function CityInfoPanel({ name, city }: { name: string; city: CityInfo }) 
         </p>
         <dl>
           <div>
-            <dt className="text-body-small-semibold">Housing mix</dt>
+            <dt className="text-body-large-semibold">Housing mix</dt>
             <dd>{city.housingMix}</dd>
           </div>
           {city.facts.map((f) => (
             <div key={f.label}>
-              <dt className="text-body-small-semibold">{f.label}</dt>
+              <dt className="text-body-large-semibold">{f.label}</dt>
               <dd>{f.value}</dd>
             </div>
           ))}

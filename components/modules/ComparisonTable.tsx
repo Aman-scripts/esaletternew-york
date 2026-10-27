@@ -9,7 +9,7 @@ export function ComparisonTable({ caption, head, rows }: ComparisonTableData) {
         <thead>
           <tr>
             {head.map((h, i) => (
-              <th key={i} scope="col" className="text-body-small-semibold">
+              <th key={i} scope="col" className="text-body-normal-semibold">
                 {h}
               </th>
             ))}

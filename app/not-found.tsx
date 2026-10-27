@@ -38,7 +38,7 @@ export default function NotFound() {
         <ul className="chip-list notfound__links">
           {keyLinks.map((l) => (
             <li key={l.href}>
-              <Link href={l.href} className="chip text-body-small-semibold">
+              <Link href={l.href} className="chip text-body-normal-semibold">
                 {l.label}
               </Link>
             </li>

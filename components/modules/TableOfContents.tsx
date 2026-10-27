@@ -5,7 +5,7 @@ export function TableOfContents({ headings, inline = false }: { headings: string
   if (headings.length < 2) return null;
   return (
     <nav className={inline ? "toc toc--inline" : "toc"} aria-label="Table of contents">
-      <p className="toc__title text-body-small-semibold">On this page</p>
+      <p className="toc__title text-body-large-semibold">On this page</p>
       <ol className="toc__list">
         {headings.map((h) => (
           <li key={h}>

@@ -23,7 +23,7 @@ export function ChildGrid({ items, icon: Icon, columns = 3 }: Props) {
             )}
             <h3 className="card__title text-h3">{item.label}</h3>
             {item.description && <p className="card__text">{item.description}</p>}
-            <span className="card__more text-body-small-semibold">
+            <span className="card__more text-body-normal-semibold">
               Read guide <ArrowRight aria-hidden="true" />
             </span>
           </Link>

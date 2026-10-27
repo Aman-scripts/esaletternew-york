@@ -59,7 +59,7 @@ export function Hero({
 
         <div className="container hero--showcase__container">
           {/* Top Pill / Rating Badge */}
-          <div className="hero-pill-badge text-body-small-semibold">
+          <div className="hero-pill-badge text-body-normal-semibold">
             <span className="hero-pill-badge__stars">
               4.9/5 <Star className="hero-pill-badge__star-icon" aria-hidden="true" />
             </span>
@@ -108,7 +108,7 @@ export function Hero({
           {checks && (
             <ul className="hero__checks hero__checks--showcase" aria-label="Key protections">
               {checks.map((c) => (
-                <li key={c} className="text-body-small">
+                <li key={c} className="text-body-normal">
                   <CheckCircle2 className="hero__check-icon" aria-hidden="true" />
                   <span>{c}</span>
                 </li>
@@ -124,10 +124,10 @@ export function Hero({
                 <span className="hero-window-mockup__dot hero-window-mockup__dot--yellow" />
                 <span className="hero-window-mockup__dot hero-window-mockup__dot--green" />
               </div>
-              <div className="hero-window-mockup__title text-body-small">
+              <div className="hero-window-mockup__title text-body-normal">
                 ESA Letter New York &middot; Private Clinical Session
               </div>
-              <div className="hero-window-mockup__badge text-body-small-semibold">
+              <div className="hero-window-mockup__badge text-body-normal-semibold">
                 <span className="hero-window-mockup__pulse" />
                 <span>Live Evaluation</span>
               </div>
@@ -146,7 +146,7 @@ export function Hero({
                     sizes="(max-width: 860px) 100vw, 540px"
                     className="hero-window-mockup__img"
                   />
-                  <div className="hero-window-mockup__video-tag text-body-small-semibold">
+                  <div className="hero-window-mockup__video-tag text-body-normal-semibold">
                     <span>Patient &amp; Support Animal</span>
                   </div>
 
@@ -175,19 +175,19 @@ export function Hero({
 
               {/* Right Column: Live Clinical Intake & Evaluation Summary */}
               <div className="hero-window-mockup__summary">
-                <div className="hero-window-mockup__summary-status text-body-small-semibold">
+                <div className="hero-window-mockup__summary-status text-body-normal-semibold">
                   <span className="hero-window-mockup__summary-pulse" />
                   <span>Taking Evaluation Summary...</span>
                 </div>
 
                 <div className="hero-window-mockup__summary-header">
                   <p className="hero-window-mockup__summary-title text-h4">NY Housing Accommodation Intake</p>
-                  <p className="hero-window-mockup__summary-sub text-body-small">Clinical Review &amp; Recommendation</p>
+                  <p className="hero-window-mockup__summary-sub text-body-normal">Clinical Review &amp; Recommendation</p>
                 </div>
 
                 <div className="hero-window-mockup__summary-section">
-                  <p className="hero-window-mockup__section-title text-body-small-semibold">Key Assessment</p>
-                  <ul className="hero-window-mockup__list text-body-small">
+                  <p className="hero-window-mockup__section-title text-body-large-semibold">Key Assessment</p>
+                  <ul className="hero-window-mockup__list text-body-normal">
                     <li>1-on-1 telehealth evaluation with licensed NY clinician</li>
                     <li>Evaluated under Fair Housing Act &amp; NYS Human Rights Law</li>
                     <li>Private consultation &middot; no diagnosis shared with landlord</li>
@@ -195,15 +195,15 @@ export function Hero({
                 </div>
 
                 <div className="hero-window-mockup__summary-section">
-                  <p className="hero-window-mockup__section-title text-body-small-semibold">Clinical Decision</p>
-                  <ul className="hero-window-mockup__list text-body-small">
+                  <p className="hero-window-mockup__section-title text-body-large-semibold">Clinical Decision</p>
+                  <ul className="hero-window-mockup__list text-body-normal">
                     <li>Reasonable accommodation clinically supported</li>
                     <li>Exempt from pet deposits, pet fees &amp; monthly pet rent</li>
                   </ul>
                 </div>
 
                 <div className="hero-window-mockup__sync">
-                  <p className="hero-window-mockup__sync-label text-body-small">Delivering to Patient Portal &amp; Documentation...</p>
+                  <p className="hero-window-mockup__sync-label text-body-normal">Delivering to Patient Portal &amp; Documentation...</p>
                   <div className="hero-window-mockup__sync-icons" aria-hidden="true">
                     <div className="hero-window-mockup__sync-item" title="Official PDF Letter">
                       <FileText />
@@ -236,7 +236,7 @@ export function Hero({
   // 2. Default & compact variants (unchanged for all other pages)
   const body = (
     <div>
-      {eyebrow && <span className="eyebrow text-body-small-semibold">{eyebrow}</span>}
+      {eyebrow && <span className="eyebrow text-body-large-semibold">{eyebrow}</span>}
       <h1 className="hero__title text-h1">{title}</h1>
       {lead && <p className="hero__lead text-body-large">{lead}</p>}
       {checks && (
@@ -256,7 +256,7 @@ export function Hero({
       )}
       {guarantee && <p className="hero__guarantee">{guarantee}</p>}
       {!hideCta && (
-        <ul className="hero__meta text-body-small" aria-label="Trust badges">
+        <ul className="hero__meta text-body-normal" aria-label="Trust badges">
           <li className="hero__meta-item">
             <BadgeCheck aria-hidden="true" /> Licensed NY providers
           </li>
