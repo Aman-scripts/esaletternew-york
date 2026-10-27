@@ -393,7 +393,9 @@
 }
 
 /* 5. Body Large (Inter 400 | Desktop: 18/28px, Tablet: 17/27px, Mobile: 16/25px) */
+/* Used for sub-headings: hero/section leads and block labels (semibold variant) */
 .text-body-large,
+.text-body-large-semibold,
 .body-large {
   font-family: var(--font-sans), system-ui, sans-serif;
   font-weight: 400;
@@ -403,6 +405,7 @@
 }
 @media (min-width: 768px) {
   .text-body-large,
+  .text-body-large-semibold,
   .body-large {
     font-size: 17px;
     line-height: 27px;
@@ -410,14 +413,21 @@
 }
 @media (min-width: 1024px) {
   .text-body-large,
+  .text-body-large-semibold,
   .body-large {
     font-size: 18px;
     line-height: 28px;
   }
 }
 
+.text-body-large-semibold {
+  font-weight: 600;
+}
+
 /* 6. Body Normal (Inter 400 | Desktop: 16/26px, Tablet: 16/26px, Mobile: 16/26px) */
+/* Default for all body text, labels, badges, chips and links (semibold variant) */
 .text-body-normal,
+.text-body-normal-semibold,
 .body-normal {
   font-family: var(--font-sans), system-ui, sans-serif;
   font-weight: 400;
@@ -426,8 +436,12 @@
   line-height: 26px;
 }
 
+.text-body-normal-semibold {
+  font-weight: 600;
+}
+
 /* 7. Body Small (Inter 400–600 | Desktop: 14/21px, Tablet: 14/21px, Mobile: 14/21px) */
-/* Used for metadata, helper text, and short legal notes */
+/* Notes only (use rarely): fine print, dates, helper hints, guarantee and legal notes */
 .text-body-small,
 .body-small {
   font-family: var(--font-sans), system-ui, sans-serif;
@@ -2874,9 +2888,9 @@ a.card:hover .card__more svg {
   .table th,
   .table td {
     padding: 10px 12px;
-    /* Body Small */
-    font-size: 14px;
-    line-height: 21px;
+    /* Body Normal */
+    font-size: 16px;
+    line-height: 26px;
   }
 }
 
