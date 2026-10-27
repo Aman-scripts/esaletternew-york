@@ -19,6 +19,8 @@ import { ButtonLink } from "../common/ButtonLink";
 type Props = {
   variant?: "full" | "compact" | "showcase";
   title: string;
+  /** Showcase only: trailing part of the title rendered in the muted second tone */
+  titleAccent?: string;
   lead?: string;
   eyebrow?: string;
   checks?: string[];
@@ -35,6 +37,7 @@ type Props = {
 export function Hero({
   variant = "compact",
   title,
+  titleAccent,
   lead,
   eyebrow,
   checks,
@@ -45,6 +48,9 @@ export function Hero({
 }: Props) {
   // 1. Showcase variant: Centered cloud layout with macOS browser mockup (Home Page)
   if (variant === "showcase") {
+    const hasAccent = !!titleAccent && title.endsWith(titleAccent);
+    const titleBase = hasAccent ? title.slice(0, -titleAccent.length).trimEnd() : title;
+
     return (
       <section className="hero hero--showcase">
         {/* Soft atmospheric cloud glows */}
@@ -53,7 +59,7 @@ export function Hero({
 
         <div className="container hero--showcase__container">
           {/* Top Pill / Rating Badge */}
-          <div className="hero-pill-badge">
+          <div className="hero-pill-badge text-body-small-semibold">
             <span className="hero-pill-badge__stars">
               4.9/5 <Star className="hero-pill-badge__star-icon" aria-hidden="true" />
             </span>
@@ -64,20 +70,23 @@ export function Hero({
 
           {/* Heading with subtle curved arrow flourish */}
           <div className="hero-title-wrap">
-            <h1 className="hero__title hero__title--showcase text-h1">{title}</h1>
-            <svg
+            <h1 className="hero__title hero__title--showcase text-h1">
+              {titleBase}
+              {hasAccent && (
+                <>
+                  {" "}
+                  <span className="hero__title-accent">{titleAccent}</span>
+                </>
+              )}
+            </h1>
+            <Image
+              src="/esaletternewyork_arrow.svg"
+              alt=""
+              width={93}
+              height={93}
               className="hero-curved-arrow"
-              viewBox="0 0 50 50"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
               aria-hidden="true"
-            >
-              <path d="M 8 36 C 8 16, 28 8, 42 16" />
-              <path d="M 36 10 L 43 16 L 37 23" />
-            </svg>
+            />
           </div>
 
           {/* Lead description */}
@@ -93,7 +102,7 @@ export function Hero({
           )}
 
           {/* Money-back guarantee note */}
-          {guarantee && <p className="hero__guarantee hero__guarantee--showcase">{guarantee}</p>}
+          {guarantee && <p className="hero__guarantee hero__guarantee--showcase text-body-small">{guarantee}</p>}
 
           {/* Trust checks */}
           {checks && (
@@ -115,10 +124,10 @@ export function Hero({
                 <span className="hero-window-mockup__dot hero-window-mockup__dot--yellow" />
                 <span className="hero-window-mockup__dot hero-window-mockup__dot--green" />
               </div>
-              <div className="hero-window-mockup__title">
+              <div className="hero-window-mockup__title text-body-small">
                 telehealth.esaletternewyork.com &middot; Private Clinical Session
               </div>
-              <div className="hero-window-mockup__badge">
+              <div className="hero-window-mockup__badge text-body-small-semibold">
                 <span className="hero-window-mockup__pulse" />
                 <span>Live Evaluation</span>
               </div>
@@ -137,7 +146,7 @@ export function Hero({
                     sizes="(max-width: 860px) 100vw, 540px"
                     className="hero-window-mockup__img"
                   />
-                  <div className="hero-window-mockup__video-tag">
+                  <div className="hero-window-mockup__video-tag text-body-small-semibold">
                     <span>Patient &amp; Support Animal</span>
                   </div>
 
@@ -166,19 +175,19 @@ export function Hero({
 
               {/* Right Column: Live Clinical Intake & Evaluation Summary */}
               <div className="hero-window-mockup__summary">
-                <div className="hero-window-mockup__summary-status">
+                <div className="hero-window-mockup__summary-status text-body-small-semibold">
                   <span className="hero-window-mockup__summary-pulse" />
                   <span>Taking Evaluation Summary...</span>
                 </div>
 
                 <div className="hero-window-mockup__summary-header">
-                  <h4 className="hero-window-mockup__summary-title">NY Housing Accommodation Intake</h4>
-                  <p className="hero-window-mockup__summary-sub">Clinical Review &amp; Recommendation</p>
+                  <p className="hero-window-mockup__summary-title text-h4">NY Housing Accommodation Intake</p>
+                  <p className="hero-window-mockup__summary-sub text-body-small">Clinical Review &amp; Recommendation</p>
                 </div>
 
                 <div className="hero-window-mockup__summary-section">
-                  <p className="hero-window-mockup__section-title">Key Assessment</p>
-                  <ul className="hero-window-mockup__list">
+                  <p className="hero-window-mockup__section-title text-body-small-semibold">Key Assessment</p>
+                  <ul className="hero-window-mockup__list text-body-small">
                     <li>1-on-1 telehealth evaluation with licensed NY clinician</li>
                     <li>Evaluated under Fair Housing Act &amp; NYS Human Rights Law</li>
                     <li>Private consultation &middot; no diagnosis shared with landlord</li>
@@ -186,15 +195,15 @@ export function Hero({
                 </div>
 
                 <div className="hero-window-mockup__summary-section">
-                  <p className="hero-window-mockup__section-title">Clinical Decision</p>
-                  <ul className="hero-window-mockup__list">
+                  <p className="hero-window-mockup__section-title text-body-small-semibold">Clinical Decision</p>
+                  <ul className="hero-window-mockup__list text-body-small">
                     <li>Reasonable accommodation clinically supported</li>
                     <li>Exempt from pet deposits, pet fees &amp; monthly pet rent</li>
                   </ul>
                 </div>
 
                 <div className="hero-window-mockup__sync">
-                  <p className="hero-window-mockup__sync-label">Delivering to Patient Portal &amp; Documentation...</p>
+                  <p className="hero-window-mockup__sync-label text-body-small">Delivering to Patient Portal &amp; Documentation...</p>
                   <div className="hero-window-mockup__sync-icons" aria-hidden="true">
                     <div className="hero-window-mockup__sync-item" title="Official PDF Letter">
                       <FileText />

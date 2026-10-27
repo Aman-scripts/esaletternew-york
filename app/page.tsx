@@ -55,6 +55,7 @@ export default function HomePage() {
         variant="showcase"
         eyebrow="Licensed New York providers"
         title={homePage.h1}
+        titleAccent="New York"
         lead="Get a legitimate ESA letter for New York housing from a licensed mental health professional. Private online evaluation, letters often within 24 hours of your consultation."
         checks={[
           "Evaluated by a New York-licensed mental health professional",
