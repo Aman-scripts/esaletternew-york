@@ -26,7 +26,7 @@ export default function NotFound() {
   return (
     <section className="notfound">
       <div className="container container--narrow">
-        <p className="notfound__code" aria-hidden="true">
+        <p className="notfound__code text-h1" aria-hidden="true">
           404
         </p>
         <h1 className="hero__title text-h1">Page Not Found</h1>

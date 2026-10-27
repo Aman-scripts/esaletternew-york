@@ -659,7 +659,7 @@ footer .text-sm {
   font-family: var(--font-sans), system-ui, sans-serif;
   font-size: 14px;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 21px;
   border-radius: 9999px;
   border: 1px solid #dbe6f1;
 }
@@ -2110,8 +2110,6 @@ img {
 .cta-band--inline .cta-band__text {
   margin: 0;
   color: var(--ink-700);
-  font-size: 15px;
-  line-height: 1.55;
 }
 
 .cta-band--final .cta-band__inner {
@@ -2181,11 +2179,6 @@ img {
   border: 1px solid rgba(18, 128, 92, 0.25);
   border-radius: 999px;
   color: var(--success-600);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  line-height: 1.2;
 }
 
 .reviewer-box__badge-icon {
@@ -2194,28 +2187,20 @@ img {
 }
 
 .reviewer-box__jurisdiction {
-  font-size: 11px;
-  font-weight: 600;
   color: var(--brand-600);
   background: rgba(15, 117, 188, 0.08);
   padding: 3px 8px;
   border-radius: 999px;
-  line-height: 1.2;
 }
 
 .reviewer-box__name {
   margin: 2px 0 0;
-  font-size: 16px;
-  font-weight: 700;
   color: var(--ink-900);
-  line-height: 1.35;
 }
 
 .reviewer-box__credentials {
   margin: 0;
   color: var(--ink-700);
-  font-size: 13.5px;
-  line-height: 1.45;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -2224,7 +2209,6 @@ img {
 
 .reviewer-box__sep {
   color: var(--ink-300);
-  font-weight: bold;
 }
 
 .reviewer-box__footer {
@@ -2243,7 +2227,6 @@ img {
   align-items: center;
   gap: 6px;
   color: var(--ink-500);
-  font-size: 12.5px;
 }
 
 .reviewer-box__meta-icon {
@@ -2257,8 +2240,6 @@ img {
   align-items: center;
   gap: 5px;
   color: var(--brand-600);
-  font-size: 13px;
-  font-weight: 600;
   text-decoration: none;
   transition: color 0.15s, transform 0.15s;
 }
@@ -2464,10 +2445,6 @@ a.card:hover .card__more svg {
 
 .tile__title {
   margin: 0;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 26px;
   color: inherit;
 }
 
@@ -2897,7 +2874,9 @@ a.card:hover .card__more svg {
   .table th,
   .table td {
     padding: 10px 12px;
-    font-size: 0.875rem;
+    /* Body Small */
+    font-size: 14px;
+    line-height: 21px;
   }
 }
 
@@ -3154,8 +3133,6 @@ a.card:hover .card__more svg {
   margin: 0 0 16px;
   padding-bottom: 14px;
   border-bottom: 1px solid var(--line);
-  font-size: 17px;
-  line-height: 24px;
 }
 
 .city-panel__icon {
@@ -3184,18 +3161,15 @@ a.card:hover .card__more svg {
 .city-panel dt {
   margin-bottom: 2px;
   color: var(--ink-500);
-  font-size: 12px;
-  line-height: 18px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
 }
 
 .city-panel dd,
 .city-panel li {
   margin: 0;
   color: var(--ink-700, var(--ink-900));
-  font-size: 15px;
-  line-height: 1.55;
+  /* Body Normal */
+  font-size: 16px;
+  line-height: 26px;
 }
 
 .city-panel ul {
@@ -3215,7 +3189,7 @@ a.card:hover .card__more svg {
   content: "";
   position: absolute;
   left: 0;
-  top: 9px;
+  top: 10px;
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -3768,13 +3742,8 @@ a.card:hover .card__more svg {
 }
 
 .notfound__code {
-  font-family: var(--font-serif);
-  font-size: clamp(4rem, 10vw, 7rem);
-  font-weight: 800;
-  line-height: 1;
   color: var(--brand-600);
   margin-bottom: 12px;
-  letter-spacing: -0.04em;
 }
 
 .notfound__links {

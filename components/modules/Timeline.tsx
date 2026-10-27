@@ -14,7 +14,7 @@ export function Timeline({ steps }: { steps: Step[] }) {
             <span className="timeline__icon">
               <Icon aria-hidden="true" />
             </span>
-            <h3 className="timeline__title text-h4">{step.title}</h3>
+            <h3 className="timeline__title text-h3">{step.title}</h3>
             <p className="timeline__text">{step.text}</p>
           </li>
         );

@@ -34,7 +34,7 @@ export function CtaBand({ variant = "inline", title, text }: Props) {
           </span>
           <div className="cta-band__body">
             <p className="cta-band__title text-h4">{title ?? copy.title}</p>
-            <p className="cta-band__text">{text ?? copy.text}</p>
+            <p className="cta-band__text text-body-normal">{text ?? copy.text}</p>
           </div>
           <ButtonLink>Start Assessment</ButtonLink>
         </div>
