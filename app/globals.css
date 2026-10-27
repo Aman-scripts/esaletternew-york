@@ -202,8 +202,8 @@
 
   @media (min-width: 1024px) {
     h1 {
-      font-size: 56px;
-      line-height: 60px;
+      font-size: 52px;
+      line-height: 58px;
     }
   }
 
@@ -225,8 +225,8 @@
 
   @media (min-width: 1024px) {
     h2 {
-      font-size: 44px;
-      line-height: 52px;
+      font-size: 40px;
+      line-height: 48px;
     }
   }
 
@@ -294,7 +294,7 @@
    H1, H2, H3, H4, Body Large, Body Normal, Body Small
    ========================================================================== */
 
-/* 1. H1 (Merriweather 400 | Desktop: 56/60px, Tablet: 44/50px, Mobile: 36/42px) */
+/* 1. H1 (Merriweather 400 | Desktop: 52/58px, Tablet: 44/50px, Mobile: 36/42px) */
 .text-h1,
 .h1 {
   font-family: var(--font-serif), Georgia, serif;
@@ -314,12 +314,12 @@
 @media (min-width: 1024px) {
   .text-h1,
   .h1 {
-    font-size: 56px;
-    line-height: 60px;
+    font-size: 52px;
+    line-height: 58px;
   }
 }
 
-/* 2. H2 (Merriweather 400 | Desktop: 44/52px, Tablet: 36/43px, Mobile: 32/38px) */
+/* 2. H2 (Merriweather 400 | Desktop: 40/48px, Tablet: 36/43px, Mobile: 32/38px) */
 .text-h2,
 .h2 {
   font-family: var(--font-serif), Georgia, serif;
@@ -339,8 +339,8 @@
 @media (min-width: 1024px) {
   .text-h2,
   .h2 {
-    font-size: 44px;
-    line-height: 52px;
+    font-size: 40px;
+    line-height: 48px;
   }
 }
 
