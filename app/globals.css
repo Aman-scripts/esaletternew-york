@@ -188,15 +188,15 @@
     font-family: var(--font-serif), Georgia, serif;
     font-weight: 400;
     color: #0c2340;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 32px;
+    line-height: 38px;
     letter-spacing: -0.01em;
   }
 
   @media (min-width: 768px) {
     h1 {
-      font-size: 44px;
-      line-height: 50px;
+      font-size: 40px;
+      line-height: 46px;
     }
   }
 
@@ -211,15 +211,15 @@
     font-family: var(--font-serif), Georgia, serif;
     font-weight: 400;
     color: #0c2340;
-    font-size: 32px;
-    line-height: 38px;
+    font-size: 28px;
+    line-height: 34px;
     letter-spacing: -0.01em;
   }
 
   @media (min-width: 768px) {
     h2 {
-      font-size: 36px;
-      line-height: 43px;
+      font-size: 32px;
+      line-height: 38px;
     }
   }
 
@@ -294,21 +294,21 @@
    H1, H2, H3, H4, Body Large, Body Normal, Body Small
    ========================================================================== */
 
-/* 1. H1 (Merriweather 400 | Desktop: 52/58px, Tablet: 44/50px, Mobile: 36/42px) */
+/* 1. H1 (Merriweather 400 | Desktop: 52/58px, Tablet: 40/46px, Mobile: 32/38px) */
 .text-h1,
 .h1 {
   font-family: var(--font-serif), Georgia, serif;
   font-weight: 400;
   color: #0c2340;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 32px;
+  line-height: 38px;
   letter-spacing: -0.01em;
 }
 @media (min-width: 768px) {
   .text-h1,
   .h1 {
-    font-size: 44px;
-    line-height: 50px;
+    font-size: 40px;
+    line-height: 46px;
   }
 }
 @media (min-width: 1024px) {
@@ -319,21 +319,21 @@
   }
 }
 
-/* 2. H2 (Merriweather 400 | Desktop: 40/48px, Tablet: 36/43px, Mobile: 32/38px) */
+/* 2. H2 (Merriweather 400 | Desktop: 40/48px, Tablet: 32/38px, Mobile: 28/34px) */
 .text-h2,
 .h2 {
   font-family: var(--font-serif), Georgia, serif;
   font-weight: 400;
   color: #0c2340;
-  font-size: 32px;
-  line-height: 38px;
+  font-size: 28px;
+  line-height: 34px;
   letter-spacing: -0.01em;
 }
 @media (min-width: 768px) {
   .text-h2,
   .h2 {
-    font-size: 36px;
-    line-height: 43px;
+    font-size: 32px;
+    line-height: 38px;
   }
 }
 @media (min-width: 1024px) {
