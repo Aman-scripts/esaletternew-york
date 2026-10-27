@@ -11,7 +11,7 @@ export const blogCategories: BlogCategory[] = [
     description:
       "Articles on ESA housing rights in New York: Fair Housing Act, NYS and NYC law, landlord denials, fees, and how to protect your request.",
     intro:
-      "Housing law for emotional support animals in New York has three layers: the federal Fair Housing Act, the New York State Human Rights Law and, in the five boroughs, the NYC Human Rights Law. The articles in this category explain how those laws work in everyday situations, from how long a letter stays current to spotting fake documentation and handling college housing. Each article links back to our detailed rights guides so you can go deeper on the legal standard. Everything here is general information, not legal advice, and legal references are reviewed for current status before publishing.",
+      "Housing law for emotional support animals in New York has three layers: the federal Fair Housing Act, the New York State Human Rights Law and, in the five boroughs, the NYC Human Rights Law. The articles in this category explain how those laws work in everyday situations, from how long a letter stays current to spotting fake documentation and handling college housing. Each article links back to our detailed rights guides so you can go deeper on the legal standard. Everything here is general information, not legal advice, and legal references are reviewed for current status before publishing. New articles are added as the law and agency guidance change.",
     pillars: ["/rights/"],
     phase: 1,
     priority: "Medium",
@@ -24,7 +24,7 @@ export const blogCategories: BlogCategory[] = [
     description:
       "Articles explaining which conditions may support an ESA letter in New York and how licensed professionals evaluate your need for an ESA.",
     intro:
-      "Whether you qualify for an emotional support animal depends on how a mental or emotional health condition affects your daily life, and on a licensed professional's judgment. These articles explain how evaluations work, how ESAs differ from service and therapy animals, and what other options exist if an ESA is not the right fit. They use careful, non-diagnostic language and are not a substitute for care from a professional. If you are in crisis, call or text 988.",
+      "Whether you qualify for an emotional support animal depends on how a mental or emotional health condition affects your daily life, and on a licensed professional's judgment. These articles explain how evaluations work, how ESAs differ from service and therapy animals, and what other options exist if an ESA is not the right fit. They use careful, non-diagnostic language and are not a substitute for care from a professional. No condition guarantees a letter: a professional licensed in New York decides after an individual evaluation. For condition-by-condition detail, see our qualifying conditions guide. If you are in crisis, call or text 988.",
     pillars: ["/conditions/"],
     phase: 3,
     priority: "Medium",
@@ -37,7 +37,7 @@ export const blogCategories: BlogCategory[] = [
     description:
       "Place-specific ESA articles for Manhattan, Brooklyn, Queens, Buffalo, Rochester and more, covering local rentals, buildings, and housing resources.",
     intro:
-      "Renting with an emotional support animal in Manhattan looks different from renting in Buffalo or Long Island. These place-specific articles cover local building types, how landlords and boards in each area tend to handle requests, and where to find help nearby. They complement our location guides, which explain how state law applies everywhere and where New York City law adds protection.",
+      "Renting with an emotional support animal in Manhattan looks different from renting in Buffalo or Long Island. These place-specific articles cover local building types, how landlords and boards in each area tend to handle requests, and where to find help nearby. They complement our location guides, which explain how state law applies everywhere and where New York City law adds protection. Expect practical detail on listings that say no pets, doorman and walk-up buildings, rent-stabilized apartments and suburban communities, plus the local agencies and tenant organizations that can help if a request stalls. Every article links to the matching location guide for the full picture.",
     pillars: ["/locations/"],
     phase: 2,
     priority: "Medium",
@@ -50,7 +50,7 @@ export const blogCategories: BlogCategory[] = [
     description:
       "Plain-language guides for New York tenants, co-op shareholders and landlords on ESA requests, board packages, documentation, and disputes.",
     intro:
-      "Practical, step-by-step guides for the moments that matter: talking to your landlord, preparing a co-op board package, understanding what a landlord can ask, and filing a complaint if a request is denied. Each guide is written in plain language for New York tenants, shareholders and housing providers, and links back to the rights guides that explain the law behind each step.",
+      "Practical, step-by-step guides for the moments that matter: talking to your landlord, preparing a co-op board package, understanding what a landlord can ask, and filing a complaint if a request is denied. Each guide is written in plain language for New York tenants, shareholders and housing providers, and links back to the rights guides that explain the law behind each step. You will find sample wording, checklists of what to attach, realistic timelines and tips for keeping every exchange in writing. Housing providers can use the same guides to review requests lawfully and avoid asking for more than the law allows.",
     pillars: ["/rights/"],
     phase: 1,
     priority: "Medium",
@@ -63,7 +63,7 @@ export const blogCategories: BlogCategory[] = [
     description:
       "Practical tips for living with an emotional support animal in New York: small-apartment care, daily routines, travel, and being a good neighbor.",
     intro:
-      "Living with an emotional support animal in New York means planning for small spaces, shared walls, elevators, walk-ups and busy sidewalks. These articles share practical tips on daily care, exercise, noise and being a considerate neighbor, so your accommodation stays smooth for everyone in the building.",
+      "Living with an emotional support animal in New York means planning for small spaces, shared walls, elevators, walk-ups and busy sidewalks. These articles share practical tips on daily care, exercise, noise and being a considerate neighbor, so your accommodation stays smooth for everyone in the building. You will also find advice on vet care, travel within the city, building amenities like dog runs and roof decks, and what to do if a neighbor complains. A well-cared-for animal that does not disturb others is the best protection for your accommodation, because housing providers may act on real nuisance or safety problems.",
     pillars: ["/conditions/", "/rights/"],
     phase: 3,
     priority: "Medium",
@@ -76,7 +76,7 @@ export const blogCategories: BlogCategory[] = [
     description:
       "Stay current on New York and federal ESA news, law changes, and HUD guidance that affect renters and landlords with emotional support animals.",
     intro:
-      "Federal guidance, state bills and court decisions can change how ESA requests are handled. This category tracks news that affects New York renters and housing providers, including HUD guidance and pending New York legislation. Every update is reviewed for accuracy and current status, and links to our rights guides for the underlying law.",
+      "Federal guidance, state bills and court decisions can change how ESA requests are handled. This category tracks news that affects New York renters and housing providers, including HUD guidance and pending New York legislation. Every update is reviewed for accuracy and current status, and links to our rights guides for the underlying law. Each article notes when it was last updated and what remains uncertain, so you can tell settled law from proposals still in progress. If a change affects an existing request, our guides explain the practical next steps for tenants, co-op shareholders and landlords. Check back regularly for new updates.",
     pillars: ["/rights/"],
     phase: 4,
     priority: "Low",

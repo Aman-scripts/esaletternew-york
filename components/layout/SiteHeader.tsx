@@ -24,7 +24,7 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="container site-header__inner">
-        <Brand priority />
+        <Brand />
 
         <nav className="nav" aria-label="Primary">
           <ul className="nav__list">

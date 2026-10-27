@@ -77,6 +77,10 @@ export type PageBase = {
   intro?: string;
   /** Visible last-reviewed / updated date (ISO) */
   updated: string;
+  /** Per-page SEO overrides (spec 10.3); default to self-canonical and the meta title / description */
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
 };
 
 export type ArticlePage = PageBase & {

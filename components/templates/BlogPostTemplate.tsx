@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, BookOpen, Calendar, RefreshCw } from "lucide-react";
+import { ArrowRight, BookOpen, Calendar, RefreshCw, UserRound } from "lucide-react";
 import type { BlogPost } from "@/lib/content/types";
 import { crumbsFor, descriptionFor, getCategory, labelFor, postsInCategory } from "@/lib/content/registry";
 import { schemasFor } from "@/lib/seo";
@@ -40,6 +40,9 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
           <h1 className="post-header__title text-h1">{post.h1}</h1>
           <div className="post-meta text-body-small">
             <span className="post-meta__item">
+              <UserRound aria-hidden="true" /> By {post.author}
+            </span>
+            <span className="post-meta__item">
               <Calendar aria-hidden="true" /> Published <time dateTime={post.published}>{formatDate(post.published)}</time>
             </span>
             <span className="post-meta__item">
@@ -60,6 +63,7 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
                   fill
                   sizes="(min-width: 1024px) 800px, 100vw"
                   priority
+                  fetchPriority="high"
                   className="post-hero-img"
                 />
               ) : (

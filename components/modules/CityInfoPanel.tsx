@@ -5,9 +5,12 @@ import type { CityInfo } from "@/lib/content/types";
 export function CityInfoPanel({ name, city }: { name: string; city: CityInfo }) {
   return (
     <section className="city-panel" aria-label={`${name} at a glance`}>
-      <div>
+      <div className="city-panel__col">
         <p className="city-panel__title text-h4">
-          <Building2 aria-hidden="true" /> {name} housing
+          <span className="city-panel__icon">
+            <Building2 aria-hidden="true" />
+          </span>
+          {name} housing
         </p>
         <dl>
           <div>
@@ -22,21 +25,27 @@ export function CityInfoPanel({ name, city }: { name: string; city: CityInfo }) 
           ))}
         </dl>
       </div>
-      <div>
+      <div className="city-panel__col">
         <p className="city-panel__title text-h4">
-          <Gavel aria-hidden="true" /> Local rules
+          <span className="city-panel__icon">
+            <Gavel aria-hidden="true" />
+          </span>
+          Local rules
         </p>
-        <ul>
+        <ul className="city-panel__rules">
           {city.localRules.map((rule) => (
             <li key={rule}>{rule}</li>
           ))}
         </ul>
       </div>
-      <div>
+      <div className="city-panel__col">
         <p className="city-panel__title text-h4">
-          <Landmark aria-hidden="true" /> Local resources
+          <span className="city-panel__icon">
+            <Landmark aria-hidden="true" />
+          </span>
+          Local resources
         </p>
-        <ul>
+        <ul className="city-panel__resources">
           {city.resources.map((r) => (
             <li key={r.name}>
               <strong>{r.name}</strong>

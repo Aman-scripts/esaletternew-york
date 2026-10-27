@@ -36,7 +36,7 @@ export const blogHub: PageBase = {
   priority: "Medium",
   schema: ["CollectionPage"],
   intro:
-    "Plain-language guides on ESA housing rights, co-op and rental requests, qualifying conditions and life with an emotional support animal in New York.",
+    "Plain-language guides on ESA housing rights, co-op and rental requests, qualifying conditions and life with an emotional support animal in New York. Every article is written for New York renters, co-op shareholders and housing providers, and links to the detailed guide behind it. Browse by category below or start with the latest posts.",
   updated: site.lastReviewed,
 };
 

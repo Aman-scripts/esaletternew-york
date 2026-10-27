@@ -11,6 +11,7 @@ import { CityInfoPanel } from "../modules/CityInfoPanel";
 import { ContentSections } from "../modules/ContentSections";
 import { CtaBand } from "../modules/CtaBand";
 import { RelatedPages } from "../modules/RelatedPages";
+import { ReviewerBox } from "../modules/ReviewerBox";
 import { ArticleAside, FaqSection, MAX_RELATED } from "./parts";
 
 type Props = {
@@ -22,7 +23,7 @@ type Props = {
 
 /**
  * T6 City: Hero (city in H1) > Quick answer > M14 City info panel [required] > Local body sections
- * > Inline CTA > City-specific FAQ > Related pages (up to /locations/, across to /rights/) > Final CTA
+ * > Inline CTA > City-specific FAQ > Related pages (up to /locations/, across to /rights/) > M11 Reviewer box > Final CTA
  */
 export function CityTemplate({ page, boroughs, siblings }: Props) {
   const boroughIndex = page.sections.findIndex((s) => s.heading.startsWith("Links to each borough"));
@@ -30,7 +31,7 @@ export function CityTemplate({ page, boroughs, siblings }: Props) {
     boroughs && boroughIndex >= 0
       ? {
           [boroughIndex]: (
-            <ul className="grid grid--3" role="list">
+            <ul className="grid grid--3 tile-grid" role="list">
               {boroughs.map((b) => (
                 <li key={b.path}>
                   <Link href={b.path} className="tile">
@@ -55,15 +56,16 @@ export function CityTemplate({ page, boroughs, siblings }: Props) {
             {page.quickAnswer && <QuickAnswer text={page.quickAnswer} />}
             <CityInfoPanel name={page.label} city={page.city} />
             <ContentSections sections={page.sections} slots={slots} />
-            <CtaBand title={`Get your ESA letter in ${page.label}`} />
+            <CtaBand title={`Renting in ${page.label}? See if you qualify`} />
             <FaqSection faqs={page.faqs} heading={`${page.label} ESA FAQ`} />
             <RelatedPages paths={[...page.related, ...siblings].slice(0, MAX_RELATED)} />
+            <ReviewerBox updated={page.updated} />
           </article>
           <ArticleAside />
         </div>
       </div>
 
-      <CtaBand variant="final" />
+      <CtaBand variant="final" title={`Get your ESA letter in ${page.label}`} />
     </>
   );
 }

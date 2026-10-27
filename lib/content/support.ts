@@ -73,11 +73,11 @@ export const supportPages: ArticlePage[] = [
     sections: [
       {
         heading: "Timeline and what to expect",
-        list: [
-          "Assessment: about 10 minutes online",
-          "Consultation: usually scheduled within a few days",
-          "Letter: often delivered within 24 hours of your consultation if you qualify",
-          "Support: help if your landlord wants to verify the letter",
+        steps: [
+          { title: "Assessment", text: "About 10 minutes online" },
+          { title: "Consultation", text: "Usually scheduled within a few days" },
+          { title: "Letter", text: "Often delivered within 24 hours of your consultation if you qualify" },
+          { title: "Support", text: "Help if your landlord wants to verify the letter" },
         ],
       },
     ],

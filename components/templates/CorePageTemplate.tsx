@@ -10,6 +10,7 @@ import { ContentSections, sectionWords } from "../modules/ContentSections";
 import { CtaBand } from "../modules/CtaBand";
 import { Callout } from "../modules/Callout";
 import { RelatedPages } from "../modules/RelatedPages";
+import { ReviewerBox } from "../modules/ReviewerBox";
 import { ArticleAside, FaqSection } from "./parts";
 
 type Props = {
@@ -20,7 +21,7 @@ type Props = {
 
 /**
  * T2 Core page: Hero (compact) > TOC (if >1,200 words) > Body H2s with inline CTA after section 2
- * > Callout > FAQ (3-5) > Related pages > Final CTA
+ * > Callout > FAQ (3-5) > Related pages > M11 Reviewer box > Final CTA
  */
 export function CorePageTemplate({ page, slots }: Props) {
   const words = countWords([page.intro, ...sectionWords(page.sections)]);
@@ -43,6 +44,7 @@ export function CorePageTemplate({ page, slots }: Props) {
             {page.callout && <Callout {...page.callout} />}
             <FaqSection faqs={page.faqs} />
             <RelatedPages paths={page.related} />
+            <ReviewerBox updated={page.updated} kind="medical" />
           </article>
           <ArticleAside />
         </div>

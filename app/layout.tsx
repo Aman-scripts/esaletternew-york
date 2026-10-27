@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
-import localFont from "next/font/local";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
@@ -9,28 +8,6 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { StickyCta } from "@/components/layout/StickyCta";
 import { JsonLd } from "@/components/common/JsonLd";
 import { Analytics } from "@/components/common/Analytics";
-
-/**
- * Fonts: Merriweather for headings (--font-serif), Inter for body and UI text (--font-sans).
- * Self-hosted so they load even where Google Fonts is blocked. See app/globals.css.
- */
-const merriweather = localFont({
-  src: [
-    { path: "./fonts/merriweather-400.woff2", weight: "400", style: "normal" },
-    { path: "./fonts/merriweather-700.woff2", weight: "700", style: "normal" },
-  ],
-  variable: "--font-serif",
-  display: "swap",
-  fallback: ["Georgia", "serif"],
-});
-const inter = localFont({
-  src: "./fonts/inter-variable.woff2",
-  weight: "100 900",
-  style: "normal",
-  variable: "--font-sans",
-  display: "swap",
-  fallback: ["system-ui", "sans-serif"],
-});
 
 /**
  * Every page is static content. 'navigation' keeps it that way and makes unknown dynamic
@@ -83,7 +60,23 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-US" className={`${merriweather.variable} ${inter.variable}`}>
+    <html lang="en-US">
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/inter-variable.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/merriweather-400.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <a href="#main" className="skip-link">
@@ -91,7 +84,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </a>
         <p className="topbar text-body-small">
           Policy update: HUD&rsquo;s 2026 ESA guidance and New York renters.{" "}
-          <Link href="/rights/hud-2026-esa-memo-new-york/">What it means</Link>
+          <Link href="/rights/hud-2026-esa-memo-new-york/" prefetch={false}>
+            What it means
+          </Link>
         </p>
         <SiteHeader />
         <main id="main">{children}</main>

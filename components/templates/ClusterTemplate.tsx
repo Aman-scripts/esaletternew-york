@@ -10,6 +10,7 @@ import { ContentSections } from "../modules/ContentSections";
 import { Callout } from "../modules/Callout";
 import { CtaBand } from "../modules/CtaBand";
 import { RelatedPages } from "../modules/RelatedPages";
+import { ReviewerBox } from "../modules/ReviewerBox";
 import { ArticleAside, FAQ_HEADING, FaqSection, MAX_RELATED } from "./parts";
 
 type Props = {
@@ -20,7 +21,7 @@ type Props = {
 
 /**
  * T4 Silo cluster / T5 Condition: Hero > Quick answer [required] > TOC > Body > Legal callout
- * > Inline CTA > FAQ > Related pages incl. link up to pillar [required] > Final CTA
+ * > Inline CTA > FAQ > Related pages incl. link up to pillar [required] > M11 Reviewer box > Final CTA
  */
 export function ClusterTemplate({ page, siblings }: Props) {
   const headings = [...page.sections.map((s) => s.heading), ...(page.faqs.length ? [FAQ_HEADING] : [])];
@@ -40,6 +41,7 @@ export function ClusterTemplate({ page, siblings }: Props) {
             <CtaBand />
             <FaqSection faqs={page.faqs} />
             <RelatedPages paths={[...page.related, ...siblings].slice(0, MAX_RELATED)} />
+            <ReviewerBox updated={page.updated} kind={page.path.startsWith("/conditions/") ? "medical" : "content"} />
           </article>
           <ArticleAside />
         </div>

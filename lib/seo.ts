@@ -22,28 +22,22 @@ type MetaInput = {
   /** Optional canonical override (spec 10.3) */
   canonical?: string;
   ogType?: "website" | "article";
+  /** Optional OG overrides (spec 10.3); default to the meta title / description */
+  ogTitle?: string;
+  ogDescription?: string;
+  /** Page-specific social image; defaults to the generated 1200x630 card from app/opengraph-image.tsx */
   image?: string;
 };
 
 export function buildMetadata(input: MetaInput): Metadata {
   const canonical = input.canonical ?? input.path;
-  const primaryImage = input.image ?? "/images/ny_esa_hero.jpg";
-  const secondaryImage = "/images/section_brooklyn_housing.jpg";
-
-  const ogImages = [
-    {
-      url: absoluteUrl(primaryImage),
-      width: 1200,
-      height: 630,
-      alt: `${site.name} — ${input.title}`,
-    },
-    {
-      url: absoluteUrl(secondaryImage),
-      width: 1200,
-      height: 630,
-      alt: `${site.name} — New York emotional support animal housing rights`,
-    },
-  ];
+  const ogTitle = input.ogTitle ?? input.title;
+  const ogDescription = input.ogDescription ?? input.description;
+  // A page-level openGraph object stops nested routes inheriting the root file-based image, so the
+  // generated 1200x630 card (app/opengraph-image.tsx) is referenced explicitly as the default.
+  const images = input.image
+    ? [{ url: absoluteUrl(input.image), alt: ogTitle }]
+    : [{ url: absoluteUrl("/opengraph-image/"), width: 1200, height: 630, alt: ogTitle }];
 
   return {
     title: { absolute: input.title },
@@ -51,19 +45,19 @@ export function buildMetadata(input: MetaInput): Metadata {
     alternates: { canonical },
     robots: ROBOTS[input.robots],
     openGraph: {
-      title: input.title,
-      description: input.description,
+      title: ogTitle,
+      description: ogDescription,
       url: canonical,
       siteName: site.name,
       type: input.ogType ?? "website",
       locale: "en_US",
-      images: ogImages,
+      images,
     },
     twitter: {
       card: "summary_large_image",
-      title: input.title,
-      description: input.description,
-      images: [absoluteUrl(primaryImage)],
+      title: ogTitle,
+      description: ogDescription,
+      images: images.map((i) => i.url),
     },
   };
 }

@@ -9,6 +9,8 @@ import { JsonLd } from "../common/JsonLd";
 import { SectionHead } from "../common/SectionHead";
 import { Hero } from "../modules/Hero";
 import { StepProcess } from "../modules/StepProcess";
+import { Timeline } from "../modules/Timeline";
+import { ReviewerBox } from "../modules/ReviewerBox";
 import { TrustBar } from "../modules/TrustBar";
 import { CtaBand } from "../modules/CtaBand";
 import { FaqAccordion } from "../modules/FaqAccordion";
@@ -53,17 +55,21 @@ function HowItWorks({ page }: { page: ArticlePage }) {
           <StepProcess steps={howItWorksSteps} />
         </div>
       </section>
-      <section className="section section--tint">
-        <div className="container container--narrow">
-          <ContentSections sections={page.sections} />
-        </div>
-      </section>
+      {page.sections.map((s) => (
+        <section key={s.heading} className="section section--tint">
+          <div className="container">
+            <SectionHead title={s.heading} center />
+            {s.steps && <Timeline steps={s.steps} />}
+          </div>
+        </section>
+      ))}
       <TrustBar />
       <section className="section">
         <div className="container container--narrow">
           <CtaBand />
           <FaqSection faqs={page.faqs} />
           <RelatedPages paths={page.related} />
+          <ReviewerBox updated={page.updated} kind="medical" />
         </div>
       </section>
       <CtaBand variant="final" />
@@ -112,6 +118,7 @@ function About({ page }: { page: ArticlePage }) {
       <section className="section section--tint">
         <div className="container container--narrow">
           <ContentSections sections={page.sections} />
+          <ReviewerBox updated={page.updated} kind="medical" />
           <CtaBand />
         </div>
       </section>

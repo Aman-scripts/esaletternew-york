@@ -13,6 +13,7 @@ import { ChildGrid } from "../modules/ChildGrid";
 import { CtaBand } from "../modules/CtaBand";
 import { LatestPosts } from "../modules/LatestPosts";
 import { FaqAccordion } from "../modules/FaqAccordion";
+import { ReviewerBox } from "../modules/ReviewerBox";
 
 type Props = {
   page: ArticlePage;
@@ -78,6 +79,7 @@ export function PillarTemplate({ page, spokes, gridTitle, gridIcon }: Props) {
         <div className="container container--narrow">
           <SectionHead title="Frequently asked questions" center />
           <FaqAccordion faqs={page.faqs} />
+          <ReviewerBox updated={page.updated} kind={page.path === "/conditions/" ? "medical" : "content"} />
         </div>
       </section>
 

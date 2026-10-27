@@ -10,12 +10,29 @@
    Colors: New York brand blues sampled from /public/esa-letter-new-york-logo-image.png
    ========================================================================== */
 
+/* Self-hosted fonts with immutable caching and preloads */
+@font-face {
+  font-family: 'Merriweather';
+  src: url('/fonts/merriweather-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: optional;
+}
+
 @theme inline {
   /* Fonts */
-  --font-serif: var(--font-serif), Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-sans: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-heading: var(--font-serif), Georgia, serif;
-  --font-body: var(--font-sans), sans-serif;
+  --font-serif: 'Merriweather', Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: 'Merriweather', Georgia, serif;
+  --font-body: 'Inter', sans-serif;
 
   /* New York Color System */
   --color-navy: #0c2340;
@@ -969,7 +986,7 @@ img {
 
 .brand__logo {
   width: 48px;
-  height: 48px;
+  height: auto;
 }
 
 .brand__name {
@@ -1438,11 +1455,69 @@ img {
   margin: 0;
 }
 
+/* Timeline: what to expect */
+.timeline {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 640px) {
+  .timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .timeline {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+.timeline__item {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.timeline__icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background: var(--brand-50);
+  color: var(--brand-600);
+}
+
+.timeline__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.timeline__title {
+  margin: 0 0 6px;
+}
+
+.timeline__text {
+  margin: 0;
+  color: var(--ink-500);
+}
+
 /* ---------- 11. CTA band (M4) ---------- */
 .cta-band {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-xl);
+}
+
+.cta-band--final {
   background: linear-gradient(120deg, var(--brand-700) 0%, var(--brand-600) 55%, var(--brand-400) 100%);
   color: #fff;
 }
@@ -1463,12 +1538,12 @@ img {
   }
 }
 
-.cta-band__title {
+.cta-band--final .cta-band__title {
   color: #fff !important;
   margin: 0 0 8px;
 }
 
-.cta-band__text {
+.cta-band--final .cta-band__text {
   color: rgba(255, 255, 255, 0.9);
   margin: 0;
 }
@@ -1477,12 +1552,114 @@ img {
   flex-shrink: 0;
 }
 
+/* Inline (mid-page) prompt: light card, distinct from the final gradient band */
 .cta-band--inline {
   margin-block: 40px;
+  background: var(--brand-50);
+  border: 1px solid var(--brand-100);
+  border-left: 4px solid var(--brand-600);
+  border-radius: var(--radius-lg);
+}
+
+.cta-band--inline .cta-band__inner {
+  padding: 24px;
+}
+
+@media (min-width: 768px) {
+  .cta-band--inline .cta-band__inner {
+    gap: 20px;
+    padding: 24px 28px;
+  }
+}
+
+.cta-band__icon {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .cta-band__icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--brand-600);
+  }
+}
+
+.cta-band__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.cta-band__body {
+  flex: 1;
+}
+
+.cta-band--inline .cta-band__title {
+  margin: 0 0 4px;
+  color: var(--ink-900);
+}
+
+.cta-band--inline .cta-band__text {
+  margin: 0;
+  color: var(--ink-700);
+  font-size: 15px;
+  line-height: 1.55;
 }
 
 .cta-band--final .cta-band__inner {
   padding-block: 48px;
+}
+
+/* M11 Author / reviewer box */
+.reviewer-box {
+  display: flex;
+  gap: 16px;
+  margin: 40px 0 0;
+  padding: 20px 22px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+
+.reviewer-box__icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--brand-50);
+  color: var(--brand-600);
+}
+
+.reviewer-box__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.reviewer-box p {
+  margin: 0;
+}
+
+.reviewer-box__label {
+  color: var(--ink-500);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 12px;
+}
+
+.reviewer-box__name {
+  margin: 2px 0 4px !important;
+  color: var(--ink-900);
+  font-weight: 600;
+}
+
+.reviewer-box__meta {
+  color: var(--ink-500);
 }
 
 /* ---------- 12. FAQ accordion (M5) ---------- */
@@ -1864,6 +2041,29 @@ a.card:hover .card__more svg {
 
 .prose a {
   font-weight: 600;
+}
+
+/* Link tiles inside prose: drop the bullet styling */
+.prose .tile-grid {
+  gap: 12px;
+  margin: 4px 0 24px;
+}
+
+.prose .tile-grid li {
+  padding-left: 0;
+}
+
+.prose .tile-grid li::before {
+  content: none;
+}
+
+.prose .tile-grid .tile {
+  height: 100%;
+  min-height: 64px;
+}
+
+.prose .tile-grid .tile__title {
+  margin: 0;
 }
 
 .inline-steps {
@@ -2290,62 +2490,112 @@ a.card:hover .card__more svg {
 /* ---------- 22. City info panel (M14) ---------- */
 .city-panel {
   display: grid;
-  gap: 24px;
+  gap: 16px;
   margin: 0 0 40px;
-  padding: 28px;
+  padding: 16px;
   background: var(--surface-alt);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .city-panel {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-.city-panel__title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 0 0 12px;
+.city-panel__col {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
 }
 
-.city-panel__title svg {
+.city-panel .city-panel__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.city-panel__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm, 8px);
+  background: var(--brand-50);
   color: var(--brand-600);
+}
+
+.city-panel__icon svg {
+  width: 18px;
+  height: 18px;
 }
 
 .city-panel dl {
   display: grid;
-  gap: 10px;
+  gap: 14px;
   margin: 0;
 }
 
 .city-panel dt {
+  margin-bottom: 2px;
   color: var(--ink-500);
+  font-size: 12px;
+  line-height: 18px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
-.city-panel dd {
+.city-panel dd,
+.city-panel li {
   margin: 0;
-  color: var(--ink-900);
+  color: var(--ink-700, var(--ink-900));
+  font-size: 15px;
+  line-height: 1.55;
 }
 
 .city-panel ul {
   display: grid;
-  gap: 8px;
+  gap: 12px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.city-panel__rules li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.city-panel__rules li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brand-400);
+}
+
+.city-panel__resources li + li {
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+}
+
 .city-panel li strong {
   display: block;
+  margin-bottom: 2px;
   color: var(--ink-900);
+  font-weight: 600;
 }
 
 /* ---------- 23. Forms (contact) ---------- */

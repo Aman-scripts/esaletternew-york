@@ -20,6 +20,14 @@ export const site = {
   },
   turnaround: "Often within 24 hours of your consultation",
   lastReviewed: "2026-10-26",
+  // M11 reviewer box. CONFIRM: replace with a real named reviewer, credentials and NY license number
+  // (spec 10.4: real, verifiable providers only; never invent a person).
+  reviewer: {
+    name: "ESA Letter New York Clinical Review Team",
+    credentials: "New York-licensed mental health professionals",
+    licenseState: "New York",
+    licenseNumber: "",
+  },
   disclaimer:
     "ESA Letter New York provides access to evaluations by licensed mental health professionals. Content on this site is for general information only and is not medical or legal advice. An ESA letter is issued only if a licensed professional determines it is clinically appropriate.",
 } as const;

@@ -24,6 +24,7 @@ export const conditionsPillar: ArticlePage = {
     "There is no official list of conditions that automatically qualify someone for an emotional support animal. Instead, a licensed mental health professional looks at two things: whether you have a mental or emotional health condition that substantially limits one or more major life activities, and whether an animal provides support that helps with those limitations.",
     "Major life activities include things like sleeping, concentrating, working, interacting with others and caring for yourself. Many New Yorkers live with anxiety, depression, PTSD or other conditions that affect these areas, especially in high-pressure, high-density city environments. For some of them, the daily routine, calm presence or companionship of an animal is a meaningful part of how they cope at home.",
     "The guides below explain how common conditions are evaluated, what a provider is likely to ask, and how documentation works with landlords and co-op boards. They are general information, not a diagnosis. If you are in crisis, call or text 988 to reach the Suicide & Crisis Lifeline.",
+    "Having a condition listed here does not guarantee a letter, and a condition that is not listed does not rule one out. The decision always rests on an individual evaluation by a professional licensed in New York, who considers your history, current symptoms and how the animal fits into your daily life. If a letter is not clinically appropriate, you will not receive one, and our money-back guarantee applies.",
   ],
   sections: [
     {
@@ -281,7 +282,7 @@ export const conditionPages: ArticlePage[] = [
     description:
       "Does OCD qualify you for an ESA letter in New York? See how a provider evaluates it and how an ESA may sit alongside existing treatment.",
     quickAnswer:
-      "Obsessive-compulsive disorder can qualify for an ESA letter in New York when obsessions or compulsions substantially limit daily life. A licensed professional evaluates your needs and whether an emotional support animal fits alongside your existing treatment.",
+      "Obsessive-compulsive disorder can qualify for an ESA letter in New York when obsessions or compulsions substantially limit daily life. A licensed professional evaluates your needs and whether an emotional support animal fits alongside your existing treatment. An ESA is not a treatment for OCD on its own.",
     qualifies: sharedQualify("Obsessive-compulsive disorder"),
     helps: ["Companionship that may reduce distress at home", "Routine and structure", "A focus outside intrusive thoughts for some people"],
     asks: ["How symptoms affect daily routines", "Your current treatment", "Whether pet care could create additional stress", "How the animal helps"],
@@ -317,7 +318,7 @@ export const conditionPages: ArticlePage[] = [
     description:
       "Does Bipolar Disorder qualify you for an ESA letter in New York? See how a provider evaluates it and how an ESA may fit a stable daily routine.",
     quickAnswer:
-      "Bipolar disorder can qualify for an ESA letter in New York when mood episodes substantially limit daily functioning. A licensed professional evaluates your needs and how an emotional support animal could fit a stable routine alongside your existing care.",
+      "Bipolar disorder can qualify for an ESA letter in New York when mood episodes substantially limit daily functioning. A licensed professional evaluates your needs and how an emotional support animal could fit a stable routine alongside your existing care. It does not replace that care.",
     qualifies: sharedQualify("Bipolar disorder"),
     helps: ["A consistent daily routine", "Companionship during difficult periods", "Structure that supports sleep and activity patterns for some people"],
     asks: ["How mood episodes affect daily life", "Your current care team", "Plans for the animal's care during difficult periods", "How the animal helps"],

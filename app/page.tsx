@@ -59,7 +59,7 @@ export default function HomePage() {
         checks={[
           "Evaluated by a New York-licensed mental health professional",
           "Supports requests under federal, NYS and NYC housing law",
-          "Accepted for rentals, co-ops, condos and NYCHA requests",
+          "Can support requests for rentals, co-ops, condos and NYCHA",
         ]}
         guarantee={
           <>
@@ -74,6 +74,8 @@ export default function HomePage() {
               width={600}
               height={450}
               priority
+              fetchPriority="high"
+              sizes="(max-width: 768px) 100vw, 600px"
               className="hero__image"
             />
           </div>
@@ -233,6 +235,8 @@ export default function HomePage() {
               alt="Licensed New York mental health clinician conducting a private telehealth evaluation"
               width={540}
               height={405}
+              sizes="(max-width: 768px) 100vw, 540px"
+              loading="lazy"
               className="section__visual-img"
             />
           </div>
@@ -309,6 +313,8 @@ export default function HomePage() {
               alt="Happy pet owner on a classic New York apartment stoop with their emotional support dog"
               width={540}
               height={405}
+              sizes="(max-width: 768px) 100vw, 540px"
+              loading="lazy"
               className="section__visual-img"
             />
           </div>

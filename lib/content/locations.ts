@@ -24,6 +24,7 @@ export const locationsPillar: ArticlePage = {
     "Every New Yorker who relies on an emotional support animal is covered by the New York State Human Rights Law and, in most housing, the federal Fair Housing Act. Inside the five boroughs, the New York City Human Rights Law adds another layer, including a duty for housing providers to engage in a cooperative dialogue before denying a request.",
     "What changes from place to place is the housing itself. In Manhattan, many requests go through co-op boards and managing agents. In Brooklyn and Queens, small landlords in two-family homes and walk-ups are common. Upstate cities like Buffalo, Rochester, Syracuse and Albany have older housing stock and large student rental markets, while Long Island and Westchester have suburban rentals, condos and homeowners associations.",
     "Each guide below explains the local housing landscape, the agencies and fair housing organizations that can help, and practical tips for making a request. The legal standard is the same everywhere in the state; the practical path is local.",
+    "Wherever you live, the basics of a strong request do not change: a current letter from a professional licensed in New York, a short written request to your landlord, managing agent or board, and a record of every reply. If a request is ignored or denied, the NYS Division of Human Rights takes complaints statewide, and renters in the five boroughs can also go to the NYC Commission on Human Rights.",
   ],
   sections: [
     {
@@ -326,7 +327,7 @@ export const cityPages: CityPage[] = [
     description:
       "Renting in the Bronx? Learn how ESA rights apply, how older buildings and public housing handle requests, and how to get a valid ESA letter.",
     quickAnswer:
-      "Bronx renters with ESAs are protected by city, state and federal law, including in NYCHA developments and rent-regulated buildings. Use your landlord's or NYCHA's reasonable accommodation process, attach your ESA letter, and keep written records of every step.",
+      "Bronx renters with ESAs are protected by city, state and federal law, including in NYCHA developments and rent-regulated buildings. Use your landlord's or NYCHA's reasonable accommodation process, attach your ESA letter, and keep written records of every step. A blanket no-pet rule is not a valid reason to deny.",
     city: {
       housingMix: "Older pre-war apartment buildings, rent-regulated housing and many NYCHA developments",
       facts: [
