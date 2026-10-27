@@ -6,7 +6,7 @@
 export const site = {
   name: "ESA Letter New York",
   url: "https://esaletternewyork.com",
-  logo: "/esa-letter-new-york-logo-image.png",
+  logo: "/logo.svg",
   // Every "Get Your ESA Letter" CTA opens the evaluation survey
   applyHref: "https://survey.myesatherapist.com/",
   // CONFIRM: support inbox and hours

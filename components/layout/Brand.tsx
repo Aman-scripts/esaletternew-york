@@ -6,10 +6,10 @@ export function Brand({ priority = false }: { priority?: boolean }) {
   return (
     <Link href="/" className="brand" aria-label={`${site.name} home`}>
       <Image
-        src={site.logo}
-        alt=""
+        src="/logo.svg"
+        alt="ESA Letter New York official logo"
         width={48}
-        height={50}
+        height={48}
         className="brand__logo"
         priority={priority}
       />

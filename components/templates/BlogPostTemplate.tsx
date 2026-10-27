@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, BookOpen, Calendar, RefreshCw } from "lucide-react";
 import type { BlogPost } from "@/lib/content/types";
 import { crumbsFor, descriptionFor, getCategory, labelFor, postsInCategory } from "@/lib/content/registry";
@@ -52,7 +53,18 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
         <div className="container article-layout">
           <article>
             <div className="post-hero-media" role="img" aria-label={`Illustration for ${post.h1}`}>
-              <BookOpen aria-hidden="true" />
+              {post.image ? (
+                <Image
+                  src={post.image}
+                  alt={post.h1}
+                  fill
+                  sizes="(min-width: 1024px) 800px, 100vw"
+                  priority
+                  className="post-hero-img"
+                />
+              ) : (
+                <BookOpen aria-hidden="true" />
+              )}
             </div>
             {words > 1000 && <TableOfContents headings={post.sections.map((s) => s.heading)} inline />}
             <ContentSections sections={post.sections} />

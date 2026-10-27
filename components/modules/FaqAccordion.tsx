@@ -17,8 +17,8 @@ export function FaqAccordion({ faqs, schema = true }: Props) {
       {schema && <JsonLd data={faqSchema(faqs)} />}
       {faqs.map((f) => (
         <details key={f.q} className="faq__item">
-          <summary className="faq__q text-h4">
-            {f.q}
+          <summary className="faq__q">
+            <h3 className="faq__title text-h3">{f.q}</h3>
             <Plus className="faq__icon" aria-hidden="true" />
           </summary>
           <div className="faq__a">

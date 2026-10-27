@@ -1464,8 +1464,21 @@ img {
 }
 
 .cta-band__title {
-  color: #fff;
-  margin: 0 0 6px;
+  color: #fff !important;
+  margin: 0 0 8px;
+}
+
+.cta-band__title.text-h2 {
+  color: #fff !important;
+  font-size: 26px;
+  line-height: 34px;
+}
+
+@media (min-width: 768px) {
+  .cta-band__title.text-h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 
 .cta-band__text {
@@ -1512,6 +1525,15 @@ img {
   color: var(--ink-900);
   list-style: none;
   cursor: pointer;
+}
+
+.faq__title {
+  margin: 0;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+  color: inherit;
 }
 
 .faq__q::-webkit-details-marker {
@@ -1647,6 +1669,15 @@ a.card:hover .card__more svg {
   height: 18px;
   flex-shrink: 0;
   color: var(--brand-600);
+}
+
+.tile__title {
+  margin: 0;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+  color: inherit;
 }
 
 /* ---------- 14. Blog cards (M7) ---------- */
@@ -2239,7 +2270,18 @@ a.card:hover .card__more svg {
 
 .pricing__price {
   margin: 0;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 52px;
   color: var(--ink-900);
+}
+
+@media (min-width: 1024px) {
+  .pricing__price {
+    font-size: 56px;
+    line-height: 60px;
+  }
 }
 
 .pricing__price small {
@@ -2852,5 +2894,38 @@ a.card:hover .card__more svg {
 
 .section__visual-wrap:hover .section__visual-img {
   transform: scale(1.02);
+}
+
+/* ---------- 404 Not Found Page ---------- */
+.notfound {
+  padding: 80px 0 100px;
+  text-align: center;
+}
+
+.notfound__code {
+  font-family: var(--font-serif);
+  font-size: clamp(4rem, 10vw, 7rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--brand-600);
+  margin-bottom: 12px;
+  letter-spacing: -0.04em;
+}
+
+.notfound__links {
+  justify-content: center;
+  margin: 32px 0;
+}
+
+/* ---------- Post Hero Image ---------- */
+.post-hero-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.post-hero-media .post-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 

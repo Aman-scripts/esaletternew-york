@@ -33,8 +33,8 @@ export function CityTemplate({ page, boroughs, siblings }: Props) {
             <ul className="grid grid--3" role="list">
               {boroughs.map((b) => (
                 <li key={b.path}>
-                  <Link href={b.path} className="tile text-h4">
-                    {b.label}
+                  <Link href={b.path} className="tile">
+                    <h3 className="tile__title text-h3">{b.label}</h3>
                     <ArrowRight aria-hidden="true" />
                   </Link>
                 </li>

@@ -105,8 +105,8 @@ export default function HomePage() {
           <ul className="grid grid--4" role="list">
             {conditions.map((c) => (
               <li key={c.path}>
-                <Link href={c.path} className="tile text-h4">
-                  {c.label}
+                <Link href={c.path} className="tile">
+                  <h3 className="tile__title text-h3">{c.label}</h3>
                   <ArrowRight aria-hidden="true" />
                 </Link>
               </li>
@@ -267,8 +267,8 @@ export default function HomePage() {
           <ul className="grid grid--4" role="list">
             {cityPages.map((c) => (
               <li key={c.path}>
-                <Link href={c.path} className="tile text-h4">
-                  {c.label}
+                <Link href={c.path} className="tile">
+                  <h3 className="tile__title text-h3">{c.label}</h3>
                   <ArrowRight aria-hidden="true" />
                 </Link>
               </li>

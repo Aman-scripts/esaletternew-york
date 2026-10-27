@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return indexableEntries().map((entry) => ({
     url: absoluteUrl(entry.path),
     lastModified: entry.updated,
+    changeFrequency: entry.path === "/" ? "daily" : entry.priority === "High" ? "weekly" : "monthly",
     priority: entry.path === "/" ? 1 : PRIORITY[entry.priority],
   }));
 }

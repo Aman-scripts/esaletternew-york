@@ -22,10 +22,29 @@ type MetaInput = {
   /** Optional canonical override (spec 10.3) */
   canonical?: string;
   ogType?: "website" | "article";
+  image?: string;
 };
 
 export function buildMetadata(input: MetaInput): Metadata {
   const canonical = input.canonical ?? input.path;
+  const primaryImage = input.image ?? "/images/ny_esa_hero.jpg";
+  const secondaryImage = "/images/section_brooklyn_housing.jpg";
+
+  const ogImages = [
+    {
+      url: absoluteUrl(primaryImage),
+      width: 1200,
+      height: 630,
+      alt: `${site.name} — ${input.title}`,
+    },
+    {
+      url: absoluteUrl(secondaryImage),
+      width: 1200,
+      height: 630,
+      alt: `${site.name} — New York emotional support animal housing rights`,
+    },
+  ];
+
   return {
     title: { absolute: input.title },
     description: input.description,
@@ -38,17 +57,19 @@ export function buildMetadata(input: MetaInput): Metadata {
       siteName: site.name,
       type: input.ogType ?? "website",
       locale: "en_US",
+      images: ogImages,
     },
     twitter: {
       card: "summary_large_image",
       title: input.title,
       description: input.description,
+      images: [absoluteUrl(primaryImage)],
     },
   };
 }
 
-export function pageMetadata(page: PageBase, ogType?: "website" | "article"): Metadata {
-  return buildMetadata({ ...page, ogType });
+export function pageMetadata(page: PageBase & { image?: string }, ogType?: "website" | "article"): Metadata {
+  return buildMetadata({ ...page, ogType, image: page.image });
 }
 
 /* ---------- JSON-LD (spec 10.2) ---------- */
@@ -103,13 +124,15 @@ export function faqSchema(faqs: Faq[]): Json {
   };
 }
 
-export function articleSchema(page: PageBase & { published?: string; author?: string }): Json {
+export function articleSchema(page: PageBase & { published?: string; author?: string; image?: string }): Json {
+  const primaryImg = page.image ?? "/images/ny_esa_hero.jpg";
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: page.h1,
     description: page.description,
     url: absoluteUrl(page.path),
+    image: [absoluteUrl(primaryImg), absoluteUrl("/images/section_brooklyn_housing.jpg")],
     datePublished: page.published ?? page.updated,
     dateModified: page.updated,
     author: { "@type": "Organization", name: page.author ?? site.name },

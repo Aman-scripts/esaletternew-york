@@ -127,7 +127,7 @@ function Reviews() {
         <div className="container container--narrow">
           {/* Review grid: real, verifiable reviews only. Add Review/AggregateRating schema only once real reviews are shown. */}
           <div className="empty-state">
-            <p className="empty-state__title text-h3">Verified reviews coming soon</p>
+            <h2 className="empty-state__title text-h2">Verified reviews coming soon</h2>
             <p>We only publish genuine reviews from customers who completed an evaluation.</p>
           </div>
           <div className="prose">
