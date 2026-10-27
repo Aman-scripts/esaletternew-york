@@ -135,7 +135,7 @@ export const blogPosts: BlogPost[] = [
     category: "co-op-condo-rental-guides",
     siloLink: "/rights/co-op-and-condo-esa-rules/",
     published: "2026-10-20",
-    image: "/images/blogs/blog_coop_board.jpg",
+    image: "/images/blogs/blog_coop_board.webp",
     excerpt: "Board packages are detailed. Here is how to add an ESA accommodation request without slowing your approval.",
     sections: [
       {
@@ -163,7 +163,7 @@ export const blogPosts: BlogPost[] = [
     category: "co-op-condo-rental-guides",
     siloLink: "/rights/no-pet-buildings/",
     published: "2026-10-18",
-    image: "/images/blogs/blog_talk_landlord.jpg",
+    image: "/images/blogs/blog_talk_landlord.webp",
     excerpt: "A calm, clear conversation and a written follow-up make most ESA requests go smoothly.",
     sections: [
       { heading: "Before you ask", list: ["Have your ESA letter ready", "Know your lease terms", "Plan to put the request in writing"] },
@@ -186,7 +186,7 @@ export const blogPosts: BlogPost[] = [
     category: "co-op-condo-rental-guides",
     siloLink: "/rights/landlord-denials/",
     published: "2026-10-16",
-    image: "/images/blogs/blog_landlord_questions.jpg",
+    image: "/images/blogs/blog_landlord_questions.webp",
     excerpt: "Landlords can verify your need, but there are clear limits on what they can demand.",
     sections: [
       { heading: "Reasonable documentation", list: ["A letter from a licensed professional", "The provider's license details for verification", "Basic information about the animal"] },
@@ -203,7 +203,7 @@ export const blogPosts: BlogPost[] = [
     category: "co-op-condo-rental-guides",
     siloLink: "/rights/landlord-denials/",
     published: "2026-10-14",
-    image: "/images/blogs/blog_housing_complaint.jpg",
+    image: "/images/blogs/blog_housing_complaint.webp",
     excerpt: "Three agencies can take ESA housing complaints in New York. Here is how to choose and prepare.",
     sections: [
       {
@@ -233,7 +233,7 @@ export const blogPosts: BlogPost[] = [
     category: "rights-housing",
     siloLink: "/requirements/",
     published: "2026-10-12",
-    image: "/images/blogs/blog_fake_esa_letter.jpg",
+    image: "/images/blogs/blog_fake_esa_letter.webp",
     excerpt: "Landlords are getting better at spotting invalid letters. Know the red flags before you buy.",
     sections: [
       { heading: "Red flags in letters", list: ["No license number", "Instant issue without consultation", "Generic wording", "Out-of-state provider"] },
@@ -250,7 +250,7 @@ export const blogPosts: BlogPost[] = [
     category: "rights-housing",
     siloLink: "/renewal/",
     published: "2026-10-10",
-    image: "/images/blogs/blog_esa_letter_validity.jpg",
+    image: "/images/blogs/blog_esa_letter_validity.webp",
     excerpt: "There is no expiration date in the law, but practical expectations matter.",
     sections: [
       { heading: "Is there a legal expiration?", paragraphs: ["No federal, state or city statute sets an expiration date for ESA letters."] },
@@ -267,7 +267,7 @@ export const blogPosts: BlogPost[] = [
     category: "rights-housing",
     siloLink: "/rights/college-dorm-esa/",
     published: "2026-10-08",
-    image: "/images/blogs/blog_college_housing_esa.jpg",
+    image: "/images/blogs/blog_college_housing_esa.webp",
     excerpt: "Campus housing deadlines come early. Plan your ESA request months ahead.",
     sections: [
       { heading: "Housing law and campus housing", paragraphs: ["Residence halls are generally covered by fair housing law, so schools must consider ESA requests individually."] },
@@ -284,7 +284,7 @@ export const blogPosts: BlogPost[] = [
     category: "qualifying-conditions",
     siloLink: "/rights/esa-vs-service-animal/",
     published: "2026-10-06",
-    image: "/images/blogs/blog_esa_vs_service_dog.jpg",
+    image: "/images/blogs/blog_esa_vs_service_dog.webp",
     excerpt: "Three kinds of animals, three different sets of rights.",
     sections: [
       {
@@ -311,7 +311,7 @@ export const blogPosts: BlogPost[] = [
     category: "qualifying-conditions",
     siloLink: "/conditions/",
     published: "2026-10-04",
-    image: "/images/blogs/blog_not_qualifying_esa.jpg",
+    image: "/images/blogs/blog_not_qualifying_esa.webp",
     excerpt: "Not qualifying is a clinical decision, not a judgment. Here are your next steps.",
     sections: [
       { heading: "How eligibility is decided", paragraphs: ["A licensed professional decides based on whether a condition substantially limits daily life and whether an animal helps."] },
@@ -330,7 +330,7 @@ export const blogPosts: BlogPost[] = [
     phase: 4,
     priority: "Low",
     published: "2026-10-02",
-    image: "/images/blogs/blog_hud_memo_new_york.jpg",
+    image: "/images/blogs/blog_hud_memo_new_york.webp",
     excerpt: "Federal enforcement shifted in 2026. State and city law did not.",
     sections: [
       { heading: "What changed", paragraphs: ["HUD's 2026 guidance reportedly narrows federal enforcement of ESA requests. Details pending legal review."] },
@@ -347,7 +347,7 @@ export const blogPosts: BlogPost[] = [
     category: "new-york-cities",
     siloLink: "/locations/brooklyn/",
     published: "2026-09-30",
-    image: "/images/blogs/blog_renting_brooklyn_esa.jpg",
+    image: "/images/blogs/blog_renting_brooklyn_esa.webp",
     excerpt: "From brownstones to new builds, here is how to rent in Brooklyn with your ESA.",
     sections: [
       { heading: "Preparing documents", list: ["Current ESA letter", "Short request letter", "Basic animal information"] },
@@ -364,7 +364,7 @@ export const blogPosts: BlogPost[] = [
     category: "new-york-cities",
     siloLink: "/locations/manhattan/",
     published: "2026-09-28",
-    image: "/images/blogs/blog_renting_manhattan_esa.jpg",
+    image: "/images/blogs/blog_renting_manhattan_esa.webp",
     excerpt: "Manhattan moves fast. Have your ESA paperwork ready before you tour.",
     sections: [
       { heading: "Listings and 'no pets' wording", paragraphs: ["A no-pets listing still must consider accommodation requests. You can apply."] },
@@ -382,7 +382,7 @@ export const blogPosts: BlogPost[] = [
     siloLink: "/conditions/",
     priority: "Low",
     published: "2026-09-26",
-    image: "/images/blogs/blog_small_apartment_care.jpg",
+    image: "/images/blogs/blog_small_apartment_care.webp",
     excerpt: "Small space, big city: practical care tips for New York ESA owners.",
     sections: [
       { heading: "Space and exercise", list: ["Plan daily walks or play sessions", "Use vertical space for cats", "Rotate toys to keep things interesting"] },

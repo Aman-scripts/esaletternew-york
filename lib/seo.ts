@@ -119,14 +119,14 @@ export function faqSchema(faqs: Faq[]): Json {
 }
 
 export function articleSchema(page: PageBase & { published?: string; author?: string; image?: string }): Json {
-  const primaryImg = page.image ?? "/images/ny_esa_hero.jpg";
+  const primaryImg = page.image ?? "/images/ny_esa_hero.webp";
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: page.h1,
     description: page.description,
     url: absoluteUrl(page.path),
-    image: [absoluteUrl(primaryImg), absoluteUrl("/images/section_brooklyn_housing.jpg")],
+    image: [absoluteUrl(primaryImg), absoluteUrl("/images/section_brooklyn_housing.webp")],
     datePublished: page.published ?? page.updated,
     dateModified: page.updated,
     author: { "@type": "Organization", name: page.author ?? site.name },

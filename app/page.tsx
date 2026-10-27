@@ -69,7 +69,7 @@ export default function HomePage() {
         aside={
           <div className="hero__image-wrap">
             <Image
-              src="/images/ny_esa_hero.jpg"
+              src="/images/ny_esa_hero.webp"
               alt="New York pet owner with emotional support dog in a cozy NYC apartment"
               width={600}
               height={450}
@@ -232,7 +232,7 @@ export default function HomePage() {
           </div>
           <div className="section__visual-wrap">
             <Image
-              src="/images/section_telehealth_clinician.jpg"
+              src="/images/section_telehealth_clinician.webp"
               alt="Licensed New York mental health clinician conducting a private telehealth evaluation"
               width={540}
               height={405}
@@ -311,7 +311,7 @@ export default function HomePage() {
           </div>
           <div className="section__visual-wrap">
             <Image
-              src="/images/section_brooklyn_housing.jpg"
+              src="/images/section_brooklyn_housing.webp"
               alt="Happy pet owner on a classic New York apartment stoop with their emotional support dog"
               width={540}
               height={405}

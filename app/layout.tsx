@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/ny_esa_hero.jpg",
+        url: "/images/ny_esa_hero.webp",
         width: 1200,
         height: 630,
         alt: `${site.name} — Online evaluations with licensed NY professionals`,
       },
       {
-        url: "/images/section_brooklyn_housing.jpg",
+        url: "/images/section_brooklyn_housing.webp",
         width: 1200,
         height: 630,
         alt: `${site.name} — New York emotional support animal housing rights`,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/images/ny_esa_hero.jpg"],
+    images: ["/images/ny_esa_hero.webp"],
   },
   icons: {
     icon: [
