@@ -62,6 +62,7 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
                   alt={post.h1}
                   fill
                   sizes="(min-width: 1024px) 800px, 100vw"
+                  quality={95}
                   priority
                   fetchPriority="high"
                   className="post-hero-img"

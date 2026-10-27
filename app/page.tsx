@@ -74,6 +74,7 @@ export default function HomePage() {
               width={600}
               height={450}
               priority
+              quality={95}
               fetchPriority="high"
               sizes="(max-width: 768px) 100vw, 600px"
               className="hero__image"
@@ -235,6 +236,7 @@ export default function HomePage() {
               alt="Licensed New York mental health clinician conducting a private telehealth evaluation"
               width={540}
               height={405}
+              quality={95}
               sizes="(max-width: 768px) 100vw, 540px"
               loading="lazy"
               className="section__visual-img"
@@ -313,6 +315,7 @@ export default function HomePage() {
               alt="Happy pet owner on a classic New York apartment stoop with their emotional support dog"
               width={540}
               height={405}
+              quality={95}
               sizes="(max-width: 768px) 100vw, 540px"
               loading="lazy"
               className="section__visual-img"
