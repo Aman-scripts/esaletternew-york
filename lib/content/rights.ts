@@ -36,13 +36,13 @@ export const rightsPillar: ArticlePage = {
   schema: ["FAQPage"],
   blogCategory: "rights-housing",
   intro:
-    "New York renters with emotional support animals are protected by federal, state and city law. This guide explains each layer and links to detailed answers.",
+    "New York renters with emotional support animals are protected mainly by state and city law. The federal Fair Housing Act still applies, but since May 22, 2026, HUD no longer pursues complaints involving untrained ESAs. This guide explains each layer and links to detailed answers",
   updated: UPDATED,
   overview: [
     "If you live with a mental or emotional health condition and an animal helps you manage it, New York housing law gives you a way to ask for an exception to no-pet rules. That request is called a reasonable accommodation, and an ESA letter from a licensed professional is the documentation that supports it.",
     "What makes New York different is that three laws can apply at once. The federal Fair Housing Act covers most housing nationwide. The New York State Human Rights Law covers housing across the state, including some buildings the federal law exempts. Inside the five boroughs, the New York City Human Rights Law adds further protections and a duty for housing providers to engage in a cooperative dialogue before turning a request down.",
     "Co-op and condo boards, NYCHA and other public housing, college residence halls and small walk-ups each raise their own practical questions. The guides below walk through each situation, what a landlord or board may and may not ask, what you can and cannot be charged, and where to turn if a request is denied.",
-    "Federal enforcement priorities can change, as the HUD 2026 guidance shows. State and city protections are separate laws with their own enforcement agencies, which is why New Yorkers should understand all three layers.",
+    "In May 2026 HUD rescinded its 2020 assistance animal guidance and said it will find cause only where the animal is individually trained to perform disability-related work or tasks. State and city protections are separate laws with their own enforcement agencies, which is why New Yorkers should understand all three layers.",
   ],
   sections: [
     {
@@ -50,7 +50,7 @@ export const rightsPillar: ArticlePage = {
       table: {
         head: ["Law", "Where it applies", "Enforced by"],
         rows: [
-          ["Fair Housing Act (42 U.S.C. 3601 et seq.)", "Most housing nationwide, with limited exemptions", "HUD and federal courts"],
+          ["Fair Housing Act (42 U.S.C. 3601 et seq.)", "Most housing nationwide, with limited exemptions", "HUD (trained-animal complaints since May 22, 2026) and federal courts"],
           ["NYS Human Rights Law (Executive Law 296)", "Housing across New York State", "NYS Division of Human Rights and state courts"],
           ["NYC Human Rights Law (Admin Code 8-107)", "Housing in the five boroughs", "NYC Commission on Human Rights and city courts"],
         ],
@@ -59,18 +59,15 @@ export const rightsPillar: ArticlePage = {
     {
       heading: "What landlords and boards can and cannot do",
       list: [
-        "Can ask for reliable documentation when a disability-related need is not obvious",
-        "Can require that the animal not pose a direct threat or cause substantial damage",
-        "Can charge for actual damage beyond normal wear and tear",
-        "Cannot charge pet rent or pet deposits for an approved ESA",
-        "Cannot demand your diagnosis, medical records or a registry certificate",
-        "Cannot apply breed, size or weight limits from a pet policy as an automatic denial",
+        "Can charge for actual damage or excessive wear and tear",
+        "Cannot preemptively charge a pet fee or additional security deposit, or require extra renter’s insurance, for an ESA",
+        "Cannot require disclosure of your specific disability or insist on a specific form of documentation",
       ],
     },
     {
       heading: "Who enforces (HUD, NYS Division of Human Rights, NYC Commission on Human Rights)",
       paragraphs: [
-        "Federal complaints go to the U.S. Department of Housing and Urban Development. Statewide complaints go to the New York State Division of Human Rights. Complaints about housing in the five boroughs can go to the NYC Commission on Human Rights. Filing rules and deadlines differ, and filing with one agency can affect your options with another, so check the current rules before you file.",
+        "Federal complaints go to HUD, but since May 22, 2026, HUD will not find cause in complaints about untrained ESAs. Private lawsuits remain possible. Statewide complaints go to the New York State Division of Human Rights. Complaints about housing in the five boroughs can go to the NYC Commission on Human Rights. Filing rules and deadlines differ, and filing with one agency can affect your options with another, so check the current rules before you file.",
       ],
     },
   ],
@@ -98,11 +95,11 @@ export const rightsSpokes: ArticlePage[] = [
     label: "Fair Housing Act",
     title: "Fair Housing Act & Your ESA: New York Renter Rights",
     description:
-      "How the federal Fair Housing Act protects ESA owners in New York: reasonable accommodation, covered housing, exemptions, and filing a HUD complaint.",
+      "How the federal Fair Housing Act applies to animal accommodation requests in New York: covered housing, exemptions, and HUD’s May 2026 enforcement change.",
     priority: "High",
-    intro: "The federal Fair Housing Act is the base layer of ESA housing protection for New Yorkers.",
+    intro: "The federal Fair Housing Act prohibits disability discrimination in housing. Since May 22, 2026, HUD pursues animal accommodation complaints only for individually trained animals.",
     quickAnswer:
-      "The Fair Housing Act requires most housing providers to make reasonable accommodations for people with disabilities, including allowing an emotional support animal despite a no-pet policy. A landlord may ask for reliable documentation, such as a letter from a licensed professional, but generally cannot charge pet fees for the animal.",
+      "The Fair Housing Act requires housing providers to make reasonable accommodations for people with disabilities. Since May 22, 2026, HUD pursues animal-related complaints only where the animal is individually trained to perform disability-related work or tasks. It no longer expects providers to extend accommodations, including pet fee waivers, to untrained emotional support animals. The Act itself is unchanged, and private lawsuits remain possible. A landlord may ask for reliable documentation when the disability or the need for the animal is not apparent.",
     sections: [
       {
         heading: "What the FHA covers",
@@ -113,7 +110,7 @@ export const rightsSpokes: ArticlePage[] = [
       {
         heading: "Reasonable accommodation explained",
         paragraphs: [
-          "A reasonable accommodation is a change to a rule, policy or practice that gives a person with a disability an equal opportunity to use and enjoy a home. Allowing an ESA in a no-pet building is a common example.",
+          "A reasonable accommodation is a change to a rule, policy, or practice that gives a person with a disability an equal opportunity to use and enjoy a home. Allowing a trained service animal in a no-pet building is a common example. HUD no longer treats untrained ESAs as covered for federal enforcement purposes. New York State and NYC law still cover them.",
         ],
       },
       {
@@ -128,7 +125,7 @@ export const rightsSpokes: ArticlePage[] = [
       {
         heading: "Enforcement and HUD complaints",
         paragraphs: [
-          "You can file a complaint with HUD, generally within one year of the discriminatory act, or file in federal court within the time allowed by statute. Confirm current deadlines and HUD enforcement priorities before relying on federal enforcement alone.",
+          "You can file a complaint with HUD, generally within one year of the discriminatory act, or file a lawsuit within the time allowed by statute (generally two years). Since May 22, 2026, HUD has been dismissing or issuing no-cause findings on complaints about untrained emotional support animals, so a HUD complaint about an untrained ESA is unlikely to proceed. The memo does not affect claims about trained service animals or claims under Section 504 or the ADA.",
         ],
       },
     ],
@@ -138,9 +135,26 @@ export const rightsSpokes: ArticlePage[] = [
       text: "Fair Housing Act, 42 U.S.C. 3604(f)(3)(B) (reasonable accommodation); HUD regulation 24 C.F.R. 100.204.",
     },
     faqs: [
-      { q: "Does the FHA apply to co-ops?", a: "Generally yes. Co-op boards are housing providers and are typically covered." },
-      { q: "Can I be charged a pet deposit under the FHA?", a: "No pet deposit or pet rent should be charged for an approved assistance animal, but you remain responsible for damage." },
-      { q: "Is my landlord exempt?", a: "Small owner-occupied buildings may be exempt from the FHA, but state and city law may still apply." },
+      {
+        q: "Does the Fair Housing Act apply to co-ops and condos?",
+        a: "Yes. The Fair Housing Act covers most housing, including rentals, condos, and co-ops, subject to limited exemptions. New York State and NYC human rights laws also apply to this housing.",
+      },
+      {
+        q: "Does the Fair Housing Act still protect emotional support animals after HUD’s 2026 memo?",
+        a: "Only in a limited way. Since May 22, 2026, HUD pursues animal complaints only for individually trained animals and no longer for untrained ESAs. The Act itself is unchanged, and private lawsuits remain possible, and New York State and NYC law still protect ESAs.",
+      },
+      {
+        q: "Is my landlord exempt from the Fair Housing Act?",
+        a: "Possibly. The Act may exempt owner-occupied buildings with four or fewer units, and single-family homes rented by the owner without a broker. New York State’s exemption is narrower, covering owner-occupied buildings of up to two units.",
+      },
+      {
+        q: "Can my landlord charge a pet fee for my assistance animal?",
+        a: "For untrained ESAs, HUD no longer expects providers to waive pet fees. In New York City, a provider cannot preemptively charge a pet fee or an extra deposit or require extra insurance for an ESA but may charge for actual damage.",
+      },
+      {
+        q: "How long do I have to file a Fair Housing Act complaint?",
+        a: "A HUD complaint is generally due within one year of the discriminatory act. A lawsuit is generally allowed within two years. State and city agencies have their own deadlines.",
+      },
     ],
     related: ["/rights/new-york-state-human-rights-law/", "/rights/nyc-human-rights-law/", "/rights/hud-2026-esa-memo-new-york/"],
   }),
@@ -152,9 +166,9 @@ export const rightsSpokes: ArticlePage[] = [
     description:
       "How the New York State Human Rights Law (Executive Law 296) protects renters with support animals, who it covers, and how the Division of Human Rights helps.",
     priority: "High",
-    intro: "State law protects ESA owners across New York, from Buffalo to Long Island.",
+    intro: "State law protects ESA owners in most housing across New York, from Buffalo to Long Island.",
     quickAnswer:
-      "The New York State Human Rights Law prohibits disability discrimination in housing and requires reasonable accommodations, which can include an emotional support animal. It applies statewide and can reach some housing the federal Fair Housing Act exempts. Complaints go to the New York State Division of Human Rights.",
+      "The New York State Human Rights Law prohibits disability discrimination in housing and requires reasonable accommodations, which can include an emotional support animal. It applies statewide and can reach some housing that the federal Fair Housing Act exempts. Complaints can be filed with the New York State Division of Human Rights or the New York State Attorney General’s Office.",
     sections: [
       {
         heading: "What Executive Law 296 says about support animals",
@@ -186,12 +200,29 @@ export const rightsSpokes: ArticlePage[] = [
     legalCallout: {
       variant: "legal",
       title: "Statute",
-      text: "New York Executive Law 296(18) (reasonable accommodation in housing). Note: bill S9086 (2025-26 session) proposes ESA definitions in state law; confirm its current status before citing.",
+      text: "New York Executive Law 296(18)(2) and 296(2-a)(d)(2) (reasonable accommodation in housing, including the use of an animal to alleviate symptoms or effects of a disability, as amended by L. 2020, ch. 137).",
     },
     faqs: [
-      { q: "Does state law cover small buildings?", a: "Coverage depends on the building and owner. Some small owner-occupied buildings are exempt; check with the Division." },
-      { q: "Do I have to file with HUD first?", a: "No. You can choose to file with the NYS Division of Human Rights." },
-      { q: "Is there a cost to file?", a: "No. Filing a complaint with the Division is free." },
+      {
+        q: "Does state law cover small buildings?",
+        a: "Mostly yes. New York State’s exemption is narrower than the federal one. It covers only owner-occupied one- and two-family buildings and some room rentals in owner-occupied housing, so a three- or four-unit owner-occupied building can still be covered by state law.",
+      },
+      {
+        q: "Do I have to file with HUD first?",
+        a: "No. You can file directly with the NYS Division of Human Rights, and a state claim does not depend on a HUD complaint. Since May 22, 2026, HUD no longer pursues complaints about untrained emotional support animals.",
+      },
+      {
+        q: "Is there a cost to file?",
+        a: "No. Filing with the Division of Human Rights is free, and you do not need an attorney to file.",
+      },
+      {
+        q: "How long do I have to file a complaint with the Division?",
+        a: "For discrimination on or after February 15, 2024, you have three years from the most recent act. A lawsuit in state court also has a three-year limit. Deadlines at other agencies differ, so check each one.",
+      },
+      {
+        q: "Does New York State law still protect my ESA after HUD’s 2026 memo?",
+        a: "Yes. The HUD memo changes only how HUD enforces the federal Fair Housing Act. New York State law still requires housing providers to accommodate an animal that alleviates the symptoms or effects of a disability, unless doing so would cause undue hardship.",
+      },
     ],
     related: ["/rights/fair-housing-act/", "/rights/nyc-human-rights-law/", "/rights/landlord-denials/"],
   }),
@@ -205,7 +236,7 @@ export const rightsSpokes: ArticlePage[] = [
     priority: "High",
     intro: "Inside the five boroughs, the NYC Human Rights Law adds one of the strongest layers of protection in the country.",
     quickAnswer:
-      "In New York City, the NYC Human Rights Law requires housing providers to reasonably accommodate people with disabilities, including requests for emotional support animals, and to engage in a cooperative dialogue before denying a request. Complaints go to the NYC Commission on Human Rights.",
+      "In New York City, the NYC Human Rights Law requires housing providers to reasonably accommodate people with disabilities, including requests for emotional support animals, and to engage in a cooperative dialogue before denying a request. Complaints can be filed with the NYC Commission on Human Rights.",
     sections: [
       {
         heading: "What the NYC Human Rights Law covers (Admin Code 8-107)",
@@ -216,18 +247,18 @@ export const rightsSpokes: ArticlePage[] = [
       {
         heading: "Reasonable accommodation process",
         steps: [
-          { title: "Request", text: "Ask in writing and attach your ESA letter." },
-          { title: "Cooperative dialogue", text: "The housing provider should engage with you in good faith about your request and any alternatives." },
-          { title: "Written determination", text: "After the dialogue, the provider should give a written final decision." },
+          { title: "Request", text: "Make your request. You can submit it in writing or orally, though writing it down helps. Provide documentation, such as your ESA letter, if your disability or need for the animal is not apparent." },
+          { title: "Cooperative dialogue", text: "The housing provider must engage with you in good faith about your request and any alternatives." },
+          { title: "Written determination", text: "At the end of the dialogue, the housing provider must give you a written final determination identifying any accommodation granted or denied." },
         ],
       },
       {
         heading: "What housing providers may and may not ask",
         list: [
-          "May ask for reliable documentation of a disability-related need",
-          "May ask about the animal's type and basic care",
-          "May not demand your diagnosis or treatment history",
-          "May not require registry certificates, vests or ID cards",
+          "May ask for confirmation from your treatment provider that you have a disability and that the animal helps treat it when this is not readily apparent",
+          "May ask for proof of vaccination if the animal is a dog, and may refuse an animal that is prohibited under the NYC Health Code",
+          "May not require you to disclose your specific diagnosis unless it is necessary to decide the accommodation, and may not ask for unrelated documentation such as complete medical records",
+          "May not require a specific form or type of documentation",
         ],
       },
       {
@@ -243,9 +274,26 @@ export const rightsSpokes: ArticlePage[] = [
       text: "NYC Administrative Code 8-107(5) (housing), 8-107(15) (reasonable accommodation) and 8-107(28) (cooperative dialogue).",
     },
     faqs: [
-      { q: "Does NYC law apply in Yonkers or Long Island?", a: "No. It applies in the five boroughs. State and federal law apply elsewhere." },
-      { q: "What is a cooperative dialogue?", a: "A good-faith exchange between you and the housing provider about your accommodation request, followed by a written decision." },
-      { q: "Can I file with the city and state?", a: "Agencies generally do not allow duplicate complaints on the same facts. Choose carefully and check current rules." },
+      {
+        q: "Does the NYC Human Rights Law still protect emotional support animals after HUD’s 2026 memo?",
+        a: "Yes. The HUD memo changes only how HUD enforces the federal Fair Housing Act, and it does not change city law. In NYC, housing providers must still permit emotional support animals as a reasonable accommodation unless it would cause undue hardship.",
+      },
+      {
+        q: "Can my landlord refuse my ESA because of a no-pet policy or a breed, size, or weight limit?",
+        a: "Not automatically. NYC housing providers must exempt emotional support animals from no-pet, no-dog, and breed, size, and weight policies unless the exemption would cause undue hardship. A provider can still exclude animals that are prohibited under the NYC Health Code.",
+      },
+      {
+        q: "Can my landlord charge a pet fee or extra deposit for my ESA?",
+        a: "Not in advance. A provider cannot preemptively charge a pet fee or additional security deposit or require extra renter’s insurance for an emotional support animal. It can require payment for actual damage or excessive wear and tear.",
+      },
+      {
+        q: "What can my landlord ask me for?",
+        a: "If your disability or need for the animal is not obvious, the landlord can ask your treatment provider to confirm that you have a disability and that the animal helps treat it. It cannot require your specific diagnosis unless that is needed to decide the accommodation. It also cannot demand complete medical records or a specific form of documentation. For a dog, it can ask for proof of vaccination.",
+      },
+      {
+        q: "What is a cooperative dialogue, and what if my landlord ignores my request?",
+        a: "It is a good-faith written or oral discussion about your needs and any alternatives, and it must end with a written final determination from the housing provider. Failing to engage, or failing to give the written determination, is a separate violation. You can report it online to the NYC Commission on Human Rights, through 311, or at 212-416-0197.",
+      },
     ],
     related: ["/rights/co-op-and-condo-esa-rules/", "/rights/nyc-pet-law-and-esas/", "/locations/new-york-city/"],
   }),
@@ -311,24 +359,24 @@ export const rightsSpokes: ArticlePage[] = [
     priority: "High",
     intro: "Co-op and condo boards have their own rules, but those rules are subject to fair housing law.",
     quickAnswer:
-      "Co-op and condo boards in New York are generally treated as housing providers under fair housing laws, so a no-pet house rule does not automatically defeat an ESA request. Submit a written accommodation request with your letter, and expect the board to review it rather than apply its pet policy by default.",
+      "Co-op and condo boards in New York are generally treated as housing providers under fair housing laws, so a no-pet house rule does not automatically defeat an ESA request under New York State and NYC law. Submit your accommodation request, preferably in writing, with your letter if your disability or need is not apparent. In NYC, the board must engage with you in a cooperative dialogue rather than apply its pet policy by default.",
     sections: [
       {
         heading: "Are co-ops and condos exempt?",
         paragraphs: [
-          "Generally no. Boards, managing agents and sponsors are typically covered by the FHA, the NYS Human Rights Law and, in the five boroughs, the NYC Human Rights Law.",
+          "Generally no. Boards and managing agents are typically covered by the NYS Human Rights Law and, in the five boroughs, the NYC Human Rights Law. The federal Fair Housing Act also covers them, but since May 22, 2026, HUD pursues animal complaints only for individually trained animals.",
         ],
       },
       {
         heading: "Board packages and ESA requests",
         paragraphs: [
-          "Submit your accommodation request separately from, or clearly flagged within, your board package. Keep it brief: the request, your letter, and basic information about the animal. You do not need to disclose your diagnosis.",
+          "Submit your accommodation request separately from, or clearly flagged within, your board package. Keep it brief: the request, your letter, and basic information about the animal. In NYC, a housing provider generally cannot require you to disclose your specific diagnosis, and it cannot ask for unrelated documentation such as complete medical records.",
         ],
       },
       {
         heading: "House rules and nuisance issues",
         paragraphs: [
-          "An ESA is still subject to rules on noise, cleanliness and conduct in common areas. Boards may act on genuine nuisance or direct-threat problems, based on the animal's actual behavior rather than assumptions.",
+          "An ESA is still subject to reasonable rules on conduct in common areas, such as leashing. A board may decline an animal only if accommodating it would cause undue hardship, for example, damage or disruption based on the animal’s actual behavior and not on assumptions. In NYC, it must first engage in a cooperative dialogue.",
         ],
       },
       {
@@ -337,19 +385,36 @@ export const rightsSpokes: ArticlePage[] = [
           "Ask for the reason in writing",
           "Respond with any missing documentation",
           "In NYC, ask for a cooperative dialogue",
-          "Consider a complaint to the NYC Commission, NYS DHR or HUD",
+          "Consider a complaint to the NYC Commission or NYS DHR. HUD no longer pursues complaints about untrained ESAs.",
         ],
       },
     ],
     legalCallout: {
       variant: "legal",
       title: "Authority",
-      text: "Fair Housing Act 42 U.S.C. 3604(f)(3)(B); NY Executive Law 296(18); NYC Admin Code 8-107(15).",
+      text: "Fair Housing Act 42 U.S.C. 3604(f)(3)(B); NY Executive Law 296(18)(2) and 296(2-a)(d)(2); NYC Admin Code 8-107(15) and 8-107(28).",
     },
     faqs: [
-      { q: "Can the board ask about my animal at the interview?", a: "Boards can ask reasonable questions about the animal, but should not probe your medical history." },
-      { q: "Can a board charge a pet fee for my ESA?", a: "Pet fees should not be charged for an approved ESA; damage costs can still apply." },
-      { q: "When should I submit the request?", a: "As early as possible, ideally with or before the board package." },
+      {
+        q: "Can a co-op or condo board refuse my ESA because of a no-pet rule?",
+        a: "Not automatically. Co-op and condo boards are covered by New York’s fair housing laws, and in NYC housing providers must exempt emotional support animals from no-pet policies unless doing so would cause undue hardship. The board must also engage in a cooperative dialogue with you before denying the request.",
+      },
+      {
+        q: "Can a board charge a pet fee or extra deposit for my ESA?",
+        a: "Not in advance. In NYC, a housing provider cannot preemptively charge a pet fee or additional deposit or require extra insurance for an emotional support animal. It can require payment for actual damage or excessive wear and tear.",
+      },
+      {
+        q: "What can a board ask me for?",
+        a: "If your disability or need for the animal is not obvious, the board can ask your treatment provider to confirm that you have a disability and that the animal helps treat it. It cannot require your specific diagnosis unless that is needed to decide the accommodation, and it cannot demand complete medical records or a specific form of documentation. For a dog, it can ask for proof of vaccination.",
+      },
+      {
+        q: "Do I have to tell the board about my disability or ESA when I apply?",
+        a: "No. In NYC, a housing provider cannot penalize you for not volunteering information about your disability or your need for an ESA when you apply, and this applies to emotional support animals. You can request an accommodation at any time.",
+      },
+      {
+        q: "Can a board ever deny an ESA?",
+        a: "Yes, in limited cases. A board can decline an animal if accommodating it would cause undue hardship, such as damage or disruption based on the animal’s actual behavior, or if it is an animal prohibited under the NYC Health Code. If the board refuses, ask for the reason in writing and for a cooperative dialogue, and consider a complaint to the NYC Commission on Human Rights or the NYS Division of Human Rights.",
+      },
     ],
     related: ["/rights/nyc-human-rights-law/", "/rights/landlord-request-letter-template/", "/blog/nyc-co-op-board-esa-request-guide/"],
   }),

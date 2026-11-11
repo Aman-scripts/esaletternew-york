@@ -867,38 +867,44 @@
 .cat-cameo:hover .cat-cameo__hop,
 .cat-cameo:focus-visible .cat-cameo__hop,
 .ny-scene__cat:hover .mascot,
-.cta-band__moon:hover .mascot {
+.cta-band__moon:hover .mascot,
+.aside-cta:hover .mascot {
   animation: cat-hop 0.7s cubic-bezier(0.3, 0.7, 0.4, 1);
 }
 
 .cat-cameo:hover .mascot__eye,
 .ny-scene__cat:hover .mascot__eye,
-.cta-band__moon:hover .mascot__eye {
+.cta-band__moon:hover .mascot__eye,
+.aside-cta:hover .mascot__eye {
   animation: none;
   transform: scale(1.2);
 }
 
 .cat-cameo:hover .mascot__ear,
 .ny-scene__cat:hover .mascot__ear,
-.cta-band__moon:hover .mascot__ear {
+.cta-band__moon:hover .mascot__ear,
+.aside-cta:hover .mascot__ear {
   animation: none;
   transform: translateY(-5px) scaleY(1.12);
 }
 
 .cat-cameo:hover .mascot__tail--sit,
 .ny-scene__cat:hover .mascot__tail--sit,
-.cta-band__moon:hover .mascot__tail--sit {
+.cta-band__moon:hover .mascot__tail--sit,
+.aside-cta:hover .mascot__tail--sit {
   animation-duration: 0.8s;
 }
 
 .cat-cameo:hover .mascot__head--sit,
 .ny-scene__cat:hover .mascot__head--sit,
-.cta-band__moon:hover .mascot__head--sit {
+.cta-band__moon:hover .mascot__head--sit,
+.aside-cta:hover .mascot__head--sit {
   animation: cat-curious 1.6s ease-in-out infinite;
 }
 
 .cat-cameo:hover .mascot__shadow,
-.ny-scene__cat:hover .mascot__shadow {
+.ny-scene__cat:hover .mascot__shadow,
+.aside-cta:hover .mascot__shadow {
   animation: cat-shadow 0.7s cubic-bezier(0.3, 0.7, 0.4, 1);
   transform-box: fill-box;
   transform-origin: center;
@@ -909,7 +915,8 @@
 }
 
 .ny-scene__cat .mascot,
-.cta-band__moon .mascot {
+.cta-band__moon .mascot,
+.aside-cta__mascot .mascot {
   transform-origin: 50% 100%;
 }
 

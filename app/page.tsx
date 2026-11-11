@@ -33,7 +33,7 @@ const featuredConditions = ["anxiety", "depression", "ptsd", "panic-disorder", "
 
 const whyNeed = [
   { icon: Building2, title: "Housing protection", text: "Request an exception to no-pet rules in rentals, co-ops and condos across New York." },
-  { icon: Wallet, title: "No pet fees", text: "Approved ESAs are generally exempt from pet rent and pet deposits." },
+  { icon: Wallet, title: "No pet fees", text: "NYC landlords generally cannot charge ESA pet fees, deposits, or extra insurance upfront." },
   { icon: HeartHandshake, title: "Mental health support", text: "Keep the companion that helps you manage daily life at home." },
 ];
 
@@ -175,7 +175,7 @@ export default function HomePage() {
             <div className="law-card">
               <span className="law-card__tag text-body-normal-semibold">Federal</span>
               <h3 className="law-card__title text-h3">Fair Housing Act</h3>
-              <p className="law-card__text">Requires most housing providers nationwide to make reasonable accommodations for people with disabilities.</p>
+              <p className="law-card__text">HUD now prioritizes trained animals, but FHA protections and private lawsuits remain unchanged.</p>
             </div>
             <div className="law-card law-card--state">
               <span className="law-card__tag text-body-normal-semibold">New York State</span>
@@ -258,7 +258,7 @@ export default function HomePage() {
           <SectionHead
             eyebrow="Locations"
             title="Cities Served Across New York"
-            lead="From the five boroughs to Buffalo, one letter from a New York-licensed professional supports your request statewide."
+            lead="From the five boroughs to Buffalo, an ESA letter from a New York-licensed professional can support your request statewide; housing providers may still review it, and approval is not guaranteed."
           />
           <ul className="grid grid--4" role="list">
             {cityPages.map((c) => (

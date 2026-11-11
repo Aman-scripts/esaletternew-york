@@ -4,13 +4,11 @@ import { crumbsFor } from "@/lib/content/registry";
 import { faqGroups } from "@/lib/content/support";
 import { faqSchema, schemasFor } from "@/lib/seo";
 import { site } from "@/lib/site";
-import { mascot } from "@/lib/mascot";
 import { Breadcrumbs } from "../layout/Breadcrumbs";
 import { JsonLd } from "../common/JsonLd";
 import { SectionHead } from "../common/SectionHead";
 import { Hero } from "../modules/Hero";
-import { LetterWalk } from "../modules/LetterWalk";
-import { letterWalkSteps as howItWorksSteps } from "../modules/letter-walk-steps";
+import { StepProcess, type Step } from "../modules/StepProcess";
 import { Timeline } from "../modules/Timeline";
 import { ReviewerBox } from "../modules/ReviewerBox";
 import { TrustBar } from "../modules/TrustBar";
@@ -20,6 +18,15 @@ import { RelatedPages } from "../modules/RelatedPages";
 import { ContentSections } from "../modules/ContentSections";
 import { ContactForm } from "../modules/ContactForm";
 import { FaqSection } from "./parts";
+
+const howItWorksSteps: Step[] = [
+  { title: "Schedule", text: "Complete a short online assessment and book a time that suits you." },
+  { title: "Consult", text: "Meet a New York-licensed mental health professional by secure video or phone." },
+  {
+    title: "Receive",
+    text: "If clinically appropriate, your signed ESA letter is typically delivered as a PDF within 24 hours after your evaluation is completed.",
+  },
+];
 
 /** T10 Support pages: flexible layouts that link to the evaluation survey (site.applyHref) */
 export function SupportTemplate({ page }: { page: ArticlePage }) {
@@ -47,8 +54,8 @@ function HowItWorks({ page }: { page: ArticlePage }) {
     <>
       <section className="section">
         <div className="container">
-          <SectionHead title="Four moves from your couch to a signed letter." lead={`No waiting room, no account to manage. ${mascot.name} does the walking.`} center />
-          <LetterWalk />
+          <SectionHead title="Three steps to your ESA letter" center />
+          <StepProcess steps={howItWorksSteps} />
         </div>
       </section>
       {page.sections.map((s) => (

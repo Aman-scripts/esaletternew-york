@@ -254,13 +254,12 @@ export const corePages: ArticlePage[] = [
     updated: UPDATED,
     sections: [
       {
-        heading: "Mandatory elements checklist",
+        heading: "Commonly Requested Elements of an ESA Letter",
         list: [
           "Provider letterhead with contact details",
           "Provider name, license type, license number and issuing state",
-          "Date of issue (ideally within the past 12 months)",
-          "Statement that you have a condition that substantially limits a major life activity",
-          "Statement that the animal provides support related to that condition",
+          "Date of issue (providers often ask for a recent date, but in NYC they cannot reject documentation solely because of its date)",
+          "Statement confirming a disability and the animal's related support.",
           "Provider signature",
         ],
       },
@@ -271,15 +270,15 @@ export const corePages: ArticlePage[] = [
         ],
       },
       {
-        heading: "Compliance with FHA, NYSHRL and NYC HRL",
+        heading: "Compliance with NYS and NYC Human Rights Laws",
         paragraphs: [
-          "All three laws allow a housing provider to request reliable documentation when a disability or the disability-related need for an animal is not obvious. None of them requires registration, certification or a specific diagnosis on the letter.",
+          "Under NYC law, a housing provider may request confirmation from a treatment provider that you have a disability and the animal helps treat it when this is not apparent. It cannot require disclosure of the specific disability or insist on a specific form of documentation. The federal Fair Housing Act still applies, but since May 22, 2026, HUD pursues animal complaints only for individually trained animals.",
         ],
       },
       {
-        heading: "Validity period (generally 1 year)",
+        heading: "Validity Period",
         paragraphs: [
-          "No statute sets an expiration date, but housing providers commonly ask for a letter dated within the last year, especially at lease signing or renewal. Planning an annual re-evaluation avoids gaps.",
+          "No statute sets an expiration date. Providers often ask for a recently issued ESA letter, but in NYC they cannot reject documentation solely because of its date.",
         ],
       },
       {
@@ -296,7 +295,7 @@ export const corePages: ArticlePage[] = [
     callout: {
       variant: "info",
       title: "Quick check",
-      text: "If you can look up the provider's license number and it is active, your letter clears the most common objection landlords raise.",
+      text: "Checking that the provider’s license is active confirms their licensure. It does not guarantee a housing provider will approve your request.",
     },
     faqs: [
       {
