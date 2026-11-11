@@ -578,17 +578,17 @@ export const rightsSpokes: ArticlePage[] = [
     priority: "High",
     intro: "A denial is not always final. Here is how to tell if it was lawful and what to do next.",
     quickAnswer:
-      "If a New York landlord denies your ESA, ask for the reason in writing. Valid reasons are limited, such as a direct threat or unreliable documentation. Respond in writing, address any gaps, and if the denial stands, consider filing with the NYS Division of Human Rights, the NYC Commission on Human Rights or HUD.",
+      "If a New York landlord denies your ESA, ask for the reason in writing. Valid reasons are limited, such as undue hardship, or an animal prohibited under the NYC Health Code. A provider should usually ask for more information before rejecting documentation. Respond in writing, address any gaps, and if the denial stands, consider filing with the NYS Division of Human Rights or the NYC Commission on Human Rights. HUD no longer pursues complaints about untrained ESAs.",
     sections: [
       {
         heading: "Valid vs invalid denial reasons",
         table: {
           head: ["Likely valid", "Likely invalid"],
           rows: [
-            ["The specific animal poses a direct threat that cannot be reduced", "The building has a no-pet policy"],
-            ["Documentation is unreliable or unverifiable", "The animal is not registered or certified"],
+            ["The animal’s actual behavior causes significant damage or disruption.", "The building has a no-pet policy"],
+            ["Insufficient documentation despite requests for additional information.", "The animal is not registered or certified"],
             ["The request would cause an undue burden", "Breed, size or weight limits in the pet policy"],
-            ["The animal has caused substantial damage", "You did not disclose your diagnosis"],
+            ["The animal has caused substantial damage", "Disability or ESA details were not disclosed during the application."],
           ],
         },
       },
@@ -604,7 +604,7 @@ export const rightsSpokes: ArticlePage[] = [
       {
         heading: "Where to file: NYS DHR, NYC CCHR, HUD (one-agency rules - legal review)",
         paragraphs: [
-          "Complaints can go to the NYS Division of Human Rights, the NYC Commission on Human Rights (for the five boroughs) or HUD. Agencies generally do not let you pursue the same claim in more than one forum at once, and deadlines differ. Check current rules before filing.",
+          "Complaints can go to the NYS Division of Human Rights or the NYC Commission on Human Rights (for the five boroughs). A HUD complaint about an untrained ESA is unlikely to proceed after May 22, 2026. Filing the same claim, based on the same facts, with one agency or in court can bar you from filing it with another, and deadlines differ. Check current rules before filing.",
         ],
       },
       {
@@ -617,12 +617,29 @@ export const rightsSpokes: ArticlePage[] = [
     legalCallout: {
       variant: "legal",
       title: "Authority",
-      text: "Fair Housing Act 42 U.S.C. 3604(f)(3)(B) and 3610; NY Executive Law 296(18) and 297; NYC Admin Code 8-107(15) and 8-109.",
+      text: "Fair Housing Act 42 U.S.C. 3604(f)(3)(B), NYC Admin Code 8-107(28) (cooperative dialogue) and 3610; NY Executive Law 296(18) and 297; NYC Admin Code 8-107(15) and 8-109.",
     },
     faqs: [
-      { q: "How long does a landlord have to respond?", a: "No fixed number of days applies everywhere, but unreasonable delay can be treated as a denial." },
-      { q: "Can I get a lawyer for free?", a: "Legal aid organizations and fair housing groups may help; see our location pages for local resources." },
-      { q: "Can the landlord retaliate?", a: "Retaliation for requesting an accommodation or filing a complaint is prohibited." },
+      {
+        q: "Can a landlord in New York deny my ESA request because of a no-pet policy?",
+        a: "No. Under the Fair Housing Act and New York Human Rights Law, landlords generally must make reasonable accommodations for ESAs, even in no-pet buildings, unless a legally recognized exception applies.",
+      },
+      {
+        q: "What should I do if my New York landlord refuses to accept my ESA letter?",
+        a: "Ask the landlord for the reason for denial in writing. You can provide relevant supporting documentation and request a reasonable accommodation review. If the denial appears discriminatory, you can file a housing discrimination complaint.",
+      },
+      {
+        q: "Can a New York landlord reject my ESA because of its breed or size?",
+        a: "Generally, no. Breed, weight, and size restrictions that apply to pets cannot automatically be applied to assistance animals. However, legitimate animal-specific health or safety concerns may require an individual assessment.",
+      },
+      {
+        q: "Can my landlord deny my ESA because I did not disclose my diagnosis?",
+        a: "No. You are generally not required to disclose your specific diagnosis. However, if your disability or need for an ESA isn't apparent, your landlord may request documentation confirming your disability and the animal's disability-related benefit.",
+      },
+      {
+        q: "Where can I report ESA discrimination by a landlord in New York?",
+        a: "NYC residents can file a complaint with the NYC Commission on Human Rights (CCHR). Tenants elsewhere in New York can contact the New York State Division of Human Rights or HUD for assistance.",
+      },
     ],
     related: ["/blog/how-to-file-a-housing-discrimination-complaint-in-new-york/", "/rights/nyc-human-rights-law/", "/rights/new-york-state-human-rights-law/"],
   }),
