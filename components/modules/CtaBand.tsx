@@ -1,5 +1,5 @@
-import { ClipboardCheck } from "lucide-react";
 import { ButtonLink } from "../common/ButtonLink";
+import { Mascot, MascotFace } from "./Mascot";
 
 type Props = {
   variant?: "inline" | "final";
@@ -30,7 +30,7 @@ export function CtaBand({ variant = "inline", title, text }: Props) {
       <aside className="cta-band cta-band--inline" aria-label="Check if you qualify">
         <div className="cta-band__inner">
           <span className="cta-band__icon" aria-hidden="true">
-            <ClipboardCheck />
+            <MascotFace />
           </span>
           <div className="cta-band__body">
             <p className="cta-band__title text-h4">{title ?? copy.title}</p>
@@ -50,6 +50,9 @@ export function CtaBand({ variant = "inline", title, text }: Props) {
             <div>
               <h2 className="cta-band__title text-h2">{title ?? copy.title}</h2>
               <p className="cta-band__text">{text ?? copy.text}</p>
+            </div>
+            <div className="cta-band__moon" aria-hidden="true">
+              <Mascot pose="home" />
             </div>
             <ButtonLink variant="white" size="lg" />
           </div>

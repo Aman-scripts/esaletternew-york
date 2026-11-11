@@ -9,7 +9,8 @@ import { SectionHead } from "@/components/common/SectionHead";
 import { ButtonLink } from "@/components/common/ButtonLink";
 import { Hero } from "@/components/modules/Hero";
 import { TrustBar } from "@/components/modules/TrustBar";
-import { StepProcess } from "@/components/modules/StepProcess";
+import { LetterWalk } from "@/components/modules/LetterWalk";
+import { mascot } from "@/lib/mascot";
 import { ComparisonTable } from "@/components/modules/ComparisonTable";
 import { PricingBlock } from "@/components/modules/PricingBlock";
 import { CtaBand } from "@/components/modules/CtaBand";
@@ -70,11 +71,14 @@ export default function HomePage() {
       />
       <TrustBar />
 
-      {/* 3. 3-step process */}
       <section className="section" id="howitworks">
         <div className="container">
-          <SectionHead eyebrow="How it works" title="Your ESA letter in three steps" center />
-          <StepProcess />
+          <SectionHead
+            eyebrow="How it works"
+            title="Four moves from your couch to a signed letter."
+            lead={`No waiting room, no account to manage. ${mascot.name} does the walking.`}
+          />
+          <LetterWalk />
           <div className="center-actions">
             <ButtonLink href="/how-it-works/" variant="outline">
               See the full process

@@ -69,7 +69,7 @@ export const supportPages: ArticlePage[] = [
     phase: 1,
     priority: "High",
     schema: ["HowTo", "FAQPage"],
-    intro: "Three simple steps, one licensed professional, and a letter your landlord can verify.",
+    intro: "Four simple moves, one licensed professional, and a letter your landlord can verify.",
     sections: [
       {
         heading: "Timeline and what to expect",

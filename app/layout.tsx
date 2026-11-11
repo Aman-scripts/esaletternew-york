@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Bricolage_Grotesque, Newsreader } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 import { site } from "@/lib/site";
@@ -6,8 +7,22 @@ import { organizationSchema, websiteSchema } from "@/lib/seo";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { StickyCta } from "@/components/layout/StickyCta";
+import { BodegaGuide } from "@/components/layout/BodegaGuide";
 import { JsonLd } from "@/components/common/JsonLd";
 import { Analytics } from "@/components/common/Analytics";
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-bricolage",
+});
+
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  display: "swap",
+  style: ["normal", "italic"],
+  variable: "--font-newsreader",
+});
 
 /**
  * Every page is static content. 'navigation' keeps it that way and makes unknown dynamic
@@ -55,28 +70,12 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0f75bc",
+  themeColor: "#213457",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-US">
-      <head>
-        <link
-          rel="preload"
-          href="/fonts/inter-variable.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/merriweather-400.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-      </head>
+    <html lang="en-US" className={`${bricolage.variable} ${newsreader.variable}`}>
       <body>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <a href="#main" className="skip-link">
@@ -92,6 +91,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main id="main">{children}</main>
         <SiteFooter />
         <StickyCta />
+        <BodegaGuide />
         <Analytics />
       </body>
     </html>
