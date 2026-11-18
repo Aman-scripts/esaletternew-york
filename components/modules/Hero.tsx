@@ -97,7 +97,7 @@ export function Hero({
           {/* Primary CTA button */}
           {!hideCta && (
             <div className="hero__actions hero__actions--showcase">
-              <ButtonLink size="lg" className="hero__cta-btn">
+              <ButtonLink size="lg">
                 Get Your ESA Letter
               </ButtonLink>
             </div>
